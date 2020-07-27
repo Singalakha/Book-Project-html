@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T19:53:17+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Zeros of polynomials in a complex variable</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_nthroots.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Term-4.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_nthroots.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Term-4.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+<li><a href="sec_zeros.html" data-scroll="sec_zeros" class="active">Zeros of polynomials in a complex variable</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-15.html" data-scroll="section-15">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_zeros"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.10</span> <span class="title">Zeros of polynomials in a complex variable</span>
+</h2>
+<a href="sec_zeros.html" class="permalink">¶</a><p id="p-937">We conclude our discussion of functions of a complex variable with one of our favorite functions, <em class="emphasis">polynomials</em>. Motivated by the definition of real polynomials of a real variable, we start by defining complex polynomials of a complex variable and their <em class="emphasis">zeros</em>. We will then use these definitions to explore interesting theorems about zeros of real polynomials of a complex variable.</p>
+<article class="definition-like" id="definition-15"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.10.1</span>. <span class="title">Complex polynomials of a complex variable and their zeros.</span>
+</h6>
+<p id="p-938">A complex polynomial in a complex variable \(z\) is an expression of the form:</p>
+<div class="displaymath">
+\begin{equation*}
+p(z)=c_0+c_1z+c_2z^2+.....+c_{n-1}z^{n-1}+c_nz^n
+\end{equation*}
+</div>
+<p>where the coefficients \(c_0,c_1,c_2,....,c_n\) are complex numbers i.e. \(c_i \in \mathbb{C}\) and \(n \in \mathbb{N}\text{.}\)</p>
+<p id="p-939">The <dfn class="terminology">degree</dfn> of \(p(z)\) is \(n\) (if \(c_n \neq 0\)).</p>
+<p id="p-940">A complex number \(\alpha\) is called a <dfn class="terminology">zero</dfn> of \(p(z)\) if \(p(\alpha)=0\text{.}\)</p></article><p id="p-941"><em class="emphasis">Remark:</em> In some texts, you will see the terms <em class="emphasis">roots and zeros</em> used interchangeably. Strictly speaking, the term <em class="emphasis">roots</em> should be used for equations, and the term <em class="emphasis">zeros</em> should be used for functions.</p>
+<p id="p-942">Consider the real polynomial \(p\) in a complex variable \(z\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+p(z)=z^2+2z+2
+\end{equation*}
+</div>
+<p id="p-943">Suppose we want to find the zeros of \(p(z)\text{.}\) We would proceed as follows:</p>
+<div class="displaymath">
+\begin{align*}
+\amp z^2+2z+2=0\\
+\amp z^2+2z+1+1=0\\
+\amp (z+1)^2+1=0\\
+\amp (z+1)^2=i^2
+\end{align*}
+</div>
+<p id="p-944">It follows that \(z+1=i\) or \(z+1=-i\) solves the equation; the zeros of \(p(z)\) are thus \(-1+i\) and \(-1-i\) . We observe that the two roots are a complex conjugate pair, is this a coincidence?</p>
+<article class="theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.10.2</span>. <span class="title">(a): Non-real zeros of a real polynomial.</span>
+</h6>
+<p id="p-945">The non-real zeros of a polynomial with real coefficients i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+p(z)=a_0+a_1z+a_2z^2+.....+a_{n-1}z^{n-1}+a_nz^n
+\end{equation*}
+</div>
+<p id="p-946">(where \(a_n \neq 0\) and the coefficients \(a_i \in \mathbb{R}\))</p>
+<p id="p-947">occur in complex conjugate pairs. That is, if \(p(\alpha)=0\) then \(p(\overline{\alpha})=0\text{.}\)</p></article><p id="p-948"><em class="emphasis">Remark</em>: A <em class="emphasis">real polynomial</em> is a polynomial with real coefficients.</p>
+<p id="p-949">Study the proof of Theorem 7(a) below and answer the questions that follow:</p>
+<article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-950">Let \(\alpha\) be a non-real zero of a polynomial of degree \(n\) with real coefficients i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+p(\alpha)=a_0+a_1\alpha +a_2\alpha^2+....+ a_{n-1}\alpha^{n-1}+a_n\alpha^n=0
+\end{equation*}
+</div>
+<p id="p-951">We shall now show that the conjugate of \(\alpha\) is also a zero of \(p(z)\) i.e. \(p(\overline{\alpha})=0\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+p(\overline{\alpha})\amp =a_0+a_1\overline{\alpha}+a_2(\overline{\alpha})^2+.....+a_{n-1}(\overline{\alpha})^{n-1}+a_n(\overline{\alpha})^n\\
+\amp =a_0+a_1\overline{\alpha}+a_2\overline{\alpha^2}+.....+a_{n-1}\overline{\alpha^{n-1}}+a_n\overline{\alpha^n}\\
+\amp =\overline{a_0}+\overline{a_1} \overline{\alpha}+\overline{a_2} \overline{\alpha^2}+.....+\overline{a_{n-1}}\overline{\alpha^{n-1}}+\overline{a_n}\overline{\alpha^n}\\
+\amp =\overline{a_0}+\overline{a_1\alpha}+\overline{a_2\alpha^2}+.....+\overline{a_{n-1}\alpha^{n-1}}+\overline{a_n\alpha^n}\\
+\amp =\overline{a_0+a_1\alpha+a_2\alpha^2+......+a_{n-1}\alpha^{n-1}+a_n\alpha^n}\\
+\amp =\overline{p(\alpha)}\\
+\amp =\overline{0}\\
+\amp =0
+\end{align*}
+</div></article></div>
+<p id="p-952"><em class="emphasis">Questions (Please get your answers checked by your tutor/lecturer)</em></p>
+<ol class="decimal">
+<li id="li-476"><p id="p-953">Where in the proof did we use the fact that the coefficients \(a_0,a_1, a_2 ...a_{n-1},a_n \in \mathbb{R}\text{?}\)</p></li>
+<li id="li-477"><p id="p-954">What property of the complex conjugate makes the expressions at (1) and (2) equal?</p></li>
+<li id="li-478"><p id="p-955">Explain why expressions in (2) and (3) are equal.</p></li>
+<li id="li-479"><p id="p-956">What property of the complex conjugate makes expressions at (3) and (4) equal?</p></li>
+<li id="li-480"><p id="p-957">What property of the complex conjugate makes the expressions at (4) and (5) equal?</p></li>
+<li id="li-481"><p id="p-958">Explain why expressions in (5) and (6) are equal.</p></li>
+<li id="li-482"><p id="p-959">Where in the proof do we use the fact that \(\alpha\) is a zero of \(p(z)\text{?}\)</p></li>
+</ol>
+<p id="p-960">Generally if you are asked to write out this proof you will also have to be clear about why you were allowed to take each step using the properties of complex numbers that we've defined throughout this chapter.</p>
+<p id="p-961">\hrulefill</p>
+<p id="p-962">For an example, suppose we are asked to find a polynomial of the form:</p>
+<div class="displaymath">
+\begin{equation*}
+p(z)=z^2+bz+c \qquad b,c \in \mathbb{R}
+\end{equation*}
+</div>
+<p>and are given that \(1+i\) is one of the zeros of \(p(z)\text{,}\) how can we use Theorem 7(a) to help us solve the problem?</p>
+<p id="p-963">Since \(p(z)\) has real coefficients, we know that the conjugate of \(1+i\) is also a zero of \(p(z)\text{,}\) so we have \(p(1+i)=p(1-i)=0\) which means \(z-(1+1)\) and \(z-(1+i)\) are both factors of \(p(z)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+p(z)\amp =(z-(1+i))(z-(1-i))\\
+\amp =((z-1)-i)((z-1)+i)\\
+\amp =(z-1)^2-i^2\\
+\amp =z^2-2z+1+1\\
+\amp =z^2-2z+2  \Box
+\end{align*}
+</div>
+<p id="p-964">Before we upgraded our number system from one dimension to two dimensions, we used to have polynomials that had no (real) zeros. Now that we allow non-real zeros, can a polynomial have no zeros at all? The Fundamental Theorem of Algebra guarantees us that a non-constant polynomial will always have at least one zero.</p>
+<article class="theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.10.3</span>. <span class="title">(b): The Fundamental Theorem of Algebra.</span>
+</h6>
+<p id="p-965">Every non-constant polynomial with complex coefficients has at least one complex zero.</p></article><p id="p-966"><em class="emphasis">Remark:</em> We will not show the proof of the FTA in this course, you'll probably see the proof in MAM3000W. It is believed that Gauss provided the first proof of this theorem in his doctoral dissertation in 1799. Although he only proved it for polynomials with real coefficients, it was not difficult to extend the theorem for polynomials with complex coefficients. Several proofs of the FTA have since been devised in several areas of mathematics including topology and complex analysis (read some proofs <a class="external" href="http://math.uchicago.edu/~may/REU2014/REUPapers/Steed.pdf" target="_blank">here</a>). Some mathematicians actually think that the term "The Fundamental Theorem of Algebra" is inaccurate because the proposition is actually part of complex analysis, calling it "The Fundamental Theorem of Complex Numbers".</p>
+<p id="p-967">The FTA actually tells us something about the number of zeros of a polynomial of degree \(n\text{.}\)</p>
+<p id="p-968"><em class="emphasis">Corollary 7: Corollary of the fundamental theorem of algebra</em></p>
+<p id="p-969">Any polynomial of degree \(n \geq 1\) has \(n\) zeros counted with multiplicity.</p>
+<p id="p-970"><em class="emphasis">Remark:</em> In some texts, you might see the FTA stated exactly the same way Corollary 7 is stated. Counting roots with multiplicity means that the polynomial \(p(z)=z^2+2z+1=(z+1)(z+1)\) has two repeated zeros namely \(-1\) and \(-1\text{,}\) so when a zero is repeated \(n\) times, we count it \(n\) times. Corollary 7 can also be stated as "Any non-constant polynomial of degree \(n\) has at most \(n\) distinct zeros".</p>
+<article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-971">Let \(P_n(z)\) be a polynomial of degree \(n \geq 1\text{.}\) By the Fundamental Theorem of Algebra (Theorem 7(b)), \(P_n(z)\) must have at least one zero, say \(r_1\text{.}\)</p>
+<p id="p-972">Since \(r_1\) is a zero of \(P_n(z)\text{,}\) by the factor theorem, \((z-r_1)\) is a factor of \(P_n(z)\text{.}\) Implying that:</p>
+<p id="p-973">\(P_n(z)=(z-r_1)Q(z)\) where \(Q(z)\) is a polynomial of degree \(n-1\text{.}\)</p>
+<p id="p-974">If \(n-1&gt;0\text{,}\) then \(Q(z)\) has at least one zero (by the FTA), say \(r_2\text{.}\)</p>
+<p id="p-975">Continuing in this fashion one may extract \(n\) factors of \(P(z)\)</p>
+<p id="p-976">\(P_n(z)=c(z-r_1)(z-r_2)(z-r_3) \cdots (z-r_{n-1})(z-r_n)\) where \(c\) is a constant to be determined.</p>
+<p id="p-977">Thus \(P_n(z)\) has \(n\) zeros counted with multiplicity.</p></article></div>
+<p id="p-978"><em class="emphasis">Remark:</em> It is important to bear in mind that the zeros \(r_i \in \mathbb{C}\) are not necessarily distinct.</p>
+<p id="p-979">In the earlier sections of the semester when we used partial fraction decomposition to evaluate integrals, we assumed that we could factor every real polynomial into linear and/or irreducible quadratic factors, we are now ready to prove this!</p>
+<article class="theorem-like" id="theorem-5"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.10.4</span>. <span class="title">(c).</span>
+</h6>
+<p id="p-980">Every non-constant real polynomial can be written as the product of real linear polynomial(s) and/or irreducible real quadratic polynomial(s).</p></article><p id="p-981">\​begin{proof}PrOoF</p>
+<p id="p-982">Consider any zero of a real polynomial \(p(z)\) call it \(R\text{.}\)</p>
+<p id="p-983">If \(R\) is real then \(z-R\) is a real linear factor.</p>
+<p id="p-984">If \(R\) is non-real then \(\overline{R}\) is also a zero of \(p(z)\) (Theorem 7(a)) , then \((z-R)\) and \((z-\overline{R})\) are factors of \(p(z)\text{.}\)</p>
+<p id="p-985">So \((z-R)(z-\overline{R})\) is a factor. \​begin{align*} \Big(z-R\Big)\Big(z-\overline{R}\Big)&amp;=z^2-\overline{R}z-Rz+R\overline{R}</p>
+<p id="p-986">&amp;=z^2-(\overline{R}+R)z+R\overline{R}</p>
+<p id="p-987">&amp;=z^2-2Re(R)z+|R|^2</p>
+<article class="theorem-like" id="proposition-6"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.10.5</span>. <span class="title">(e) and 2.2(d).</span>
+</h6>
+<p id="p-988">\end{align*}</p>
+<p id="p-989">\(z^2-2Re(R)z+|R|^2\) is a real quadratic factor of \(p(z)\)</p>
+<p id="p-990">The discriminant of this quadratic is:</p>
+<div class="displaymath">
+\begin{align*}
+\Delta \amp =(-2Re(R))^2-4(1)(|R|)^2\\
+\amp =4(Re(R))^2-4|R|^2\\
+\amp =4(Re(R))^2-4((Re(R))^2+(Im(R))^2)  \textbf{Definition 3.1}\\
+\amp =-4(Im(R))^2\\
+\amp \lt  0  \textbf{R is not real, so $Im(R) \neq 0$}
+\end{align*}
+</div>
+<p id="p-991">So \(z^2-2Re(R)z+|R|^2\) is an irreducible real quadratic factor.</p>
+<p id="p-992">This means that a polynomial of degree \(n \geq 1\) with real coefficients can be factorized into real linear factors and/or real irreducible quadratic factors.</p></article><article class="example-like" id="example-12"><a data-knowl="" class="id-ref" data-refid="hk-example-12"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.10.6</span>.</h6></a></article><div id="hk-example-12" class="hidden-content tex2jax_ignore"><article class="example-like"><ol class="decimal">
+<li id="li-483"><p id="p-993">Given that \(p(2-i)=0\text{,}\) write \(p(z)=2z^3-9z^2+14z-5\) as a product of a linear factor and a real irreducible quadratic factor. Find the real zero of \(p(z)\text{.}\)</p></li>
+<li id="li-484"><p id="p-994">Consider the function \(g(z)=z^4-2z^3+2z^2-10z+25\text{.}\) Given that \(2+i\) is one of the zeros of \(g(z)\text{,}\) factorize \(g\) completely.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div id="hk-solution-11" class="hidden-content tex2jax_ignore"><div class="solution"><ul class="disc">
+<li id="li-485">
+<p id="p-995">\(p(z)\) is a polynomial with real coefficients, therefore all non-real roots come in conjugate pairs. Thus if \(p(2-i)=0\text{,}\) we must have that \((z-(2-i))\) and \((z-(2+i))\) are factors. Given this, then:</p>
+<div class="displaymath">
+\begin{equation*}
+(z-(2-i))(z-(2+i))=z^2-4z+5
+\end{equation*}
+</div>
+<p>is a factor. We then know that this must divide \(p(z)\text{.}\) Doing polyonomial long division we find:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{2z^3-9z^2+14z-5}{5-4z+z^2}=2z-1
+\end{equation*}
+</div>
+<p>Therefore \((2z-1)=2(z-\frac{1}{2})\) is a factor and so \(\frac{1}{2}\) is the real root of this cubic.</p>
+</li>
+<li id="li-486">
+<p id="p-996">As in the previous example \((z-(2+i))(z-(2-i))=z^2-4z+5\) must be a factor of \(g\text{.}\) Again, dividing \(g(z)\) by this factor gives:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{z^4-2z^3+2z^2-10z+25}{z^2-4z+5}=z^2+2z+5
+\end{equation*}
+</div>
+<p>This quadratic is factored by completing the square to give two more roots: \(z=-1-2i\) and \(z=-1+2i\text{,}\) thus the fully factored polynomial is</p>
+<div class="displaymath">
+\begin{equation*}
+g(z)=(z-(2+i))(z-(2-i))(z-(-1-2i))(z-(-1+2i))
+\end{equation*}
+</div>
+</li>
+</ul></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-11"><a data-knowl="" class="id-ref" data-refid="hk-exercise-11"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.10.7</span>.</h6></a></article><div id="hk-exercise-11" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-487"><p id="p-997">Find all four zeros of \(p(z)=z^4+1\) and use them to deduce the factorization \(z^4+1=(z^2-\sqrt{2}z+1)(z^2+\sqrt{2}z+1)\text{.}\)</p></li>
+<li id="li-488"><p id="p-998">The polynomial \(p(z)=z^4-5z^3+2z^2+22z-20\) has a zero at \(z=3-i\text{.}\) Factorize \(p(z)\) as a product of real linear and real irreducible quadratic factors.</p></li>
+<li id="li-489">
+<p id="p-999">Let \(q(z)=z^4+1\) and \(p(z)=z^5-3z^4+z-3\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-490"><p id="p-1000">Find all the complex zeros of \(q(z)\) and plot them on an Argand diagram.</p></li>
+<li id="li-491"><p id="p-1001">Show that there is a polynomial \(r(z)\) such that \(p(z)=r(z)q(z)\) and hence find all the zeros of \(p(z)\text{.}\)</p></li>
+<li id="li-492"><p id="p-1002">Factorize \(p(z)\) completely into linear and real irreducible quadratic factors.</p></li>
+</ol>
+</li>
+<li id="li-493"><p id="p-1003">Two of the solutions of a cubic equation (with real coefficients) in the complex variable \(z\) , are \(1+2i\) and \(2\text{.}\) If the constant term is equal to \(-30\text{,}\) find the coefficient of \(z^3\text{.}\)</p></li>
+<li id="li-494">
+<p id="p-1004">Given that \(3+i\) is a solution of the equation</p>
+<div class="displaymath">
+\begin{equation*}
+z^4-6z^3+6z^2+24z-40=0
+\end{equation*}
+</div>
+<p>find the other solutions of the equation.</p>
+</li>
+<li id="li-495"><p id="p-1005">Given that \(i\) is a zero of the polynomial \(p(z)=z^4+4z^3+14z^2+4z+13\) , find all complex zeros of \(p(z)\text{.}\)</p></li>
+<li id="li-496"><p id="p-1006">The complex number \(2+i\) is a zero of the polynomial \(p(z)=3z^3-14z^2+23z-10\text{.}\) Use this information to factorize the <em class="emphasis">real-valued</em> polynomial \(p(x)=3x^3-14x^2+23x-10\) into real linear and irreducible quadratic factors.</p></li>
+</ol></article></div>
+<article class="outcomes" id="outcomes-9"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-497"><p id="p-1007">I know what a zero of a polynomial in a complex variable is.</p></li>
+<li id="li-498"><p id="p-1008">I know that a real polynomial is a polynomial with real coefficients.</p></li>
+<li id="li-499"><p id="p-1009">I can prove that non-real roots of a real polynomial occurs in complex conjugate pair.</p></li>
+<li id="li-500"><p id="p-1010">I know that any polynomial of degree \(n \geq 1\) is guaranteed to have at least one root by The Fundamental Theorem of Algebra.</p></li>
+<li id="li-501"><p id="p-1011">I can prove that The Fundamental Theorem of Algebra implies that any polynomial of degree \(n \geq 1\) has \(n\) zeros counted with multiplicity.</p></li>
+<li id="li-502"><p id="p-1012">I can prove that every non-constant real polynomial can be written as the product of real linear polynomials and/or irreducible real quadratic polynomials.</p></li>
+<li id="li-503"><p id="p-1013">I can factorize any real polynomial completely given at least one of its zeros.</p></li>
+<li id="li-504"><p id="p-1014">I will give constructive feedback on this pilot chapter.</p></li>
+</ol></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

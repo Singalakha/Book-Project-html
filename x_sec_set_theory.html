@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T22:15:46+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A lightning introduction to Set Theory</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_math_as_language.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_math_as_a_practice.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_math_as_language.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_math_as_a_practice.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory" class="active">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-14.html" data-scroll="section-14">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="x_sec_set_theory"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">A lightning introduction to Set Theory</span>
+</h2>
+<a href="x_sec_set_theory.html" class="permalink">¶</a><section class="introduction" id="introduction-4"><p id="p-83">Set Theory is one of the most and yet most powerful fields of mathematics, and thousands of books have been written on the subject. In their book written at the beginning of the 20th century, The Principia Mathematica, two mathematicians (Russel and Whitehead) tried to build all of mathematics up from the very most basic principles. It turned out to be a big process, and it was only after almost 400 pages that they could prove that 1+1=2. Here is the last part of that proof:</p>
+<figure class="figure-like" id="figure-3"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/Principia_Mathematica_54-43.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.2.1.</span> On page 379 of the Principia Mathematica, Russel and Whitehead finally prove that 1+1=2. You do NOT need to understand this! Taken from <a class="external" href="https://en.wikipedia.org/wiki/Principia_Mathematica" target="_blank">Wikipedia: Principia Mathematica</a></figcaption></figure><p id="p-84">This might seem completely weird...isn't it obvious that 1+1=2? Well, it certainly makes a lot of sense, but the beauty of mathematics is that we can start from something much simpler than the integers and prove something which, yes, seems basic, but is important to be able to prove.</p>
+<p id="p-85">What is that most basic thing which they start with? Well, it's something called a set. A set can be thought of as a collection of things. In fact, the set that they start with is a very special set called The Empty Set. We denote a set using curly braces, and put all of the things in between these braces, so the empty set is just give by \(\{\}\text{.}\) It's like a bag with nothing in it.</p>
+<p id="p-86">Actually, there is a special symbol for this empty set. We denote it as \(\emptyset\) and we can write:</p>
+<div class="displaymath">
+\begin{equation*}
+\emptyset=\{\}
+\end{equation*}
+</div>
+<p id="p-87">This is our first example of a <em class="emphasis">definition</em>. It is simply defining the thing on the left to be always given by the thing on the right.</p>
+<p id="p-88"><em class="emphasis">In mathematics a definition is a way to give a name to a mathematical concept.</em></p>
+<p id="p-89">Here are some more examples of mathematical definitions:</p>
+<ul class="disc">
+<li id="li-25"><p id="p-90"><span class="times-sign">×</span> is defined as the multiplication symbol.</p></li>
+<li id="li-26"><p id="p-91">A numerical fraction is defined as an expression of the form \(\frac{a}{b}\) where \(a\) and \(b\) can be any real number but \(b\) cannot be \(0\text{.}\)</p></li>
+<li id="li-27"><p id="p-92">A perfect number is a positive integer which is equal to the sum of its proper divisors.</p></li>
+</ul>
+<p id="p-93">We can see that some of the above definitions involve terms which themselves need to be defined: What is the definition of a real number? What is the definition of a proper divisor? Note also that not all definitions have the word "defined" in them.</p>
+<p id="p-94"><em class="emphasis">A definition is not something that can be proved</em>, because it is simply a statement of the rules of the game. However, we might have a definition which leads to an inconsistency, so we have to be careful with the way that we define things. Note also that we can make temporary definitions in mathematics. For instance, we might say:</p>
+<p id="p-95">{{Let \(L\) be an odd integer greater than 17.}}</p>
+<p id="p-96">This isn't a definition which is used in all of mathematics, but it might be used as part of a mathematical proof.</p>
+<p id="p-97">The definition of \(\emptyset\) is a also a <em class="emphasis">mathematical statement</em>.</p>
+<p id="p-98"><em class="emphasis">In mathematics a statement is something which is either true or false</em></p>
+<p id="p-99">Let's give some examples of perfectly good mathematical statements:</p>
+<ul class="disc">
+<li id="li-28"><p id="p-100">All even numbers are divisible by 2.</p></li>
+<li id="li-29"><p id="p-101">There are four primes which are less than 10.</p></li>
+<li id="li-30"><p id="p-102">\(2+1=3\)</p></li>
+<li id="li-31"><p id="p-103">\(\cos^2\theta+\sin^2\theta=1\) for all \(\theta\in\mathbb{R}\)</p></li>
+<li id="li-32"><p id="p-104">If \(x&gt;10\) then \(x+1&gt;10\)</p></li>
+<li id="li-33"><p id="p-105">If \(x+1&gt;10\) then \(x&gt;10\)</p></li>
+<li id="li-34"><p id="p-106">150 is the largest prime</p></li>
+</ul>
+<p id="p-107">Note that not all of these statements were true. That's fine, they don't need to be to be perfectly good mathematical statements.</p>
+<p id="p-108">And finally, the definition of \(\emptyset\) is also an equation.</p>
+<p id="p-109"><em class="emphasis">An equation is a mathematical statement that two mathematical expressions are equal.</em></p>
+<p id="p-110">Here are some examples of equations:</p>
+<ul class="disc">
+<li id="li-35"><p id="p-111">\(1+1=2\)</p></li>
+<li id="li-36"><p id="p-112">\(x^2+2x+1=0\)</p></li>
+<li id="li-37"><p id="p-113">\(x+1=x\)</p></li>
+</ul>
+<p id="p-114">Note that in that last example there is an inconsistency. There are no values of \(x\) for which this is true. However it's still an equation, even if it has no solutions.</p>
+<p id="p-115">We've got to be a bit careful here, as we just used the word "mathematical expression" without defining what this was.</p>
+<p id="p-116"><em class="emphasis">An expression is a combination of numbers and/or mathematical symbols using the defined set of ways in which they are allowed to be combined.</em></p>
+<p id="p-117">This list of symbols does not include the equality, or inequality symbols. The following are well defined mathematical expressions:</p>
+<ul class="disc">
+<li id="li-38"><p id="p-118">\(1+1\)</p></li>
+<li id="li-39"><p id="p-119">\(x^2+2x+1\)</p></li>
+<li id="li-40"><p id="p-120">\(x+1\)</p></li>
+<li id="li-41"><p id="p-121">\(\frac{\tan x}{\sin \theta}+\int dx\sqrt{\sin(x)+2}\)</p></li>
+</ul>
+<p id="p-122">Thus, an equation is something which says that two expressions are equal to each other.</p>
+<p id="p-123">Thinking back to the original statements about mathematics as a language, we see that in a mathematical expression or statement some symbols are a bit like nouns and others like verbs. An equal sign is like the verb "to be", a fraction is a command to do something with the things above and below the line. A multiplication is an action between symbols. The nouns are the numbers, and variables - the 2, the \(x\text{,}\) the \(\theta\text{,}\) etc. In this mathematical realm a statement is a whole sentence explaining exactly what is going on.</p>
+<p id="p-124">A moment ago we came across another type of mathematical statement:</p>
+<div class="displaymath">
+\begin{equation*}
+\cos^2\theta+\sin^2\theta=1
+\end{equation*}
+</div>
+<p id="p-125">This is a statement known as an identity. It is an identity because it is said to be identically true for any value of \(\theta\text{.}\)</p>
+<p id="p-126"><em class="emphasis">An identity is an equation which is always true for any values of the unknowns (often within some specified range.</em></p>
+<p id="p-127">Some more identities might be:</p>
+<ul class="disc">
+<li id="li-42"><p id="p-128">\((a+b)^2=a^2+b^2+2ab\)</p></li>
+<li id="li-43"><p id="p-129">\(e^{i\pi}+1=0\)</p></li>
+<li id="li-44"><p id="p-130">\(\left( \begin{array}{c} n \\ k \end{array} \right)=\left( \begin{array}{c} 2 n-2 \\ 2 k-1 \end{array} \right)\) for positive integers \(n\) and \(k\) where \(n\ge k\)</p></li>
+</ul>
+<p id="p-131">As you can see, the identity might only be true within some specific subset of ALL possible values. For instance, in the last example, it's not true for ALL \(n\) and \(k\) but it's an identity for the infinite set of those specified.</p>
+<p id="p-132">An identity is different from an equation of the form:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2+2x-3=0
+\end{equation*}
+</div>
+<p>which isn't true for all \(x\text{.}\) In fact it's true only for two values of \(x\) in this case.</p>
+<p id="p-133">As a next exercise, say which of the following are Definitions, Expressions, Equations, Identities, Statements. Remember that one may be several of these.</p>
+<p id="p-134">.....still to come.....</p></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Back to sets!</span>
+</h3>
+<section class="introduction" id="introduction-5"><p id="p-135">Where were we? We just defined the empty set \(\emptyset\) and suddenly got carried away with all of our definitions (including the definition of a definition). We actually wanted to do some maths, right?</p>
+<p id="p-136">So, so far we have the equivalent of an empty bag: \(\emptyset\text{.}\) It is a collection of things, except there are no things in this collection. Our first non-trivial set is going to be a set with one thing in it. We could put a number in, or letter, or a graph, or your friend Kabelo. These are going to be denoted:</p>
+<ul class="disc">
+<li id="li-45"><p id="p-137">\(\{42\}\)</p></li>
+<li id="li-46"><p id="p-138">\(\{a\}\) <figure class="figure-like" id="figure-4"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/graphset.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.2.2.</span> </figcaption></figure></p></li>
+<li id="li-47"><p id="p-139">\(\{Kabelo\}\)</p></li>
+</ul>
+<p id="p-140">Each of these is a perfectly good set. Generally when we introduce a set we will give it a name. We could say:</p>
+<p id="p-141">Let \(A=\{a\}\text{.}\)</p>
+<p id="p-142">Which means let's define a new thing "A" and it's going to be defined as a set with one thing in it which is the letter \(a\text{.}\) We say that \(a\) is an element of the set \(A\text{.}\) In fact in this case it's the only element. We write "\(a\) is an element of \(A\)" as:</p>
+<div class="displaymath">
+\begin{equation*}
+a\in A
+\end{equation*}
+</div>
+<p id="p-143">Let's look at a set with more than one element in i:</p>
+<p id="p-144">Let \(B=\{a,b,c\}\text{.}\)</p>
+<p id="p-145">Which is a new set \(B\) which has three elements in, \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) So we could write, for instance \(c\in B\text{.}\) Now comes the first important point about sets. The order of the things in the set doesn't matter. We say that the elements of a set are <em class="emphasis">unordered</em>, so:</p>
+<div class="displaymath">
+\begin{equation*}
+\{a,b,c\}\equiv \{c,b,a\}
+\end{equation*}
+</div>
+<p id="p-146">The symbol (\(\equiv\)) in between the two just means "equivalent to". So it says that the thing on the left and on the right are equivalent (which you can think of as the same in this context). In fact you could write the letters in any order you like and it's still the same set.</p>
+<p id="p-147">Another really important idea is that a thing either is in a set, or it's not. It can't be in their multiple times (or half a time). So \(\{a,a\}\) doesn't make much sense as a set. Once \(a\) is in there, it can't be MORE in there. We say that the elements of a set are <em class="emphasis">distinct</em></p>
+<p id="p-148">So, we've got here some really small sets, but in fact you already know some sets, which are not only not small, but not even finite. A finite set is a set which has a finite number of things (as all the sets above do, even if that number is zero). There are some well-known sets with an infinite number of elements. For instance, the integers is a well defined set with an infinite number of elements in. This is such an important set that ew give it a special letter of its own: \(\mathbb{Z}\text{.}\) Actually, here is a list of the basic infinite sets you may or may not have already come across:</p>
+<ul class="disc">
+<li id="li-48"><p id="p-149">\(\mathbb{N}\) - set of natural numbers</p></li>
+<li id="li-49"><p id="p-150">\(\mathbb{Z}\) - set of integers</p></li>
+<li id="li-50"><p id="p-151">\(\mathbb{Q}\) - set of rational numbers</p></li>
+<li id="li-51"><p id="p-152">\(\mathbb{R}\) - set of real numbers</p></li>
+<li id="li-52"><p id="p-153">\(\mathbb{C}\) - set of complex numbers (we will look at complex numbers in the second semester)</p></li>
+</ul>
+<p id="p-154">We can take these sets and make sets with only some of the elements in these. What if you wanted to make a set of the even integers. In words you might say "All integers of the form \(2k\) where \(k\) is an integer. There's a way of writing this set. We write:</p>
+<div class="displaymath">
+\begin{equation*}
+\{x\in \mathbb{Z}| x=2k, \, k\in \mathbb{Z}\}
+\end{equation*}
+</div>
+<p id="p-155">Let's break this down. This is a set. The elements of it are all of those elements in \(\mathbb{Z}\) (denoted by \(x\in\mathbb{Z}\)), such that (this is denoted by the vertical line, "|") the element is of the form \(2k\text{,}\) where \(k\) is itself an integer.</p>
+<p id="p-156">The set of odd integers could thus be written:</p>
+<div class="displaymath">
+\begin{equation*}
+\{x\in \mathbb{Z}| x=2k+1, \, k\in \mathbb{Z}\}
+\end{equation*}
+</div>
+<p id="p-157">Do you see why, for either of the last two examples we could have said \(x\in\mathbb{R}\) rather than \(x\in\mathbb{R}\text{.}\)</p>
+<p id="p-158">Now can you start to see something about the language of mathematics? We can write it all down, or we can write it in the form of the expression which is much shorter. But to understand it you have to know how to read the language.</p>
+<p id="p-159">The general form for writing a set like this is:</p>
+<div class="displaymath">
+\begin{equation*}
+\{x\in X| P(x)\}
+\end{equation*}
+</div>
+<p>where \(P(x)\) is some property we want to be true. It is some mathematical statement about the elements which are in \(x\) and can be thought of as a constraint on the set that you are building from the set \(X\text{.}\)</p>
+<p id="p-160">We can think of it like this:</p>
+<ol class="decimal">
+<li id="li-53"><p id="p-161">Start with the set \(X\text{.}\)</p></li>
+<li id="li-54"><p id="p-162">For every elements \(x\) in \(X\text{,}\) test if it satisfies the property \(P(x)\text{.}\)</p></li>
+<li id="li-55"><p id="p-163">If it does, it's in the set that we're trying to create.</p></li>
+</ol>
+<p id="p-164">We're so far figuring out how we can define a language to describe sets, but we can't yet do much with these sets. One thing which tends to be very useful in mathematics is to be able to compare two objects. With sets we can see if the elements in one set are all in another. We say:</p>
+<p id="p-165">Definition: A set \(S\) is said to be a <em class="emphasis">subset</em> of a set \(A\text{,}\) written as \(S\subseteq A\text{,}\) if each element of \(S\) is an element of \(A\text{.}\)</p>
+<p id="p-166">It might actually be that not only is every element of set \(S\) in the set \(A\text{,}\) but every element of the set \(A\) is in \(S\text{.}\) If this is the case then the sets must be the same things, and we can write \(S=A\text{.}\) If it's not the case then we say that \(S\) is a proper subset of \(A\) which rules out that they may be the same. We write this as:</p>
+<div class="displaymath">
+\begin{equation*}
+S\subset A
+\end{equation*}
+</div>
+<p id="p-167">Note the difference between \(\subset\) and \(\subseteq\)</p>
+<p id="p-168">Do you see the parallel with \(x\lt y\text{,}\) \(x\le y\) when \(x\in\mathbb{R}\) and \(y\in\mathbb{R}\) (ie. when \(x\) and \(y\) are real numbers.</p>
+<p id="p-169">So, given \(X=\{a,b,c\}\text{,}\) \(Y=\{a,b\}\text{,}\) \(Z=\{a,b,c\}\text{.}\) We can write:</p>
+<div class="displaymath">
+\begin{equation*}
+Y\subset X\subseteq Z
+\end{equation*}
+</div>
+<p id="p-170">(note that we could also have written \(Y\subset Z\subseteq X\text{,}\) or \(Y\subset X=Z\text{.}\) All of these would be true statements). We could also write:</p>
+<div class="displaymath">
+\begin{equation*}
+X\not\subset Y
+\end{equation*}
+</div>
+<p>which just says that \(X\) is not a subset of \(Y\text{.}\)</p>
+<p id="p-171">A statement about whether one set is a subset of another is an inclusion. We can write down the inclusion for the infinite sets that we wrote down before. In fact we have that:</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}
+\end{equation*}
+</div>
+<p id="p-172">In fact here we have a case of a new type of mathematical language: a relation. We are actually not going to define a relation here as we need a bit more machinery to make sense of a relation, but we can give some examples.</p>
+<ul class="disc">
+<li id="li-56"><p id="p-173">The greater than sign \(&gt;\) takes in two values, \(a\) and \(b\) \(\in\mathbb{R}\text{.}\) ie \(a&gt;b\text{.}\) If \(a\) is greater than \(b\) then we say that \((a,b)\) are in the relation \(&gt;\text{.}\) We can think of this as asking for which pairs of values is \(a&gt;b\text{?}\) \(&gt;\) is a relation on real numbers.</p></li>
+<li id="li-57"><p id="p-174">We can do the same thing with \(=\text{.}\) In this case, pairs of real numbers \((a,a)\) are in the relation "equal to".</p></li>
+<li id="li-58"><p id="p-175">We can have sets of numbers, like \((4,2)\text{,}\) \((9,3)\text{,}\) \((16,4)\text{.}\) These pairs of numbers are in the \(\sqrt{\,}\) relation, because for \((a,b)\text{,}\) \(\sqrt{a}=b\) for all of these pairs.</p></li>
+</ul>
+<p id="p-176">Note that in the above list, when we talk about \((a,b)\) this is not a set. In this case the order <em class="emphasis">does</em> matter, and we <em class="emphasis">can</em> have the same element twice.</p>
+<p id="p-177">You might have thought that there were more integers than there are even numbers (because the integers contains both even and odd numbers)...but you'd be wrong!!! Something very strange happens with infinite sets, and it turns out that the integers and the even numbers are called countably infinite sets which are of the same size. In fact this can be proved very simply and leads to some really weird ideas. Hilbert's Hotel is one of them.</p>
+<p id="p-178">Hilbert's hotel has an infinite number of rooms (all numbered) and an infinite number of guests, one in each room. A new guest comes along and asks for a room. The manager (Dr Hilbert) beams and says, but of course! We just need to do a little rearrangement. He asks the person who is in room 1 to move to room 2, the person who is in room 2 to move to room 3, the person who is in room \(n\) to move to room \(n+1\text{,}\) etc.. He gives the guest the key to room 1 and bids him a good night's sleep.</p>
+<p id="p-179">The next day a bus arrives. This bus has an infinite number of people in. It's a tour group. The tour group manager comes to speak with Dr Hilbert and asks, with a worried expression, if there is room for everyone. Dr Hilbert grins again and says, but of course! He asks the person who is in room 1 to move to room 2, the person who is in room 2 to move into room 4, the person who is in room \(n\) to move to room \(2n\) etc. He then gives the keys to all the odd numbered rooms to the tour group manager and wishes the infinite number of new guests a good night's sleep.</p>
+<p id="p-180">It turns out that this madness can go on much further, with infinite numbers of busses, and infinite numbers of boats with infinite numbers of busses, but I hope you see that infinities don't just work like really big numbers. They are fundamentally different....and super weird!</p>
+<p id="p-181">So far we're not really doing maths. We're just naming things. In order to do maths we need some operations.</p>
+<p id="p-182"><em class="emphasis">In mathematics an operation is something which takes in zero or more mathematical objects and outputs a mathematical object.</em></p>
+<p id="p-183">Some examples of operations are:</p>
+<ul class="disc">
+<li id="li-59"><p id="p-184">Multiplication is an operation which takes in two numbers outputs another.</p></li>
+<li id="li-60"><p id="p-185">The square root is an operation which takes in one number and outputs another.</p></li>
+<li id="li-61"><p id="p-186">We could take a graph and find the area under the graph. This would be an operation on the mathematical object which describes the graph. The output is a real number.</p></li>
+</ul>
+<p id="p-187">The first operation on sets is the set equivalent of addition. It is called the union operation and is written \(\cup\)</p></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.2.1.1</span> <span class="title">Set Theory and Logic questions</span>
+</h4>
+<p id="p-188">This section is by Siphelele</p></section></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Introduction to Sets and Set Operations</span>
+</h3>
+<section class="introduction" id="introduction-6"><ul class="disc"><li id="li-62"><p id="p-189">Provide the definition of a set.</p></li></ul>
+<ul class="disc"><li id="li-63">
+<p id="p-190">Write each of the following sets by listing their elements between braces.</p>
+<ul class="circle">
+<li id="li-64"><p id="p-191">\(\{x\in \mathbb{Z}|-2\leq x\leq 7\}\)</p></li>
+<li id="li-65"><p id="p-192">\(\{x\in \mathbb{R}|x^2+4x=-6\}\)</p></li>
+<li id="li-66"><p id="p-193">\(\{x\in \mathbb{N}|x^3+5x^2=-6x\}\)</p></li>
+<li id="li-67"><p id="p-194">\(\{x\in \mathbb{R}|\sin \pi x=0\}\)</p></li>
+<li id="li-68"><p id="p-195">\(\{6a+2b|a,b\in \mathbb{Z}\}\)</p></li>
+</ul>\(x\)\(\mathbb{Z},\mathbb{R},\mathbb{Q},\mathbb{N}\text{,}\)\(\{x\in \mathbb{Q}|-2\leq x\leq 7\}\text{,}\)</li></ul>
+<ul class="disc"><li id="li-69">
+<p id="p-196">Write each of the following sets in set builder notation.</p>
+<ul class="circle">
+<li id="li-70"><p id="p-197">\(\{-4,-3,-2,-1,0,1,2,3,4\}\)</p></li>
+<li id="li-71"><p id="p-198">\(\{1,2,3,4,\cdots\}\)</p></li>
+<li id="li-72"><p id="p-199">\(\{\cdots -\pi ,-\pi/2,0,\pi/2,\pi,3\pi/2,2\pi,\cdots\}\)</p></li>
+<li id="li-73"><p id="p-200">\(\{\cdots,3/2,-3/4,0,3/4,3/2,9/4,3,15/4,9/2,\cdots\}\)</p></li>
+<li id="li-74"><p id="p-201">\(\{3,6,11,18,27,38,\dots\}\)</p></li>
+</ul>
+</li></ul>
+<ul class="disc"><li id="li-75">
+<p id="p-202">Sketch the following points in the \(xy\)-plane.</p>
+<ul class="circle">
+<li id="li-76"><p id="p-203">\(\{(x,y)|x\in [1,2],y\in [3,4]\}\)</p></li>
+<li id="li-77"><p id="p-204">\(\{(x,x^2)|x\in\mathbb{R}\}\)</p></li>
+<li id="li-78"><p id="p-205">\(\{(x,y)|x,y\in \mathbb{R},\,x^2+y^2\leq 1\}\)</p></li>
+<li id="li-79"><p id="p-206">\(\{(x,y)|x,y\in \mathbb{R},\,y\geq x^2-1\}\)</p></li>
+<li id="li-80"><p id="p-207">\(\{(x,x+y)|x\in \mathbb{R},y\in \mathbb{Z} )\}\)</p></li>
+<li id="li-81"><p id="p-208">\(\{(x,y)|x,y\in \mathbb{R}|(x-y)(y+x)=0\}\)</p></li>
+</ul>\(x,y\)\(\mathbb{Z},\mathbb{R},\mathbb{Q},\mathbb{N}\)\(\mathbb{R}\)\(\mathbb{N}\)</li></ul>
+<ul class="disc"><li id="li-82"><p id="p-209">Define a subset \(B\) of some given set \(A\text{.}\)</p></li></ul>
+<ul class="disc"><li id="li-83">
+<p id="p-210">Write for each of the following subsets all possible subsets.</p>
+<ul class="circle">
+<li id="li-84"><p id="p-211">\(\{a,b,c\}\)</p></li>
+<li id="li-85"><p id="p-212">\(\{\emptyset\}\text{,}\) \(\{\{\emptyset\}\}\) and \(\{\emptyset,\{\emptyset\}\}\)</p></li>
+<li id="li-86"><p id="p-213">\(\{x\in \mathbb{Z}|0\leq x\leq 5\}\)</p></li>
+</ul>
+</li></ul>
+<ul class="disc"><li id="li-87"><p id="p-214">Given two sets \(A\) and \(B\text{,}\) define the complement of each set. Proceed to define what an intersection, union and difference of two sets is.</p></li></ul>
+<ul class="disc"><li id="li-88">
+<p id="p-215">Let \(U=\{i|i\in \mathbb{N}\cup \{0\},\,0\leq i\leq 8\},\, A=\{0,2,4,6,7\},\,B=\{1,3,5,7\}\text{.}\)</p>
+<ul class="circle">
+<li id="li-89"><p id="p-216">\(A^c\text{,}\) \(B^c\)</p></li>
+<li id="li-90"><p id="p-217">\(A\cup A^c\)</p></li>
+<li id="li-91"><p id="p-218">\(A^c\cap B^c\)</p></li>
+<li id="li-92"><p id="p-219">\(A\cup B\)</p></li>
+<li id="li-93"><p id="p-220">\((A\cup B)^c\)</p></li>
+<li id="li-94"><p id="p-221">\((A\cap A^c)\)</p></li>
+<li id="li-95"><p id="p-222">\(A\backslash B\)</p></li>
+<li id="li-96"><p id="p-223">\(A\backslash B^c\)</p></li>
+</ul>\(U=\mathbb{R},\, A=\mathbb{Z},\, B=\mathbb{Q}\)</li></ul></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.2.2.1</span> <span class="title">Introduction to Mathematical Arguments</span>
+</h4>
+<p id="p-224">Let \(A,B, C\) be sets and let \(U\) be the universal set.</p>
+<ul class="disc"><li id="li-97"><p id="p-225">Show that for any set \(A\text{,}\) \(A\subseteq \emptyset\) implies that \(A=\emptyset\)</p></li></ul>
+<ul class="disc"><li id="li-98"><p id="p-226">Show that for any set \(B\text{,}\) \(B\cap B^c=\emptyset\)</p></li></ul>
+<ul class="disc"><li id="li-99"><p id="p-227">Prove that \(A\cup B=B\cup A\) and that \((A\cup B)\cup C=A\cup (B\cup C)\text{.}\) Are these true if we replace \(\cup\) with \(\cap\text{?}\)</p></li></ul>
+<ul class="disc"><li id="li-100"><p id="p-228">Prove that \(A\cup (B\cap C)=(A\cup B)\cap (A\cup C)\) and \(A\cap (B\cup C)=(A\cap B)\cup (A\cap C)\text{.}\)</p></li></ul>
+<ul class="disc"><li id="li-101"><p id="p-229">Prove that \(U\backslash(A\cup B)=(U\backslash A)\cap (U\backslash B)\) and that \(U\backslash (A\cap B)=(U\backslash A)\cup(U\backslash B)\)</p></li></ul>
+<ul class="disc"><li id="li-102"><p id="p-230">Let \(\mathcal{A}\) be a collection of sets and \(U\) be the usual universal set. Prove that \(U\backslash(\cup \mathcal{A}) =\cap \{U\backslash A|A\in \mathcal{A}\}\) and that \((U\backslash\cap \mathcal{A})=\cup \{U\backslash A|A\in \mathcal{A}\}\)</p></li></ul>
+<ul class="disc"><li id="li-103">
+<p id="p-231">Prove the following:</p>
+<ul class="circle">
+<li id="li-104"><p id="p-232">\(\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap \mathcal{P}(B)\)</p></li>
+<li id="li-105"><p id="p-233">\(\mathcal{P}(A\cup B)\supset \mathcal{P}(A)\cup \mathcal{P}(B)\text{.}\) Give an example to show why \(\subseteq\) fails.</p></li>
+<li id="li-106"><p id="p-234">\(\mathcal{P}(A\backslash B)\backslash \{\emptyset\}\subset \mathcal{P}(A)\backslash \mathcal{P}(B)\)</p></li>
+</ul>
+</li></ul>
+<ul class="disc"><li id="li-107"><p id="p-235">Let \(A=\{X|X \text{ is a set and } X\notin X\}\) . Read this definition carefully until you can find a way to describe the set \(A\) in English (without using symbols). Answer the following questions: Is \(A\in A\text{?}\) Is \(A\notin A\text{?}\) Are you noticing anything strange about this set from the answers of these questions? If you are not shocked at this stage, you need to think deeply about your previous answers.</p></li></ul>
+<ul class="disc"><li id="li-108">
+<p id="p-236">Let P,Q be true statements. As a warm up, draw the truth tables for the following.</p>
+<ul class="circle"><li id="li-109"><p id="p-237">\(\neg P\text{,}\) \(P\vee Q\text{,}\) \(P\wedge Q\) and \(P\implies Q\)</p></li></ul>
+</li></ul>
+<ul class="disc"><li id="li-110">
+<p id="p-238">Let \(P, Q, R\) and show that the following are true.</p>
+<ul class="circle">
+<li id="li-111"><p id="p-239">\(P\vee Q\iff Q\vee P\)</p></li>
+<li id="li-112"><p id="p-240">\(P\wedge (Q\vee R)\iff (P\wedge Q)\vee (P\wedge R)\)</p></li>
+<li id="li-113"><p id="p-241">\(P\vee (Q\wedge R)\iff (Q\vee)\wedge(\vee)\)</p></li>
+<li id="li-114"><p id="p-242">\(P\wedge P\iff P\)</p></li>
+</ul>
+</li></ul>
+<ul class="disc"><li id="li-115">
+<p id="p-243">Let \(Q, P, R, S\) be statements. Show that the following are true.</p>
+<ul class="circle">
+<li id="li-116"><p id="p-244">\(\neg (P\vee Q)\iff \neg P\wedge \neg Q\)</p></li>
+<li id="li-117"><p id="p-245">\(\neg(P\wedge Q)\iff \neg P\vee \neg Q\)</p></li>
+<li id="li-118"><p id="p-246">\((P\implies Q)\iff \neg (P\wedge \neg Q)\)</p></li>
+<li id="li-119"><p id="p-247">\([P\wedge (P\vee Q)]\implies Q\)</p></li>
+<li id="li-120"><p id="p-248">\([(P\vee Q)\wedge \neg P]\implies P\)</p></li>
+<li id="li-121"><p id="p-249">\([(P\implies Q)\wedge(R\implies Q)]\iff [(P\wedge R)\implies Q]\)</p></li>
+<li id="li-122"><p id="p-250">\([(P\implies Q)\wedge(P\implies R)]\iff [P\implies (Q\wedge R)]\)</p></li>
+<li id="li-123"><p id="p-251">If \(Q\iff R\text{,}\) then \((P\implies Q)\iff (P\implies R)\)</p></li>
+<li id="li-124">
+<p id="p-252">If \(P\implies Q\text{,}\) \(R\implies S\text{,}\) then</p>
+<ul class="square">
+<li id="li-125"><p id="p-253">\(P\vee R\implies Q\vee S\)</p></li>
+<li id="li-126"><p id="p-254">\(P\wedge R\implies Q\wedge S\)</p></li>
+</ul>
+</li>
+</ul>
+</li></ul></section></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

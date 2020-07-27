@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T22:15:46+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Number Systems and a new way to look at mathematics</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_math_as_a_practice.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_complex_numbers.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_math_as_a_practice.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_complex_numbers.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems" class="active">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-14.html" data-scroll="section-14">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_number_systems"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Number Systems and a new way to look at mathematics</span>
+</h2>
+<a href="sec_number_systems.html" class="permalink">¶</a><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title">What's in a 3?</span>
+</h3>
+<p id="p-268">What is a 3? This might seem like a completely ridiculous question, but there are several answers to this:</p>
+<ul class="disc">
+<li id="li-138"><p id="p-269">It is a particular pattern of lines, which are usually seen on a piece of paper, on a computer screen or on a blackboard.</p></li>
+<li id="li-139"><p id="p-270">It is a symbol denoting a sound, though that sound is different in different languages (three, zintathu, sami, and <a class="external" href="https://en.wikipedia.org/wiki/List_of_numbers_in_various_languages" target="_blank">so much more...</a> .)</p></li>
+<li id="li-140"><p id="p-271">It is a symbol which denotes a concept.</p></li>
+<li id="li-141"><p id="p-272">and probably more answers which I haven't thought of here...can you think of more?</p></li>
+</ul>
+<p id="p-273">Even the third answer has surprisingly different interpretations:</p>
+<ul class="disc">
+<li id="li-142"><p id="p-274">It denotes the size of a collection of objects where the number of objects is denoted by the symbol 3.</p></li>
+<li id="li-143"><p id="p-275">It is a mathematical object which can be manipulated in an abstract space...wait, what?</p></li>
+</ul>
+<p id="p-276">It is quite remarkable that we can consider the number 3 without actually discussing any objects. When I say '3', you don't say: '3 what?'. You understand that this is a number which doesn't have to be associated with an object. In fact, you know that I can use it to manipulate other numbers: I can perform the "multiply by 3" operation on a number to get a different number (unless the original number was 0). I can think of it as the number of times that I multiply another symbol by itself...things get even more abstract when that symbol is \(x\text{,}\) but we don't complain about \(x^3\) and say "but what is \(x\)"?? At least I hope not.</p>
+<p id="p-277">Ok, so we can agree that the symbol 3 has particular mathematical significance. I think that we can also agree that if we used the Chinese symbol</p>
+<p id="p-278">三 , pronounced "san" which, yep, means 3 in Chinese, we'd all be talking about the same concept as '3'</p>
+<p id="p-279">it's rather nice that in Chinese, the numbers 1, 2 and 3 are</p>
+<p id="p-280">一，二，三 , though 4 and onwards are not so clearly linked to their numerical value. See <a class="external" href="https://en.wikipedia.org/wiki/Akkadian_language" target="_blank">Akkadian</a> for a language which takes this even further.</p>
+<p id="p-281">So, as long as we agree on the symbol, it doesn't matter much what it looks like (though the simpler the better in general).</p>
+<p id="p-282">However, there are different ways that we can start to build up more complicated numbers. It's clear that the numbers we use would be very complicated if for every number we needed to introduce a completely new symbol. So, we start building up bigger numbers from smaller ones.</p>
+<p id="p-283">The number system most of us use now is called the Hindu-Arabic number system and was developed in India around 1500 years ago. They were taken from India through the Middle East and then through North Africa, before Fibonacci (who didn't invent the Fibonacci sequence!), introduced them to Europe.</p>
+<p id="p-284">Before this time, Europeans used the Roman Numeral system, which is a crazy system! The Hindu-Arabic number system is base 10: we build up larger (and smaller) numbers, in powers of 10. The Roman Numeral system is base 10...and (sub)base 5...and (sub)base 2...and depending on which order the numbers are in, a number is added or subtracted.</p>
+<p id="p-285">With \(I=1\text{,}\) \(V=5\) and \(X=10\text{,}\) one to ten in Roman numerals is:</p>
+<div class="displaymath">
+\begin{equation*}
+I,II,III,IV,V,VI,VII,VIII,IX,X
+\end{equation*}
+</div>
+<p id="p-286">So 8 has 4 digits and 9 has 2 digits, which is completely ridiculous, frankly!</p>
+<p id="p-287">In fact, it's so crazy that even addition and multiplication using Roman numerals is really hard. This actually held back the development of European mathematics enormously. It was only because of the introduction of the Hindu-Arabic numeral system from North Africa that mathematics began to flourish in the 12th century, and allowed for the development of algebra in particular (named after al-Khwarizmi, a Persian scholar of the 9th century).</p>
+<p id="p-288">Although Chinese has a different set of symbols for the first ten numbers, it still uses the decimal system (base ten). In fact, the majority of languages use the decimal system, although not all of them do. Take a look <a class="external" href="https://en.wikipedia.org/wiki/Decimal#Other_bases" target="_blank">here</a> to see which languages use other bases. Some examples of base 10 number systems are can be found <a class="external" href="https://en.wikipedia.org/wiki/Decimal#Other_bases" target="_blank">here</a>. We should note that really the only good reason for using base 10 is because we have 10 fingers. The Mayans who noted that they also had 10 toes, decided to use a base 20 system:</p>
+<figure class="figure-like" id="figure-5"><div style="width: 92.5%; margin-left: 3.75%; margin-right: 3.75%;"><img src="images/Maya.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.4.1.</span> <a class="external" href="https://en.wikipedia.org/wiki/Maya_numerals" target="_blank">The base 20 Mayan number system</a></figcaption></figure><p id="p-289">It turns out that in fact if we had 8 or 16 fingers and toes, we might be more natural mathematicians, as powers of 2 are generally much easier to work with.</p>
+<p id="p-290">Some languages went even higher and the Mali Empire, which at its peak (around the 14th century) was a civilisation with over 400 cities, towns and villages used base 60 (though there seems to be little reference on this).</p>
+<p id="p-291">One of the most interesting and complex number systems in use today is that of Yoruba which uses a base 20 number system as well as using a system of subtraction, like the Roman numerals. You can see the way numbers are composed in Yoruba as taken from <a class="external" href="http://www.prenhall.com/divisions/esm/app/ph-elem/multicult/html/chap3.html" target="_blank">here</a> :</p>
+<div class="displaymath">
+\begin{align*}
+35 \text{ (marundilogoji) } \amp =\amp  (2 \times 20) - 5\\
+47 \text{ (metadiladota) } \amp =\amp  (3 \times 20) - 10 - 3\\
+51 \text{ (mokanleladota) } \amp =\amp  (3 \times 20) - 10 + 1\\
+55 \text{ (marundilogota) } \amp =\amp  (3 \times 20) - 5\\
+67 \text{ (metadiladorin) } \amp =\amp  (4 \times 20) - 10 - 3\\
+73 \text{ (metaleladorin) } \amp =\amp  (4 \times 20) - 10 + 3\\
+86 \text{ (merindiladorun) } \amp =\amp  (5 \times 20) - 10 - 4\\
+117 \amp =\amp  (6 x 20) - 3
+\end{align*}
+</div>
+<p id="p-292">See if you can figure out the structure from the number words and the way they are composed. More numbers can be found <a class="external" href="http://www.sf.airnet.ne.jp/ts/language/number/yoruba.html" target="_blank">here</a>.</p>
+<p id="p-293">In fact, we can go back even further than the Roman and Hindu-Arabic number system to discover something about the symbolic expression of number.</p>
+<p id="p-294">The very first object we have today which has what appear to be numerical markings is the Ishango bone, found in the Kingdom of eSwatini (formerly Swaziland) and dates back 35,000 years. A good writeup of this, and the cradle of mathematics can be found on <a class="external" href="http://www.mathemafrica.org/?p=10707" target="_blank">Mathemafrica</a>.</p>
+<figure class="figure-like" id="figure-6"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/Ishango.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.4.2.</span> The Ishango bone. The exact interpretation is still not known. Huylebrouck, ’Afrika, die Wiege der Mathematik‘, Ethnomathematik, Spektrum der Wissenschaft 2 (2006), 10-15.</figcaption></figure><p id="p-295">If you speak a language which has a number system different to any of those above, let me know and I'll be happy to include some information about it in a future edition.</p></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.2</span> <span class="title">Does 3 exist?</span>
+</h3>
+<p id="p-296">Have you ever seen a 3 in the wild? I mean, really seen it...? Yes, you've all seen the symbol, and you've seen collections of 3 things, but we can all agree that 3 has a meaning in an abstract way, without it being linked to any objects. Have you seen a -3? That's maybe even harder to see what it corresponds to as an entity (though we understand completely what it means as a mathematical object). How about \(\pi\text{?}\) Or \(e\text{?}\) Each of these has a very precise meaning, independent of the physical world, though they can be associated with real things in the real world.</p>
+<p id="p-297">The word "Table Mountain" is also just lines on a page, but it also corresponds to something that we can see and touch. Numbers are different. Numbers can have parallels in the real world, but really they live in an abstract space. Mathematics is (amongst other things) about how to understand the relationships and interplay of these objects in this abstract world, and about how to write the dictionary between the abstract world of numbers, and the real world. Let's call this abstract world Mathemafrica.</p>
+<p id="p-298">This has some very profound consequences. It means that so long as we are consistent, we have a playground to experiment in (or perhaps a laboratory to play in). We can start to make up the rules and see what the consequences are. We define the \(+\) symbol to have a particular action in Mathemafrica and then see what happens when we apply it to certain objects which live in this land.</p>
+<p id="p-299">We are now the inventors and discovers of this landscape. We get to define a rule, and then discover what it means...if we find that the result of this new rule are that it clashes with our former rules, then these rules are not compatible and we have to be careful when we apply them. I could try and define a rule which says that when I am counting, when I get to 9 and add 1, I get back to 0. This, it turns out is a subregion in Mathemafrica called Modulandia, and it has very special rules of its own.</p>
+<p id="p-300">This newfound freedom is wonderful, but we have to be careful...so far, the beings in our land are the rational numbers, abstract symbols (like \(x\) and \(y\) and \(n\) which we can, if we want associate with numbers, but we don't have to), functions, which are like the transport infrastructure in Mathemafrica, and the society in this land is made up of all the possible interactions of these objects.</p>
+<p id="p-301">What we are going to see next is that actually, if we want a more flexible society, we can add some new people to Mathemafrica and they will allow us to do things which we were previously completely impossible. We will see this in the next section...</p></section><section class="subsection" id="freedom-math"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.3</span> <span class="title">On the freedom we have in Mathemafrica</span>
+</h3>
+<a href="sec_number_systems.html#freedom-math" class="permalink">¶</a><p id="p-302">So, how much do we discover about Mathemafrica, and how much do we invent ourselves? Well, to a certain extent, we get to define a set of our own objects, and then we see how they interact in the mathematical world. One of the best examples of this is the square root function. This is something that so often trips up first years. A question I often get is:</p>
+<p id="p-303">{{I thought that the square root could be positive or negative. Isn't \(\sqrt{9}=\pm 3\text{?}\)}}</p>
+<p id="p-304">The answer is that we get to define the square root function as we want. It isn't a naturally occurring function which you find in the wild and one that has properties of its own. We invent this function whose definition we choose to be:</p>
+<article class="definition-like" id="itm__Definition_1_3"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.4.3</span>. <span class="title">The principle square root of \(x \) (written \(\sqrt{x}\) ).</span>
+</h6>
+<p id="p-305">The principle square root of a positive real number \(x\) is that positive number which, when squared, gives you \(x\text{.}\)</p></article><p id="p-306">Notice here that we {<em class="emphasis">define</em>} the principle square root from the start as being the positive number. And that is our choice. We could have chosen the negative, but having chosen the positive, we can then explore how this object can be used, and what its consequences are. Note that generally we simply say square root for principle square root and implicitly mean the positive root. This is an issue of language. Indeed there are two square roots of 9, but when we say "the square root of 9", we mean the principle, or positive square root.</p>
+<p id="p-307">Note that \(x^2=9\) has two solutions, one is \(\sqrt{9}=3\) and one is \(-\sqrt{9}=-3\text{,}\) but \(\sqrt{9}\) itself is positive. To get the negative root, we have to put the - sign on the front.</p>
+<p id="p-308">In the following we will frequently make definitions of mathematical functions, and then explore their consequences as we add them as another ingredient to Mathemafrica.</p>
+<p id="p-309">The bottom line:</p>
+<ol class="decimal">
+<li id="li-144"><p id="p-310">We can define new mathematical operations, so long as they aren't in contradiction to the rules of the game that came before (except that sometimes they will stretch the previous rules).</p></li>
+<li id="li-145"><p id="p-311">We can use these definitions and the others that we have made before in order to prove theorems.</p></li>
+</ol>
+<p id="p-312">We will be careful in what follows to distinguish here what is a definition and what is a theorem and show you how to prove the theorems from the definitions.</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

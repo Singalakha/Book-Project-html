@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T22:15:47+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Complex Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_number_systems.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_argument.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_number_systems.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_argument.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers" class="active">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-14.html" data-scroll="section-14">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_complex_numbers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Complex Numbers</span>
+</h2>
+<a href="sec_complex_numbers.html" class="permalink">¶</a><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title">Introducing a new kind of number</span>
+</h3>
+<p id="p-313">What if you knew nothing about negative numbers and I asked you to solve the equation</p>
+<div class="displaymath">
+\begin{equation*}
+x^2=1
+\end{equation*}
+</div>
+<p id="p-314">You would laugh at how ridiculous I was being and tell me the answer was 1 not realising you'd missed half of the solutions.</p>
+<p id="p-315">In China, around 200BC negative numbers were first introduced. This might be a long time ago, but ideas of counting had been around for a long long time already and so we had mathematics for millenia without having negative numbers.</p>
+<p id="p-316">In Indian mathematics negative numbers were introduced around 620AD with Brahmagupta who introduced them in the concept of debt.</p>
+<p id="p-317">In Greek mathematics where many of the cornerstones of modern mathematics developed, they didn't really concern themselves with negative numbers because they were mostly interested in geometry, and when you're thinking about distances, negative numbers aren't really needed.</p>
+<p id="p-318">In 300AD Diophantus wrote down an equation which would have had a negative solution and said that this was absurd!</p>
+<p id="p-319">Really, negative numbers were understood quite a bit later with the development of mathematics in the Arab world, with the likes of Al-Khwarizmi, Abul-Wafa and Al-Samawal.</p>
+<p id="p-320">If you want to know more, take a look at <a class="external" href="https://nrich.maths.org/5961" target="_blank">https://nrich.maths.org/5961</a>.</p>
+<p id="p-321">What if you didn't believe in the existence of irrational numbers and I asked you to find \(x\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+x^2=2
+\end{equation*}
+</div>
+<p id="p-322">You would laugh at how ridiculous I was being and tell me that there is no solution to this. You would be in good company! See <a class="external" href="https://en.wikipedia.org/wiki/Irrational_number" target="_blank">The wikipedia article on Irrational Numbers</a> for the history of them.</p>
+<p id="p-323">We have a good way of denoting negative numbers. We just take the magnitude of the number and put a little horizontal line in front of it. It's just some notation, but we know what it means and we know how to manipulate it. For irrational numbers we can't ever write down their digit expansions, but we can write things like \(\sqrt{2}\text{,}\) \(e\text{,}\) \(\pi\) and we know what that means.</p>
+<p id="p-324">Well, we are now going to do exactly the same thing but this time with the equation:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2=-1
+\end{equation*}
+</div>
+<p id="p-325">You first laugh and tell me how ridiculous I'm being as you have done so many times before. However, this time I take my hat off and pull out a new number...</p>
+<p id="p-326">...tada...</p>
+<p id="p-327"><em class="emphasis">The answer</em>, I tell you, <em class="emphasis">is \(i\) and \(-i\text{!}\)</em></p>
+<p id="p-328"><em class="emphasis">What's that?</em> You say.</p>
+<p id="p-329"><em class="emphasis">Well, they are both numbers which, when squared give you \(-1\text{.}\) That's just how we are going to define them. It need be no more, nor less complicated than that.</em></p>
+<article class="definition-like" id="definition-3"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.1</span>. <span class="title">The imaginary unit \(i\).</span>
+</h6>
+<p id="p-330">\(i\) and \(-i\) are the two numbers which when squared give \(-1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+i^2=-1\, ,\,\,\,  (-i)^2=-1
+\end{equation*}
+</div></article><p id="p-331">This is the starting point of complex numbers and as we will see, it will allow us to do many things that we couldn't do before, including solving equations, like that above, which we thought were unsolvable. It will also bridge areas of mathematics that we thought had nothing to do with each other before, like trigonometry and exponential functions. We'll discover that they are really the same thing, but that only becomes clear when we are allowed to define this weird number \(i\text{,}\) such that \(i^2=-1\text{.}\)</p>
+<p id="p-332">Looking at the equation \(x^2=1\) and asking how to solve this using a graph means taking the graph of \(y=x^2-1\) and asking when \(y=0\text{.}\) It's obviously where it cuts the \(x\)-axis. Asking to solve \(x^2=-1\) we can look at the graph of \(y=x^2+1\) and ask where this cuts the \(x\)-axis. And suddenly it is clear where the problem lies...it doesn't cut the \(x\)-axis. But then perhaps the \(x\)-axis isn't all there is. We will see this in the next section.</p>
+<figure class="figure-like" id="figure-7"><div style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/fig3b.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.2.</span> Solving \(x^2=1\) is equivalent to asking where the graph of \(y=x^2-1\) cuts the \(x\)-axis, but it's clear that we have a problem when we try and solve \(x^2=-1\text{.}\)</figcaption></figure></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.2</span> <span class="title">Another perspective on addition and multiplication</span>
+</h3>
+<p id="p-333">Let's look at this object in a slightly different way. The more ways we can look at the same thing, the clearer it will all be in the end.</p>
+<p id="p-334">So far we have been working with numbers on a number line (one dimension). There was an origin (0), and there were positive and negative numbers to the right and left of the origin and up to now every number we could imagine was on this line.</p>
+<p id="p-335">In particular we could move about this number line using the basic operations of arithmetic. Adding shifts you left or right. Multiplication by a positive number scales you away from the origin. Multiplication by a negative number reflects you about the origin and then scales you.</p>
+<p id="p-336">If we start at 1 and multiply by 2 we end up moving to 2, obviously.</p>
+<figure class="figure-like" id="figure-8"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig1.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.3.</span> Multiplication by a positive number on the real number line is a scaling.</figcaption></figure><p id="p-337">We can also ask about the square root of 2. What that really means is: What is the operation (in terms of moving on the number line) which, when you do it twice takes you from 1 to 2. Well, we can first multiply by \(\sqrt{2}\) which takes us to \(\sqrt{2}\) or indeed we can multiply by \(-\sqrt{2}\) (reflect to -1, then scale to \(-\sqrt{2}\)) and then multiply again by \(-\sqrt{2}\) (reflect by -1 which takes us to \(\sqrt{2}\) then scale by \(\sqrt{2}\) which takes us to 2).</p>
+<figure class="figure-like" id="figure-9"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.4.</span> Multiplication by a positive number on the real number line is a scaling.</figcaption></figure><p id="p-338">We could ask something a bit more tricky. We could ask if you can multiply by -1 in two equal steps. We saw above that reflecting twice (ie. multiplying by a negative number twice) keeps us on the same side of the origin. So how can we do something twice which takes us from 1 to -1. Remember that we are talking about multiplication, not addition. It's easy to get from 1 to -1 in two steps by addition.</p>
+<p id="p-339">In fact, with the number line as it is we can't get from 1 to -1 multiplicatively in two equal steps. We are now going to upgrade our number line and turn it into a number plane and then all will become clear.</p>
+<p id="p-340">Let's simply extend the number line into a number plane. The horizontal axis of this plane is just like the real numbers you know and love, and now there is a new vertical axis which so far doesn't mean much to us.</p>
+<p id="p-341">The wonderful thing about a plane is that we can move around in it in much more complex ways than we can on a line. On a line you can move left and right (either by addition or multiplication), and you can reflect about the origin (if you are multiplying by a negative number).</p>
+<p id="p-342">In a plane we can now rotate. Once we allow for rotation, it's very obvious how we can get from 1 to -1 in two steps...though it's not completely clear yet why this corresponds to multiplication...we will see!</p>
+<p id="p-343">Well, let's just start off by drawing a two dimensional space of numbers. We are going to call one of the axes "Re" (the real number line) and the other axis we will call "Im" (the imaginary number line). The reason for this will become clear soon I hope. Let's start off just by seeing what it would look like to rotate from 1 to somewhere on the imaginary number line and then rotate again to get to -1.</p>
+<figure class="figure-like" id="figure-10"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig3.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.5.</span> Rotation by \(\frac{\pi}{2}\) or \(\frac{-\pi}{2}\) twice to get us from 1 to -1 in two equal steps.</figcaption></figure><p id="p-344">Note that just as with moving from 1 to 2 in two equal steps there are two ways to do this operation..</p>
+<p id="p-345">So...so far in this subsection we haven't mentioned this weird number \(i\text{.}\) However, we've actually just sneaked it in there without you really noticing it.</p>
+<p id="p-346">When we asked the question how do you get from 1 to 2 in two equal multiplicative steps we are really asking you to solve:</p>
+<div class="displaymath">
+\begin{equation*}
+1 \times x\times x=2
+\end{equation*}
+</div>
+<p>for \(x\text{.}\) We could also just write this as \(x^2=2\text{.}\) The answer to this of course is \(x=\pm\sqrt{2}\text{.}\)</p>
+<p id="p-347">We could write that number at the point that we get to at the end of the first step and it would look like:</p>
+<figure class="figure-like" id="figure-11"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig4.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.6.</span> \(\sqrt{2}\) and \(-\sqrt{2}\) are the points that we get to after one step of the two to move us multiplicatively from 1 to 2 in two equal steps.</figcaption></figure><p id="p-348">Now we are asking to solve:</p>
+<div class="displaymath">
+\begin{equation*}
+1 \times x\times x=-1
+\end{equation*}
+</div>
+<p>or \(x^2=-1\text{.}\) And we know the answer to that now is \(x=\pm i\text{.}\)</p>
+<p id="p-349">So perhaps the points that we get to at the end of the quarter turns anti-clockwise and clockwise are \(i\) and \(-i\text{.}\) In fact this is exactly how we are going to construct what is known as the complex plane.</p>
+<p id="p-350">When we introduced the imaginary number before, it was clear that it wasn't a number like we'd ever seen before, and didn't fit nicely on the real number line, so we are going to give it its own line and extend the number line to a number plane, with one axis being real numbers and the other axis being imaginary numbers.</p>
+<p id="p-351">That then looks like there are more numbers that are imaginary than just \(i\text{.}\) Well, yes, absolutely. To start with we could have, for instance, two lots of i, which we will write:</p>
+<div class="displaymath">
+\begin{equation}
+2i\text{.}\tag{2.5.1}
+\end{equation}
+</div>
+<p id="p-352">This is a number which, when you square it gives you:</p>
+<div class="displaymath">
+\begin{equation}
+(2i)^2=2^2 i^2=4'\times -1=-4\text{.}\tag{2.5.2}
+\end{equation}
+</div>
+<p id="p-353">In fact, we can take \(i\) and we can multiply it by any real number, \(a\) and then you just have \(a\) lots of \(i\text{,}\) and this number lies somewhere on the imaginary number line.</p>
+<p id="p-354">You might think as just as you have 1,2,3,4, etc. along the real number line you might have \(i\text{,}\)\(j\text{,}\)\(k\text{,}\)\(l\text{,}\) etc. along the imaginary number line, but remember 2 is just 1+1 and 3 is 1+1+1, so \(2i=i+i\) and there isn't another way of writing this number. Along the imaginary direction we only ever have a real number times \(i\)</p>
+<figure class="figure-like" id="figure-12"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig5.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.7.</span> Multiples of \(i\) lie along the imaginary number line</figcaption></figure><p id="p-355">So now we can take any equation of the form \(x^2=a\) for any real \(a\text{,}\) be it positive or negative, and find the solutions which are either going to be real numbers if \(a\) is positive, or imaginary numbers if \(a\) is negative, and we can put them on the number plane, either on the horizontal or vertical axis.</p>
+<p id="p-356">It seems like a sensible time for a definition:</p>
+<article class="definition-like" id="definition-4"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.8</span>. <span class="title">Imaginary numbers.</span>
+</h6>
+<p id="p-357"><dfn class="terminology">Imaginary numbers</dfn> are real multiples of the imaginary unit \(i\text{.}\) They take the form \(z=ai\) where \(a\in\mathbb{R}\text{.}\)</p></article></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.3</span> <span class="title">The Complex Plane</span>
+</h3>
+<p id="p-358">We've added an extra axis to the real number line and found ourselves in a two dimensional space. We can pin-point on here any real number and any multiple of \(i\text{,}\) but it feels like a great waste of space. What about the numbers which aren't on either axis?</p>
+<p id="p-359">Well, let's look at an equation like:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2+2x+2=0
+\end{equation*}
+</div>
+<p id="p-360">We are going to solve this by completing the square. This can be written as:</p>
+<div class="displaymath">
+\begin{equation*}
+(x+1)^2+1=0
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+(x+1)^2=-1
+\end{equation*}
+</div>
+<p id="p-361">But we know that the numbers which square to give -1 or \(\pm i\text{,}\) so it must be true that:</p>
+<div class="displaymath">
+\begin{equation*}
+(x+1)=\pm i
+\end{equation*}
+</div>
+<p id="p-362">So what is \(x\text{?}\) Well, we we just use our normal rules of manipulating equations and take the 1 to the other side to give:</p>
+<div class="displaymath">
+\begin{equation}
+x=-1\pm i\text{.}\tag{2.5.3}
+\end{equation}
+</div>
+<p id="p-363">So what's the answer? Well, that is \(x=-1\pm i\text{.}\) There's no way to simplify this any further. It's a number which has a real part to it: -1 and an imaginary part to it \(\pm i\text{.}\) You can check that this is a solution by plugging it back into the original equation and finding that the equation is satisfied.</p>
+<p id="p-364">One thing to note here is that by completing the square, we never found ourselves in a position where we had to take the square root of -1. We haven't defined this object. Sometimes you will see it written that \(i=\sqrt{-1}\text{,}\) but we are defining \(i\) instead as a number which, when squared gives \(-1\text{.}\) We haven't needed to extend the domain of the square root function to include negative numbers.</p>
+<p id="p-365">So Where do these two numbers sit in this new two-dimensional plane? Well, at the point you get to if you move -1 along the real axis and up or down one unit along the imaginary axis:</p>
+<figure class="figure-like" id="figure-13"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig6.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.9.</span> The two numbers which satisfy the equation \(x^2+2x+1=0\)</figcaption></figure><p id="p-366">Numbers of this form, with a real part, and an imaginary part are called complex numbers.</p>
+<article class="definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.10</span>. <span class="title">Complex numbers.</span>
+</h6>
+<p id="p-367">A <dfn class="terminology">complex number</dfn> \(z\) is any expression of the form \(z=a+bi\text{,}\) where \(a\) and \(b\) are real numbers and \(i\) is the imaginary unit that satisfies \(i^2=-1\text{.}\)</p>
+<p id="p-368">Two complex numbers \(a_1+ib_1\) and \(a_2+ib_2\) are said to be equal (i.e. \(a_1+ib_1 = a_2+ib_2\)) if and only if \(a_1=a_2\) and \(b_1=b_2\text{.}\)</p>
+<p id="p-369">For a <dfn class="terminology">complex number</dfn> \(z=a+bi\text{,}\) \(a\) is called <dfn class="terminology">the real part of \(z\)</dfn> and is denoted by \(\boldsymbol{Re(z)}\) i.e. \(Re(z)=a\text{,}\) while \(b\) is called <dfn class="terminology">the imaginary part of \(z\)</dfn> and is denoted by \(\boldsymbol{Im(z)}\) i.e. \(Im(z)=b\text{.}\)</p>
+<p id="p-370">The set of all complex numbers is denoted by \(\mathbb{C}\text{.}\)</p></article><p id="p-371">Note that a complex number with no imaginary part is just a real number, and so real numbers are also a special type of complex number (just with \(Im(z)=0\)), and similarly a complex number with \(Re(z)=0\) is just an imaginary numbers.</p>
+<p id="p-372">We have a bit of a hierarchy of sets that we can think about now. Just as the integers are a subset of the real numbers we can write:</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbb{N}\subset \mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}
+\end{equation*}
+</div>
+<p id="p-373">It turns out that there are actually even bigger sets that form the totality of all "normed divisor algebras" but we definitely don't need to worry about what that means, these sets form four dimensional and eight dimensional spaces and are called the quaternions and octionions respectively.</p>
+<p id="p-374">We can think about the complex numbers as ordered pairs, just like we have \((x,y)\) coordinates, we here have the real part and the imaginary part and can write a complex number as \((Re(z),Im(z))\text{.}\) As always there are multiple ways to write the same thing and it's useful to be able to do so in as many ways as you can.</p>
+<p id="p-375">One thing that we should notice about the two dimensional space (called The Complex Plane, or Argand Plane) is that even though the imaginary axis corresponds to imaginary numbers, we write 1, 2, 3, etc. on it, and not \(i\text{,}\) \(2i\text{,}\) \(3i\) etc. because the number denotes how many units of \(i\) we have. Moving 1 along the imaginary axis means moving one unit of \(i\text{.}\)</p>
+<p id="p-376">Note that we have here written our complex numbers in a specific form: \(z=a+bi\text{.}\) It turns out that there are going to be other ways to write the same complex number. This particular form we call the Cartesian Form, because it will be easy to represent where the complex number is as a set of cartesian coordinates where the horizontal distance from the origin is \(a\) and the vertical distance from the origin is \(b\text{.}\) We will later study the other ways of writing it in detail.</p>
+<article class="example-like" id="example-2"><a data-knowl="" class="id-ref" data-refid="hk-example-2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.5.11</span>.</h6></a></article><div id="hk-example-2" class="hidden-content tex2jax_ignore"><article class="example-like"><ol class="decimal">
+<li id="li-146">
+<p id="p-377">Solve the following equations by completing the square where necessary. You should never need to take the square root of -1.:</p>
+<ol class="lower-alpha">
+<li id="li-147"><p id="p-378">\(x^2+9=0\)</p></li>
+<li id="li-148"><p id="p-379">\(x^2+2x+2=0\)</p></li>
+<li id="li-149"><p id="p-380">\(x^4-1=0\)</p></li>
+</ol>
+</li>
+<li id="li-150"><p id="p-381">Show that \(i^n\text{,}\) where \(n\) is a non-negative integer, can only take on one of four values.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-382" class="decimal">
+<li id="li-151"><ol class="lower-alpha">
+<li id="li-152">
+<p id="p-383">To solve \(x^2+9=0\) we write:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2=-9
+\end{equation*}
+</div>
+<p>dividing both sides by 9 and taking it inside the square we get</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\frac{x}{3}\right)^2=-1
+\end{equation*}
+</div>
+<p>But we know that the number which when squared gives -1 must be \(\pm i\) and so</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{x}{3}=\pm i\implies x=\pm 3i
+\end{equation*}
+</div>
+<p>Plug it back into the formula to make sure that it does indeed solve the equation</p>
+</li>
+<li id="li-153">
+<p id="p-384">For this example we do need to complete the square:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2+2x+2=0\implies (x+1)^2+1=0\implies (x+1)^2=-1
+\end{equation*}
+</div>
+<p>Using the same logic as in the previous example we know that the number which we've squared must be \(\pm i\) and so:</p>
+<div class="displaymath">
+\begin{equation*}
+(x+1)=\pm i \implies x=-1\pm i
+\end{equation*}
+</div>
+</li>
+<li id="li-154">
+<p id="p-385">This is a quartic equation but it's one that we can solve. First we write that:</p>
+<div class="displaymath">
+\begin{equation*}
+x^4=1
+\end{equation*}
+</div>
+<p>which implies that \(x^2=\pm 1\text{.}\) We can deal with each of these two cases separately. For \(x^2=1\text{,}\) we just have \(x=\pm 1\) and for \(x^2=-1\) we have that \(x^2=\pm i\text{,}\) so overall the solutions are:</p>
+<div class="displaymath">
+\begin{equation*}
+x=-1,1,i,-i
+\end{equation*}
+</div>
+</li>
+</ol></li>
+<li id="li-155"><p id="p-386">Let's look at some simple cases to get the idea. If \(n=1\) we have \(i^1=i\text{.}\) For \(n=2\) we have \(i^2=-1\text{.}\) For \(n=3\) we have \(i^3=i*i^2=-i\) and for \(n=4\) we have \(i^n=i^2* i^2=-1*-1=1\text{.}\) Now we get to five and something interesting happens, we have \(i^5=i*i^4=i\) which is the same as for \(n=1\text{.}\) In fact we can take any \(n&gt;5\) and always write \(i^n=i^{n-4}*i^4=i^{n-4}\text{.}\) So we can always connect an \(i^n\) with one with a lower \(n\text{.}\) In fact we can subtract any number of \(4k\)'s where \(k\) is an integer and \(n-4k&gt;=0\) until we get to a \(k\) such that \(1\le n-4k\le 4\) and we get to one of the four values that we've seen above, ie. \(i,-1,-i,1\text{.}\) Note that \(n=0\) is the same as \(n=4\text{,}\) so we could also have shown that all values of \(n\) are equivalent to \(n=0,1,2,3\) rather than \(n=1,2,3,4\text{.}\)</p></li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-1"><a data-knowl="" class="id-ref" data-refid="hk-exercise-1"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.5.12</span>.</h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-156"><p id="p-387">Find the value of \(i^5\text{.}\)</p></li>
+<li id="li-157"><p id="p-388">Simplify \(i^{100}\text{.}\)</p></li>
+<li id="li-158">
+<p id="p-389">Solve the following equations:</p>
+<ol class="lower-alpha">
+<li id="li-159"><p id="p-390">\(x^2+4=0\)</p></li>
+<li id="li-160"><p id="p-391">\(4x^2+9=0\)</p></li>
+<li id="li-161"><p id="p-392">\(x^2-2x+2=0\)</p></li>
+</ol>
+</li>
+</ol></article></div></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.4</span> <span class="title">Simple arithmetic operations on complex numbers</span>
+</h3>
+<p id="p-393">Well, now we have these new numbers as solutions to simple equations (so far just quadratic), but we want to be able to play all our usual arithmetic games with them. We're going to do this with a definition. This definition is going to be the obvious choice, but still, it's something that we have chosen.</p>
+<article class="definition-like" id="definition-6"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.13</span>. <span class="title">Addition of Complex numbers.</span>
+</h6>
+<p id="p-394">Given two complex numbers \(z_1=a_1+ib_1\) and \(z_2=a_2+ib_2\) where \(a_1,b_1,a_2,b_2 \in \mathbb{R}\) then:</p>
+<p id="p-395">we define their <dfn class="terminology">Addition</dfn> as: \(z_1+z_2=(a_1+ib_1)+(a_2+ib_2)=(a_1+a_2)+i(b_1+b_2)\)</p></article><p id="p-396">This, I hope seems at least reasonably sensible. If I take two complex numbers and I add them together, then the real part of the new complex number is the addition of the real parts of those that we are adding together, and similarly its imaginary part. Let's see what this looks like in the complex plane:</p>
+<figure class="figure-like" id="figure-14"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/figadd.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.14.</span> The addition of two complex numbers can be thought of as putting together the arrows that take you from the origin to each one, and stacking them to form a parallelogram. The answer in the end is the result of the two arrows. Note that the addition of real numbers follows the same rule, but the arrows are just facing in the same direction.</figcaption></figure><p id="p-397">You see it all looks very geometrical. This means that if we add a real number to any complex number, it just shifts it left and right (depending on the sign), and if we add an imaginary number to any complex number it just shifts it up and down (depending on the sign).</p>
+<p id="p-398">To think about multiplication, we're going to start with the definition of the multiplication of two complex numbers and then we will step back and see what multiplication by a real number means in the complex plane, and then what multiplication by an imaginary number means.</p>
+<article class="definition-like" id="definition-7"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.15</span>. <span class="title">Multiplication of Complex numbers.</span>
+</h6>
+<p id="p-399">Given two complex numbers \(z_1=a_1+ib_1\) and \(z_2=a_2+ib_2\) where \(a_1,b_1,a_2,b_2 \in \mathbb{R}\) then:</p>
+<p id="p-400">we define their multiplicative product as: \(z_1z_2 =(a_1a_2-b_1b_2)+i(a_1b_2+a_2b_1)\)</p></article><p id="p-401">This looks a bit complicated, but in fact we can see that it comes from:</p>
+<div class="displaymath">
+\begin{equation*}
+z_1z_2 = (a_1+ib_1)(a_2+ib_2)=a_1a_2+ia_1b_2+ia_2b_1+i^2b_1b_2 = (a_1a_2-b_1b_2)+i(a_1b_2+a_2b_1)
+\end{equation*}
+</div>
+<p id="p-402">We write \(z_1z_2\) to mean the product of \(z_1\) and \(z_2\) just as we would do for two real numbers \(x_1\) and \(x_2\text{.}\)</p>
+<p id="p-403">Ok, so that's a bit complicated for the moment. Let's just look at multiplication of a complex number by a real number:</p>
+<p id="p-404">Given \(r\in\mathbb{R}\) and \(z=a_1+i b_1\text{,}\) we have:</p>
+<div class="displaymath">
+\begin{equation*}
+r z=ra_1+i r b_1
+\end{equation*}
+</div>
+<p id="p-405">So in terms of the complex plane this will just scale both the real and imaginary parts by a factor of \(r\) towards or away from the origin depending on whether \(r\) is less than or greater than 1, and will perform a reflection about the real and imaginary axes if \(r\) is negative.</p>
+<p id="p-406">Let's just think a bit more about what arithmetic operations look like in the complex plane. We are going to start with a load of random complex numbers and see what happens to them when we perform some operation. Let's start with the following complex numbers:</p>
+<div class="displaymath">
+\begin{equation*}
+-1,0,1,-i,i,1+i,1-i,2i
+\end{equation*}
+</div>
+<p id="p-407">In the following figure we first see these points placed in the complex plane, and then we add real and imaginary numbers to them to see how they move, and then multiply by positive and negative real numbers to see what happens.</p>
+<figure class="figure-like" id="figure-15"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig8.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.16.</span> Numbers in the complex plane having added real and imaginary numbers, and multiplied by real numbers.</figcaption></figure><p id="p-408">What would happen to these numbers if we multiplied not be a real number but by an imaginary number?</p>
+<p id="p-409">Well, let's calculate what will happen if we multiply them all by \(i\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\times i: (-1,0,1,-i,i,1+i,1-i,2i)\rightarrow (-i,0,i,1,-1,i-1,i+1,-2)
+\end{equation*}
+</div>
+<p id="p-410">Let's look at this mapping in the complex plane.</p>
+<figure class="figure-like" id="figure-16"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/plcurve.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.17.</span> Multiplying a complex number by \(i\) takes that point and rotates it by \(\frac{\pi}{2}\) anticlockwise about the origin. Blue points are the original points, red points are the result of the multiplication by \(i\text{.}\)</figcaption></figure><p id="p-411">We see that multiplying by \(i\) corresponds to a rotation by \(\frac{\pi}{2}\) radians anticlockwise about the origin. This is actually exactly what we saw before when we asked how we could multiply by -1 in two equal steps...we said that we had to do this via two rotations. Now we see the link between the arithmetic and the geometry.</p>
+<p id="p-412">What about multiplying by \(2i\text{?}\) Well, this is the same as multiplying by \(i\) and then multiplying by 2; so it's a rotation and a scaling.</p>
+<figure class="figure-like" id="figure-17"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/plcurve2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.18.</span> Multiplying by \(2i\) leads to a rotation and a scaling.</figcaption></figure><p id="p-413">Now we can say that in the complex plane:</p>
+<ol class="decimal">
+<li id="li-162"><p id="p-414">addition by a real number shifts left and right</p></li>
+<li id="li-163"><p id="p-415">addition by an imaginary number shifts up and down</p></li>
+<li id="li-164"><p id="p-416">addition by a complex number with both real and imaginary parts does a bit of both of the above</p></li>
+<li id="li-165"><p id="p-417">multiplication by a real number scales towards or away from the origin and reflects about the real and imaginary axis if the number is negative.</p></li>
+<li id="li-166"><p id="p-418">multiplication by an imaginary number rotates left and right and scales, and may reflect as above if it is \(i\) times a negative real number.</p></li>
+</ol>
+<p id="p-419">In fact, given the above, we can think of multiplication by -1 not as reflection across the imaginary axis, but as \(-1=i\times i\) therefore rotation about the origin counterclockwise by \(\frac{\pi}{2}\) twice, ie. by \(\pi\text{.}\) Of course we could also think of it as \(-1=(-i)\times(-i)\) ie. the same thing but clockwise rather than counterclockwise.</p>
+<p id="p-420">Now let's give you something to investigate:</p>
+<ol class="decimal">
+<li id="li-167"><p id="p-421">choose any number in the complex plane which is a distance 1 away from the origin, but not a simple one like 1, or \(i\text{,}\) etc. You can find these by drawing a unit circle about the origin and picking any point on it.</p></li>
+<li id="li-168"><p id="p-422">Write down this number in the form \(a+ib\text{,}\) with \(a\) and \(b\in\mathbb{R}\text{.}\)</p></li>
+<li id="li-169"><p id="p-423">Note that if it's on the unit circle then you should have \(a^2+b^2=1\text{.}\) Check that you do!</p></li>
+<li id="li-170"><p id="p-424">Work out what is the angle subtended between the positive real axis, and the line joining the origin to your number, going in the counterclockwise direction.</p></li>
+<li id="li-171"><p id="p-425">Take the numbers that we looked at before (ie. \((-1,0,1,-i,i,1+i,1-i,2i)\)) and multiply them by this number.</p></li>
+<li id="li-172"><p id="p-426">What has happened to all of these numbers? Ho does this relate to the angle that you found in step 4?</p></li>
+</ol>
+<p id="p-427">One really important thing to note here is that:</p>
+<p id="p-428"><em class="emphasis">Complex numbers are closed under addition and multiplication i.e. if \(z_1,z_2 \in \mathbb{C}\) then so is \(z_1+z_2\) and \(z_1z_2\text{.}\)</em></p>
+<p id="p-429">This means that we don't have to worry about a different kind of number suddenly appearing. As long as we are doing regular arithmetic, so long as I give you a bunch of complex numbers, you can't find yourself in some unknown realm of numbers.</p>
+<p id="p-430">Now is a moment to step back and remember that we are in Mathemafrica, and we have the freedom to make certain choices and then explore those choices. Above we have simply defined addition and multiplication of two complex numbers. Now we can find out the consequences of this. We have to figure out what are the <em class="emphasis">properties</em> of addition and multiplication of two or more complex numbers having made the above choice.</p>
+<p id="p-431">The above <em class="emphasis">definitions</em> are what we can think of as <em class="emphasis">axioms</em> in this system. They can't be proven, they are simply the basic definitions that we've decided to give our new ingredients. Anything which comes from this in the form of <em class="emphasis">properties</em> or <em class="emphasis">theorems</em> must be proven.</p>
+<p id="p-432">Below we will <em class="emphasis">postulate</em> (this is like a guess, before we have proved something) the <em class="emphasis">properties</em> which come out of the above <em class="emphasis">definitions</em>. Each of them can be proven, and we will prove one of them below. All you need to prove them are the definitions of addition and multiplication of complex numbers along with the properties of the addition and multiplication of real numbers.</p>
+<article class="theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.5.19</span>. <span class="title">Common arithmetic properties of complex numbers.</span>
+</h6>
+<p id="p-433">If \(z, z_1, z_2, z_3 \in \mathbb{C}\text{,}\) then:</p>
+<ol class="decimal">
+<li id="li-173"><p id="p-434"><em class="emphasis">Commutative property of addition</em>: \(z_1+z_2=z_2+z_1\)</p></li>
+<li id="li-174"><p id="p-435"><em class="emphasis">Commutative property of multiplication</em>: \(z_1z_2=z_2z_1\)</p></li>
+<li id="li-175"><p id="p-436"><em class="emphasis">Associative property of addition</em>: \(z_1+(z_2+z_3)=(z_1+z_2)+z_3\)</p></li>
+<li id="li-176"><p id="p-437"><em class="emphasis">Associative property of multiplication</em>: \(z_1(z_2z_3)=(z_1z_2)z_3\)</p></li>
+<li id="li-177"><p id="p-438"><em class="emphasis">Distributive property</em>: \((z_1+z_2)z_3=z_1z_3+z_2z_3\)</p></li>
+<li id="li-178"><p id="p-439"><em class="emphasis">Additive Identity</em>: \(\boldsymbol{0}+z=z\)</p></li>
+<li id="li-179"><p id="p-440"><em class="emphasis">Multiplicative Identity</em>: \(\boldsymbol{1}z=z\)</p></li>
+<li id="li-180"><p id="p-441"><em class="emphasis">Additive Inverse</em>: \(z+(\boldsymbol{-z})=0\)</p></li>
+<li id="li-181"><p id="p-442"><em class="emphasis">Multiplicative Inverse</em>: \(zz^{-1}=1\) (provided \(z \neq 0\))</p></li>
+</ol></article><p id="p-443">We will prove property 2.1(a) and leave the rest for homework exercises (we will frequently prove a few properties and leave the rest for Check your understanding exercises).</p>
+<p id="p-444"><em class="emphasis">Property 2.1(a) proof</em>: Let \(z_1=a_1+ib_1\) and \(z_2=a_2+ib_2\) for \(a_1,a_2,b_1,b_2 \in \mathbb{R}\)</p>
+<div class="displaymath">
+\begin{align*}
+z_1+z_2\amp =(a_1+ib_1)+(a_2+ib_2)\\
+\amp =(a_1+a_2)+i(b_1+b_2)  \textbf{Definition 2.1(a)}\\
+\amp =(a_2+a_1)+i(b_2+b_1)  \textbf{Commutative property of addition for real numbers}\\
+\amp =(a_2+ib_2)+(a_1+ib_1)  \textbf{Definition 2.1(a)}\\
+\amp =z_2+z_1  \Box
+\end{align*}
+</div>
+<article class="example-like" id="example-3"><a data-knowl="" class="id-ref" data-refid="hk-example-3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.5.20</span>.</h6></a></article><div id="hk-example-3" class="hidden-content tex2jax_ignore"><article class="example-like"><ol class="decimal">
+<li id="li-182"><p id="p-445">Solve for \(z \in \mathbb{C}\) if \(z^2=1+4\sqrt{3}i\text{.}\) Hint: Let \(z=x+iy\) for \(x,y \in \mathbb{R}\)</p></li>
+<li id="li-183">
+<p id="p-446">Simplify the following:</p>
+<ol class="lower-alpha">
+<li id="li-184"><p id="p-447">\((5-2i)+(1+3i)\)</p></li>
+<li id="li-185"><p id="p-448">\((1+i)-(3-2i)\)</p></li>
+<li id="li-186"><p id="p-449">\((1+2i)(3-i)\)</p></li>
+<li id="li-187"><p id="p-450">\(i(2-3i)+(1+4i)\)</p></li>
+</ol>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-451" class="decimal">
+<li id="li-188">
+<p id="p-452">Letting \(z=x+iy\) we have:</p>
+<div class="displaymath">
+\begin{equation*}
+(x+iy)^2=1+4\sqrt{3}i
+\end{equation*}
+</div>
+<p>Expanding out the left hand side gives us:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2-y^2+2ixy=1+4\sqrt{3}i
+\end{equation*}
+</div>
+<p>Make absolutely sure that you can get this! Now, for two complex numbers to be equal (ie. the left and right hand sides), their real parts and imaginary parts must separately be equal. The real part of the left is \(x^2-y^2\) and that of the right is 1, while the imaginary parts for each side are \(2xy\) for the left, and \(4\sqrt{3}\) for the right. Equating them gives us two equations:</p>
+<div class="displaymath">
+\begin{equation*}
+x^2-y^2=1\, ,\,\,\,\, 2xy=4\sqrt{3}
+\end{equation*}
+</div>
+<p>This is two equations in two unknowns and we can solve this. Remember \(x\) and \(y\) are real so we are just doing regular algebra at this point. Finding the two real solutions to the above two equations and replacing them in \(z=x+i y\) we have:</p>
+<div class="displaymath">
+\begin{equation*}
+z=-2-\sqrt{3}i\, , \,\,\, z=2+\sqrt{3}i
+\end{equation*}
+</div>
+</li>
+<li id="li-189">
+<p id="p-453">In each of these cases we will just be collecting the real and imaginary parts together:</p>
+<ol class="lower-alpha">
+<li id="li-190"><p id="p-454">\((5-2i)+(1+3i)=6+i\)</p></li>
+<li id="li-191"><p id="p-455">\((1+i)-(3-2i)=-2+3i\)</p></li>
+<li id="li-192"><p id="p-456">\((1+2i)(3-i)=5+5i\)</p></li>
+<li id="li-193"><p id="p-457">\(i(2-3i)+(1+4i)=2i+3+1+4i=4+6i\)</p></li>
+</ol>
+</li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-2"><a data-knowl="" class="id-ref" data-refid="hk-exercise-2"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.5.21</span>.</h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-194"><p id="p-458">By first writing \(z=a+bi\) (where \(a,b \in \mathbb{R}\)) solve the equation: \(z^2=8+6i\)</p></li>
+<li id="li-195"><p id="p-459">Solve for the real numbers \(x\) and \(y\) such that \((3+2i)x+(2-i)y=7i\)</p></li>
+<li id="li-196">
+<p id="p-460">Evaluate the following expressions and write your answer in the cartesian form i.e. form \(a+bi\)</p>
+<ol class="lower-alpha">
+<li id="li-197"><p id="p-461">\((5-6i)+(3+2i)\)</p></li>
+<li id="li-198"><p id="p-462">\((1+2i)-(2-3i)\)</p></li>
+<li id="li-199"><p id="p-463">\((2+5i)(4-i)\)</p></li>
+<li id="li-200"><p id="p-464">\((2+3i)(1+i)(2-3i)\)</p></li>
+<li id="li-201"><p id="p-465">\((1+i)-(2+3i)(1+i)\)</p></li>
+<li id="li-202"><p id="p-466">\((1+\sqrt{3}i)(1-\sqrt{3}i\))</p></li>
+</ol>
+</li>
+<li id="li-203"><p id="p-467">Show that \((a+bi)(a-bi)\) where \(a,b \in \mathbb{R}\) is a real number.</p></li>
+<li id="li-204"><p id="p-468">Find the real numbers \(x\) and \(y\) that satisfy the equation: \(x-y+2(x+y-1)i=5+4i\text{.}\)</p></li>
+<li id="li-205"><p id="p-469">Prove properties 2.1(b) to 2.1(e).</p></li>
+</ol></article></div>
+<article class="outcomes" id="outcomes-1"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-206"><p id="p-470">Imaginary numbers are real multiples of \(i\) where \(i\) is a special number satisfying \(i^2=-1\text{.}\)</p></li>
+<li id="li-207"><p id="p-471">I understand the geometric effect that multiplication by \(i\) has.</p></li>
+<li id="li-208"><p id="p-472">I know how to find non-real roots of an irreducible quadratic equation by completing the square.</p></li>
+<li id="li-209"><p id="p-473">Complex numbers are number of the form \(a+bi\) where \(a,b \in \mathbb{R}\) and \(i\) satisfies \(i^2=-1\text{.}\)</p></li>
+<li id="li-210"><p id="p-474">Two complex numbers are equal if and only if their real parts and imaginary parts are equal.</p></li>
+<li id="li-211"><p id="p-475">If \(z=a+bi\) then \(a\) is the real part of \(z\) denoted by \(Re(z)=a\) and \(b\) is the imaginary part of \(z\) denoted by \(Im(z)=b\text{.}\)</p></li>
+<li id="li-212"><p id="p-476">I know how to add or multiply two complex numbers.</p></li>
+<li id="li-213"><p id="p-477">Complex numbers have nice properties and I know how to use the definitions for addition and multiplication of complex numbers to prove the properties.</p></li>
+<li id="li-214"><p id="p-478">I work through the worked examples before checking the solutions, and I also like doing Check Your Understanding exercises.</p></li>
+</ol></article></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.5</span> <span class="title">Identities, inverses and division of complex numbers</span>
+</h3>
+<p id="p-479">We need to make some more definitions at this point:</p>
+<ol class="decimal">
+<li id="li-215"><p id="p-480">The <em class="emphasis">additive identity</em> for complex numbers is a number, call it \(w\text{,}\) such that \(z+w=w+z=z\) for any complex number \(z\text{.}\) It becomes clear that \(0+0i\) (or simply \(0\)) is the additive identity since \(z+0=z=0+z\) for any complex number \(z\text{.}\)</p></li>
+<li id="li-216"><p id="p-481">The <em class="emphasis">additive inverse</em> of a complex number \(z\text{,}\) let's again call it \(w\text{,}\) is a number such that if you take any number, and add \(z\) to it, then add \(w\) to it, you get back to the original number. We can actually write this as: \(z+w=0\text{.}\) ie. \(w=-z\text{.}\) More explicitely, given \(z=a+bi\text{,}\) the additive inverse is \(w=-a-bi\text{.}\)</p></li>
+<li id="li-217"><p id="p-482">The <em class="emphasis">multiplicative identity</em> is that number which, when you multiply it by complex number, that number remains the same. ie. if we call the multiplicative identity \(w\text{,}\) then for any \(z\in\mathbb{C}\) we must have that \(wz=zw=z\text{,}\) and this number is just \(w=1\text{.}\)</p></li>
+</ol>
+<p id="p-483">We'll give a whole box to the next one as it definitely takes a bit more thought.</p>
+<ul class="disc"><li id="li-218">
+<p id="p-484">The other thing that we need to think about is the <em class="emphasis">multiplicative inverse</em>. Let's first think about the multiplicative inverse for real numbers. What is the multiplicative inverse of 2? We call it \(2^{-1}\) and it's the number that you have to multiply 2 by to get to 1, which is clearly 0.5. We can write this as:</p>
+<div class="displaymath">
+\begin{equation*}
+2^{-1}2=1\implies 2^{-1}=0.5
+\end{equation*}
+</div>
+<p>How about for complex numbers? What is the multiplicative inverse of \(z=a+bi\text{,}\) \(a,b\in\mathbb{R}\text{?}\) Let's call it \(z^{-1}=c+di\text{,}\) \(c,d\in\mathbb{R}\) and it must have the property such that:</p>
+<div class="displaymath">
+\begin{equation*}
+z z^{-1}=z^{-1}z=1
+\end{equation*}
+</div>
+<p>In fact we only need to deal with one of \(z z^{-1}\) or \(z^{-1}z\) because we saw that complex numbers commute under multiplication. Let's figure out what the \(c\) and \(d\) have to be in terms of \(a\) and \(b\text{.}\) Remember, we are given \(z\) and we have to figure out what is \(z^{-1}\text{.}\) Let's write the whole thing out:</p>
+<div class="displaymath">
+\begin{equation*}
+zz^{-1}=(a+bi)(c+di)=ac-bd+i(ad+bc)
+\end{equation*}
+</div>
+<p>and we want this to equal 1. Well, for this to be 1, we must have that \(ac-bd=1\) and \(ad+bc=0\text{.}\) We can solve this for \(c\) and \(d\) and we find:</p>
+<div class="displaymath">
+\begin{equation*}
+c=\frac{a}{a^2+b^2}\, ,\,\,\,\, d=\frac{-b}{a^2+b^2}
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1}=\frac{a-bi}{a^2+b^2}
+\end{equation*}
+</div>
+<p>In fact we can therefore write:</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1}=\frac{1}{a+bi}=\frac{a-bi}{a^2+b^2}
+\end{equation*}
+</div>
+</li></ul>
+<p id="p-485">You might ask why we can't just write that</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1}=\frac{1}{a+bi}
+\end{equation*}
+</div>
+<p id="p-486">Indeed this is quite correct, but it gives you no idea about where this number is in the complex plane. In order to put it into Cartesian Form, you need to know what is the real part, and what is the imaginary part, and that is written then explicitely as:</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1}=\frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}i
+\end{equation*}
+</div>
+<p>or just</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1}=\frac{a-bi}{a^2+b^2}
+\end{equation*}
+</div>
+<p id="p-487">This way the number which is the multiplicative inverse of \(z=a+bi\) is \(\frac{a}{a^2+b^2}\) along the real axis and \(\frac{-b}{a^2+b^2}\) along the imaginary axis.</p>
+<p id="p-488">So we can now also divide by complex numbers. Note that while the numerator is complex, the denominator is real, so if I give you a complex number, let's say \(z=3-4i\text{,}\) you can find which number in the complex plane is \(\frac{1}{z}\) which in this case will be</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{3}{25}+\frac{4i}{25}
+\end{equation*}
+</div>
+<p>and you can pinpoint this in the complex plane. Make sure that you get this when you use the above formula for the multiplicative inverse.</p>
+<p id="p-489">Let's take an example and try and calculate:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{2+3i}{3-4i}
+\end{equation*}
+</div>
+<p id="p-490">Well, this is the same as:</p>
+<div class="displaymath">
+\begin{equation*}
+(2+3i)\frac{1}{3-4i}=(2+3i)\frac{3+4i}{25}=\frac{(6-12)+i(8+9)}{25}=\frac{-6+17i}{25}
+\end{equation*}
+</div>
+<p id="p-491">Actually, we can do something kind of strange here. We can think about our first function of complex numbers. We know how to draw the graph of \(y=1/x\text{.}\) We do this by setting up the \(x\) and \(y\) axes, and finding the points in the \((x,y)\) plane such that \(y=\frac{1}{x}\text{.}\) What would this mean for complex numbers. Well for real numbers, each axis was one dimensional, and so we ended up with a two dimensional graph. Here, we have a mapping from points in a two dimensional space to points in a two dimensional space, ie:</p>
+<div class="displaymath">
+\begin{equation*}
+f:a+bi\rightarrow \frac{a-bi}{a^2+b^2}
+\end{equation*}
+</div>
+<p>so it kinda looks like this should be four dimensional, ie. all points \((z,w)\) such that \(w=\frac{1}{z}\)</p>
+<p id="p-492">Well, we can't do this, so instead we put two complex planes next to each other, and ask where entire lines of complex numbers get mapped to. The easiest lines to think about are lines of constant imaginary part (ie. horizontal lines) and lines of constant real part (ie. vertical lines). It turns out that these lines of points get mapped in a really pretty way to circles of different positions and radii under the map \(z\rightarrow \frac{1}{z}\text{.}\)</p>
+<p id="p-493">There is a mathemafrica blog-post <a class="external" href="https://bit.ly/2PfFwl0" target="_blank">here</a> on plotting functions of complex numbers, the material is not examinable. We recommend reading this blog-post <a class="external" href="https://bit.ly/2MCdROb" target="_blank">here</a> to see some animated mapping. Below are some plots generated using Mathematica which you will also find in the blog-post.</p>
+<figure class="figure-like" id="figure-18"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/plboth.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.22.</span> The mapping of \(z \rightarrow \dfrac1{z}\) from one complex plane to its image.</figcaption></figure><p id="p-494">In the figure above, the colors of each line are matched, and you can see four points which are mapped to their correspondingly colored points in the complex plane.</p>
+<p id="p-495">Actually, when we calculated the multiplicative inverse of \(z=a+bi\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1}=\frac{1}{a+bi}=\frac{a-bi}{a^2+b^2}
+\end{equation*}
+</div>
+<p>we found two expressions which will be used frequently and have names of their own, they are called the complex conjugate, and the modulus respectively:</p>
+<article class="definition-like" id="definition-8"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.23</span>. <span class="title">Complex conjugate and modulus.</span>
+</h6>
+<p id="p-496">(a) The <dfn class="terminology">complex conjugate</dfn> of the complex number \(z=a+bi\) is denoted by \(\overline{z}\) and is defined as:</p>
+<p id="p-497">\(\overline{z}=a-ib\) (simply change the sign of the imaginary part).</p>
+<p id="p-498">(b) The <dfn class="terminology">modulus</dfn> of a complex number \(z=a+bi\text{,}\) denoted by \(|z|\text{,}\) is defined as:</p>
+<p id="p-499">\(|z|=\sqrt{a^2+b^2}\)</p>
+<p id="p-500">Note that the modulus of a complex number is just the distance of that number in the complex plane to the point 0.</p></article><p id="p-501"><em class="emphasis">Remark:</em> Geometrically, the complex conjugate \(\overline{z}\) is the reflection of \(z\) about the real axis, and the modulus \(|z|\) is the length of a line segment joining the origin and the complex number \(z\text{:}\)</p>
+<figure class="figure-like" id="figure-19"><div style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/plmodconj.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.24.</span> The complex conjugate of \(z\) is the reflection of \(z\) by the real axis, and the modulus of \(z\) is the distance between the origin and the complex number \(z\)</figcaption></figure><p id="p-502">Therefore, in terms of the definitions above, we have</p>
+<div class="displaymath">
+\begin{equation}
+z^{-1}=\dfrac{a-bi}{a^2+b^2}=\dfrac{\overline{z}}{|z|^2}\text{.}\tag{2.5.4}
+\end{equation}
+</div>
+<p id="p-503">We can therefore write the division of complex numbers in terms of the complex conjugate and modulus:</p>
+<article class="definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.5.25</span>. <span class="title">Division of complex numbers.</span>
+</h6>
+<p id="p-504">If \(z,w \in \mathbb{C} , z \neq 0\text{,}\) we define the quotient \(\dfrac{w}{z}\) as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\dfrac{w}{z}=\dfrac{w\overline{z}}{z\overline{z}}=\dfrac{w\overline{z}}{|z|^2}
+\end{equation*}
+</div></article><p id="p-505">So to divide by a complex number, multiply by its conjugate and divide by its modulus squared.</p>
+<p id="p-506"><em class="emphasis">Remark</em>: Complex numbers are closed under division i.e. if \(z,w \in \mathbb{C}\) then \(\dfrac{w}{z} \in \mathbb{C}\text{,}\) provided \(z \neq 0\text{.}\)</p>
+<article class="example-like" id="example-4"><a data-knowl="" class="id-ref" data-refid="hk-example-4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.5.26</span>.</h6></a></article><div id="hk-example-4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-507">Write the following complex numbers in a cartesian form i.e. the form \(z=a+ib\)</p>
+<ol class="decimal">
+<li id="li-219"><p id="p-508">\(\dfrac{1-i}{2+i}\)</p></li>
+<li id="li-220"><p id="p-509">\(\dfrac{\overline{1+i}}{3-2i}\)</p></li>
+<li id="li-221"><p id="p-510">\(\dfrac{2+3i}{i(1+i)}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-511">In each case here we will rationalise the denominator. This just means multiplying top and bottom by the complex conjugate:</p>
+<ol class="decimal">
+<li id="li-222"><p id="p-512">\(\dfrac{1-i}{2+i}=\dfrac{(1-i)(2-i)}{(2+i)(2-i)}=\dfrac{1 - 3 i}{5}\)</p></li>
+<li id="li-223"><p id="p-513">\(\dfrac{\overline{1+i}}{3-2i}=\dfrac{{1-i}}{3-2i}=\dfrac{5-i}{13}\)</p></li>
+<li id="li-224"><p id="p-514">\(\dfrac{2+3i}{i(1+i)}=\dfrac{2+3i}{(i-1)}=\dfrac{(2+3i)(-1-i)}{(i-1)(-1-i)}=\dfrac{(1 - 5 i)}{2}\)</p></li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-3"><a data-knowl="" class="id-ref" data-refid="hk-exercise-3"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.5.27</span>.</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-225">
+<p id="p-515">Write the following complex numbers in a cartesian form i.e. form \(z=a+bi\) (\(a,b \in \mathbb{R}\))</p>
+<ol class="lower-alpha">
+<li id="li-226"><p id="p-516">\(\dfrac{2-3i}{1+i}\)</p></li>
+<li id="li-227"><p id="p-517">\(\dfrac{\overline{3+4i}}{1-i}\)</p></li>
+<li id="li-228"><p id="p-518">\(\dfrac{(1-i)^2}{2-3i}\)</p></li>
+<li id="li-229"><p id="p-519">\(\dfrac{\overline{(2-3i)}(1+i)}{\sqrt{3}+i}\)</p></li>
+<li id="li-230"><p id="p-520">\(\dfrac{(1+i)^2}{2-\sqrt{3}i}\)</p></li>
+</ol>
+</li>
+<li id="li-231"><p id="p-521">Prove <a data-knowl="./knowl/itm_Properies_2_2.html" title="Proposition 2.5.28: Properties of the complex conjugate">properties 2.5.28</a>.</p></li>
+<li id="li-232"><p id="p-522">Find all real numbers \(x\) and \(y\) such that \(\dfrac1{x+iy}=1+i\text{.}\)</p></li>
+<li id="li-233"><p id="p-523">If \(z=2-i\text{,}\) write \(\dfrac{\overline{z}}{1-z}\) in a form \(a+bi\text{.}\)</p></li>
+<li id="li-234">
+<p id="p-524">Find the real and the imaginary parts of</p>
+<div class="displaymath">
+\begin{equation}
+\dfrac1{1+\dfrac{i}{1+i}}\text{.}\tag{2.5.5}
+\end{equation}
+</div>
+</li>
+<li id="li-235"><p id="p-525">Simplify \(\dfrac{z\overline{z}^2}{|z|^2}\) if \(z \in \mathbb{C}\text{.}\)</p></li>
+<li id="li-236">
+<p id="p-526">Let \(z=1-\sqrt{3}i\text{.}\) Find:</p>
+<ol class="lower-alpha">
+<li id="li-237"><p id="p-527">\(|z|\)</p></li>
+<li id="li-238"><p id="p-528">\(\overline{iz}\)</p></li>
+<li id="li-239"><p id="p-529">Re\((\frac1{z})\)</p></li>
+</ol>
+</li>
+<li id="li-240"><p id="p-530">Prove that if \((\overline{z})^2=z^2\text{,}\) then \(z\) is either real or pure imaginary.</p></li>
+</ol>
+<ol class="decimal">
+<li id="li-241"><p id="p-531">Give a value for \(z\) and a value for \(w\) for which \(|z+w| \neq |z|+|w|\text{.}\)</p></li>
+<li id="li-242"><p id="p-532">Show that \(z\overline{z}=|z|^2\text{.}\)</p></li>
+<li id="li-243"><p id="p-533">Show why the expressions in (5) and (6) are equal.</p></li>
+<li id="li-244"><p id="p-534">Show that for any complex number \(z\text{,}\) Re\((z) \leq |z|\text{.}\) Hence, justify the relationship between (6) and (7).</p></li>
+<li id="li-245"><p id="p-535">Deduce from the triangle inequality that \(||z|-|w||\leq |z-w|\text{.}\)</p></li>
+</ol></article></div></section><section class="subsection" id="ordered"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.6</span> <span class="title">Properties of the conjugate and modulus</span>
+</h3>
+<a href="sec_complex_numbers.html#ordered" class="permalink">¶</a><p id="p-536">Just as we did for multiplication and addition of complex numbers, we can write down the properties of the complex conjugate, all of which can be proved from its definition, and the definition of the arithmetic procedures of complex numbers:</p>
+<article class="theorem-like" id="itm_Properies_2_2"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.5.28</span>. <span class="title">Properties of the complex conjugate.</span>
+</h6>
+<p id="p-537">If \(z,w \in \mathbb{C}\) and \(n \in \mathbb{Z}^{+}\text{,}\) then</p>
+<ol class="decimal">
+<li id="li-246"><p id="p-538">\(\overline{z+w}=\overline{z}+\overline{w}\)</p></li>
+<li id="li-247"><p id="p-539">\(\overline{zw}\)=\(\overline{z}\) \(\overline{w}\)</p></li>
+<li id="li-248"><p id="p-540">\(\overline{\Big(\dfrac{z}{w}\Big)}\)=\(\dfrac{\overline{z}}{\overline{w}}\) for \(w\neq 0\)</p></li>
+<li id="li-249"><p id="p-541">\(z\overline{z}=|z|^2\)</p></li>
+<li id="li-250"><p id="p-542">\(z+\overline{z}=2Re(z)\)</p></li>
+<li id="li-251"><p id="p-543">\(z-\overline{z}=2iIm(z)\)</p></li>
+<li id="li-252"><p id="p-544">\(\overline{\overline{z}}=z\)</p></li>
+<li id="li-253"><p id="p-545">\(\overline{(z^n)}=(\overline{z})^n\)</p></li>
+</ol></article><p id="p-546">We will prove properties 2.2(a) and 2.2(h) and leave the rest for Check your understanding exercises.</p>
+<p id="p-547"><em class="emphasis">Property 2.2(a) proof:</em> Let \(z=a+ib\) and \(w=c+id\) where \(a,b,c,d \in \mathbb{R}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\overline{z+w}\amp =\overline{(a+ib)+(c+id)}\\
+\amp =\overline{(a+c)+i(b+d)}  \textbf{Definition 2.1(a)}\\
+\amp =(a+c)-i(b+d)  \textbf{Definition 2.2.1(a)}\\
+\amp =(a-ib)+(c-id)  \textbf{Definition 2.1(a)}\\
+\amp =\overline{a+ib}+\overline{c+id}  \textbf{Definition 2.2.1(a)}\\
+\amp =\overline{z}+\overline{w}  \Box
+\end{align*}
+</div>
+<p id="p-548"><em class="emphasis">Property 2.2(h) proof:</em> We will prove this by mathematical induction.</p>
+<p id="p-549">Let \(P(n)\) be the proposition that \(\overline{(z^n)}=(\overline{z})^n\) for \(n \in \mathbb{Z}^+\)</p>
+<p id="p-550"><em class="emphasis">Base Case</em>: When \(n=1\) the matter is clear.</p>
+<p id="p-551"><em class="emphasis">Induction Hypothesis</em>: Assume that \(P(k)\) is true for some \(k \in \mathbb{Z}^+\) i.e. \(\overline{(z^k)}=\overline{(z)}^k\text{.}\)</p>
+<p id="p-552"><em class="emphasis">Induction Step</em>: We will now show that \(P(k+1)\) holds true i.e. \(\overline{(z^{k+1})}=(\overline{z})^{k+1}\)</p>
+<div class="displaymath">
+\begin{align*}
+\overline{(z^{k+1})}\amp = \overline{(z^kz)}\\
+\amp =\overline{(z^k)}\overline{z}  \textbf{Property 2.2(b)}\\
+\amp =\overline{z}^k\overline{z}  \textbf{By the Induction Hypothesis}\\
+\amp =\overline{(z)}^{k+1}
+\end{align*}
+</div>
+<p id="p-553">So \(P(k+1)\) is correct. Hence by the principle of mathematical induction \(P(n)\) is true for all \(n \in \mathbb{Z}^+\text{.}\)</p>
+<p id="p-554">For the modulus of a complex number we have</p>
+<article class="theorem-like" id="itm_Properies_3_1"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.5.29</span>. <span class="title">Properties of the modulus.</span>
+</h6>
+<p id="p-555">If \(z\) and \(w\) are complex numbers, then:</p>
+<ol class="decimal">
+<li id="li-254"><p id="p-556">\(z\overline{z}=|z|^2\)</p></li>
+<li id="li-255"><p id="p-557">\(|\overline{z}|=|z|\)</p></li>
+<li id="li-256"><p id="p-558">\(|z|\geq 0\)</p></li>
+<li id="li-257"><p id="p-559">\(|z|=0\) if and only if \(z=0\)</p></li>
+<li id="li-258"><p id="p-560">\(|z-w|\) is the distance between the points \(z\) and \(w\) in the complex plane.</p></li>
+<li id="li-259"><p id="p-561">\(|zw|=|z||w|\)</p></li>
+<li id="li-260"><p id="p-562">\(|z|+|w| \geq |z+w|\) (The triangle inequality)</p></li>
+</ol></article><p id="p-563">Notice that this is the first time we see inequalities in our discussion of complex numbers. This is because the quantity \(|z|\) is a real number, and real numbers can be ordered. The reason why we don't discuss inequalities for complex numbers is because they cannot be <em class="emphasis">"ordered"</em>.</p>
+<p id="p-564">Real numbers possess an ordering relation i.e. they can be ordered. The axioms of order in real numbers are:</p>
+<ol class="decimal">
+<li id="li-261"><p id="p-565">If \(a \in \mathbb{R}\) and \(a \neq 0\) then either (but not both) \(a&gt;0\) or \(a\lt 0\text{.}\)</p></li>
+<li id="li-262"><p id="p-566">If \(a,b \in \mathbb{R}\) and \(a,b&gt;0\text{,}\) then \(ab&gt;0\text{.}\)</p></li>
+<li id="li-263"><p id="p-567">If \(a,b \in \mathbb{R}\) and \(a,b&gt;0\text{,}\) then \(a+b&gt;0\text{.}\) Unlike real numbers, the complex numbers cannot be ordered, that is, there is no ordering satisfying axioms 1 to 3 compatible with the structure of complex numbers. For if there were such an ordering, since \(i\neq0\) then we must must have either \(i&gt;0\) or \(i\lt 0\) by \((1)\text{.}\) But if \(i&gt;0\) then \(i\times i&gt;0\) by (2), that is, \(-1&gt;0\) which is a contradiction. Similarly if \(i\lt 0\text{,}\) then \(-i&gt;0\text{,}\) by (2) we have \(-i \times -i &gt;0\text{,}\) again \(-1&gt;0\) which is a contradiction.</p></li>
+</ol>
+<p id="p-568">The proof of the triangle inequality is probably the hardest of the basic properties to prove, so make sure that you understand every step.</p>
+<article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+|z+w|^2\amp =(z+w)(\overline{z+w})\\
+\amp =(z+w)(\overline{z}+\overline{w})\\
+\amp =z\overline{z}+w\overline{z}+z\overline{w}+w\overline{w}\\
+\amp =|z|^2+w\overline{z}+z\overline{w}+|w|^2\\
+\amp =|z|^2+\overline{z\overline{w}}+z\overline{w}+|w|^2\\
+\amp =|z|^2+2Re(z\overline{w})+|w|^2\\
+\amp \leq |z|^2+2|z\overline{w}|+|w|^2\\
+\amp \leq|z|^2+2|z||\overline{w}|+|w|^2\\
+\amp \leq|z|^2+2|z||w|+|w|^2\\
+\amp \leq(|z|+|w|)^2\text{.}
+\end{align*}
+</div></article></div>
+<article class="example-like" id="example-5"><a data-knowl="" class="id-ref" data-refid="hk-example-5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.5.30</span>.</h6></a></article><div id="hk-example-5" class="hidden-content tex2jax_ignore"><article class="example-like"><ol class="decimal">
+<li id="li-264">
+<p id="p-569">Find the distance between the given complex numbers and the origin i.e. find the modulus of \(z\) if:</p>
+<ol class="lower-alpha">
+<li id="li-265"><p id="p-570">\(z=1+i\)</p></li>
+<li id="li-266"><p id="p-571">\(z=1-\sqrt{3}i\)</p></li>
+<li id="li-267"><p id="p-572">\(z=a+b-i(a-b)\)</p></li>
+</ol>
+</li>
+<li id="li-268">
+<p id="p-573">Draw a sketch of the set of all \(z \in \mathbb{C}\) such that:</p>
+<ol class="lower-alpha">
+<li id="li-269"><p id="p-574">\(|z|=1\)</p></li>
+<li id="li-270"><p id="p-575">\(|z-(i+1)|=2\)</p></li>
+<li id="li-271"><p id="p-576">\(|z-i|=|z+1|\)</p></li>
+<li id="li-272"><p id="p-577">\(|z+2-i|\leq 1\)</p></li>
+</ol>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div id="hk-solution-4" class="hidden-content tex2jax_ignore"><div class="solution">
+<ol class="decimal">
+<li id="li-273">
+<p id="p-578">The modulus of a complex number is its distance from the origin, so we just have to calculate that.</p>
+<ol class="lower-alpha">
+<li id="li-274"><p id="p-579">If \(z=1+i\) then \(|z|=|1+i|=\sqrt{1^2+1^2}=\sqrt{2}\)</p></li>
+<li id="li-275"><p id="p-580">If \(z=1-\sqrt{3}i\) then \(|z|=|1-\sqrt{3}i|=\sqrt{1^2+\sqrt{3}^2}=\sqrt{1+3}=2\)</p></li>
+<li id="li-276"><p id="p-581">If \(z=a+b-i(a-b)\) then \(|z|=|a+b-i(a-b)|=\sqrt{(a+b)^2+(a-b)^2}=\sqrt{2(a^2+b^2)}\)</p></li>
+</ol>
+</li>
+<li id="li-277">
+<p id="p-582">Draw a sketch of the set of all \(z \in \mathbb{C}\) such that:</p>
+<ol class="lower-alpha">
+<li id="li-278"><p id="p-583">\(|z|=1\text{.}\) That is, which points in the complex plane are a distance 1 from the origin? This is just the unit circle.</p></li>
+<li id="li-279"><p id="p-584">\(|z-(i+1)|=2\text{.}\) Remember that the modulus of \(z-w\) is the distance between the complex numbers \(z\) and \(w\) in the complex plane, so this is asking for all points \(z\) which are a distance 2 away from \((1+i)\text{,}\) that is a circle of radius 2 about the point \((1+i)\text{.}\)</p></li>
+<li id="li-280"><p id="p-585">\(|z-i|=|z+1|\text{.}\) This is asking for those points \(z\) which are the same distance away from \(i\) as they are from the point -1. Of course the point right in between these points is one such \(z\) but in fact there is a whole line of them as can be seen in the figure</p></li>
+<li id="li-281"><p id="p-586">\(|z+2-i|\leq 1\text{.}\) This is all points \(z\) less than 1 unit away from the point \((-2+i)\text{,}\) which corresponds to a unit disk centred on the points \((-2+i)\text{.}\)</p></li>
+</ol>\(z=a+bi\)\(a\)\(b\)</li>
+</ol>
+<figure class="figure-like" id="figure-20"><div style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="images/regions.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.31.</span> Solutions to the above questions: b) i)Blue, ii)Red, iii) Black, iv) Green</figcaption></figure>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-4"><a data-knowl="" class="id-ref" data-refid="hk-exercise-4"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.5.32</span>.</h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-282">
+<p id="p-587">Find the modulus of the following complex numbers:</p>
+<ol class="lower-alpha">
+<li id="li-283"><p id="p-588">\(2-5i\)</p></li>
+<li id="li-284"><p id="p-589">\(-2i\)</p></li>
+<li id="li-285"><p id="p-590">\(2+\pi\)</p></li>
+<li id="li-286"><p id="p-591">\(-1+2\sqrt{2}i\)</p></li>
+<li id="li-287"><p id="p-592">\(-1-\sqrt{2}\)</p></li>
+</ol>
+</li>
+<li id="li-288"><p id="p-593">If \(w=1-2i\) and \(z=2+3i\text{,}\) find \(||w|-\overline{z}|\text{.}\)</p></li>
+<li id="li-289">
+<p id="p-594">Describe and sketch the following subsets of the complex plane:</p>
+<ol class="lower-alpha">
+<li id="li-290"><p id="p-595">\(\{ z \in \mathbb{C}|\ 5\lt |5z+10i|\lt 10\ \}\)</p></li>
+<li id="li-291"><p id="p-596">\(\{ z \in \mathbb{C}|\ |\overline{z}+4|\geq|2+iz|\ \}\)</p></li>
+<li id="li-292"><p id="p-597">\(\{ z \in \mathbb{C}|\ |z-(1+2i)|=1\ \}\)</p></li>
+<li id="li-293"><p id="p-598">\(\{ z \in \mathbb{C}|\ Re(z)+Im(z) \geq 0\ \}\)</p></li>
+<li id="li-294"><p id="p-599">\(\{ z \in \mathbb{C}|\ |z+i|=|z+1|\ \}\)</p></li>
+<li id="li-295"><p id="p-600">\(\{ z \in \mathbb{C}|\ |z+i| \leq 1\\) and \(|z+1| \leq 1\ \}\)</p></li>
+</ol>
+</li>
+<li id="li-296"><p id="p-601">Show that the complex numbers satisfying \(Re\big(\dfrac1{z}\big)=\dfrac1{2}\) where \(z \in \mathbb{C}\) form a circle. Give it's center and radius.</p></li>
+<li id="li-297">
+<p id="p-602">If \(z=a+bi\text{,}\) where \(a,b \in \mathbb{R}\text{,}\) \(b \neq 0\text{,}\) and \(|z|=1\text{,}\) show that</p>
+<div class="displaymath">
+\begin{equation*}
+\dfrac{z-1}{z+1}
+\end{equation*}
+</div>
+<p>is purely imaginary.</p>
+</li>
+<li id="li-298"><p id="p-603">If \(z+\dfrac1{z}\) is real, where \(z \in \mathbb{C}\text{,}\) prove that \(|z|=1\) or \(z\) is real.</p></li>
+<li id="li-299"><p id="p-604">Prove <a data-knowl="./knowl/itm_Properies_3_1.html" title="Proposition 2.5.29: Properties of the modulus">Properties 2.5.29</a></p></li>
+<li id="li-300"><p id="p-605">The definition of the relation \(&gt;\) in the real number system is based upon the existence of a subset \(\mathscr{P}\) (the positive reals) having the following properties: (i)For any real number \(\alpha \neq 0\text{,}\) either \(\alpha\) or \(-\alpha\) (but not both) belongs to \(\mathscr{P}\text{.}\) (ii) If \(\alpha\) and \(\beta\) belong to \(\mathscr{P}\text{,}\) so does \(\alpha + \beta\text{.}\) (iii) If \(\alpha\) and \(\beta\) belong to \(\mathscr{P}\text{,}\) so does \(\alpha \times \beta\text{.}\) When such a set \(\mathscr{P}\) exists we write \(\alpha &gt; \beta\) if and only if \(\alpha-\beta\) belongs to \(\mathscr{P}\text{.}\) Prove that the complex number system does not possess a non-empty subset \(\mathscr{P}\) having properties (i),(ii), and (iii).</p></li>
+</ol></article></div>
+<article class="outcomes" id="outcomes-2"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-301"><p id="p-606">I know what a complex conjugate of \(z=a+bi\) is and how it is defined, i.e. \(\overline{z}=a-bi\) .</p></li>
+<li id="li-302"><p id="p-607">I know the geometric interpretation of the complex conjugate i.e. reflection of \(z\) about the real axis.</p></li>
+<li id="li-303"><p id="p-608">I know how to use the complex conjugate to write a quotient of two complex number in a Cartesian form i.e. form \(a+bi\text{.}\)</p></li>
+<li id="li-304"><p id="p-609">On the complex plane, the modulus of a complex number is the distance between a complex number \(z=a+bi\) and the origin, it is defined as \(|z|=\sqrt{a^2+b^2}\text{.}\)</p></li>
+<li id="li-305"><p id="p-610">I understand why complex numbers cannot be ordered.</p></li>
+<li id="li-306"><p id="p-611">I know how to sketch subsets of the complex plane.</p></li>
+</ol></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

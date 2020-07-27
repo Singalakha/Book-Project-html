@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T22:15:47+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The argument of a complex number</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_complex_numbers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_deMoivre.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_complex_numbers.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_deMoivre.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument" class="active">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-14.html" data-scroll="section-14">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_argument"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">The argument of a complex number</span>
+</h2>
+<a href="sec_argument.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-612">Here we are going to give the second way of representing a complex number. Every number sits at some point in the complex plane and every point in the complex plane corresponds to a unique complex number. So far we have written these points by their Cartesian representation. ie. what is the real part of the complex number and what is the imaginary part. This representation is one-to-one. I give you a point in the complex plane and you can give me \(a+bi\text{,}\) and vice versa.</p>
+<p id="p-613">Here we're going to see that we can represent them in a different way in the complex plane.</p>
+<p id="p-614">This representation will be written not in terms of \(a\) and \(b\) denoting the real and imaginary parts, but in terms of the distance of the point in the complex plane from the origin, and the angle subtended between the positive real axis and the line joining the origin to the complex number.</p>
+<p id="p-615">What's going to be very strange here is that this representation will not be one-to-one.</p>
+<p id="p-616">Let's take an example here. Given the complex number \(z=1+i\text{,}\) we can ask what angle \(\theta\) does the line between 0 and \(z\) make with the positive real axis (going anti-clockwise)? Let's look at this in the complex plane:</p>
+<p id="p-617">For instance, given the complex number \(z=1+i\text{,}\) what angle \(\theta\) does it make with the positive real axis, and how far is it from the origin?</p>
+<figure class="figure-like" id="figure-21"><div style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="images/modarg.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.6.1.</span> A complex number \(z=1+i\) can be located in the complex plane using its modulus \(|1+i|=\sqrt{2}\) and the angle  \(theta\) read counterclockwise from the positive real axis.</figcaption></figure><p id="p-618">This complex number is \(\sqrt{2}\) units away from the origin, and makes an angle of \(\theta =\dfrac{\pi}{4}\) counterclockwise from the positive real axis.</p>
+<p id="p-619">What this means is that if I had simply told you to locate the number in the complex plane which is modulus \(\sqrt{2}\) and makes angle \(\frac{\pi}{4}\) with the positive real axis, you would be able to uniquely pinpoint where this number was and you could tell me that it has real part 1 and imaginary part 1. ie it is \(z=1+i\text{.}\)</p>
+<p id="p-620">This tells us that there is a mapping from \((|z|,\theta)\rightarrow (Re(z),Im(z))\text{.}\)</p>
+<p id="p-621">The angle \(theta\) is called an argument of the complex number. What's strange is that while giving \(|z|\) and \(\theta\) will give me a unique point in the complex plane, there are an infinite number of different \(\theta\)'s which correspond to the same point. The reason for this is that, for instance with \(z=1+i\text{,}\) although we went counterclockwise from the positive real axis an angle \(\frac{\pi}{4}\text{,}\) we could also have gone \(\frac{\pi}{4}+2\pi\) and we would have ended up at the same place:</p>
+<figure class="figure-like" id="figure-22"><div style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="images/modarg2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.6.2.</span> You could have gone round a full circle plus \(\frac{\pi}{4}\) and arrived at the same point as just going \(\frac{\pi}{4}\text{.}\)</figcaption></figure><p id="p-622">In fact we could have gone round any number of full rotations. This tells us that if we said where is the number with modulus \(\sqrt{2}\) and with angular position \(2\pi+\frac{\pi}{4}\) it would also be \(z=1+i\text{.}\) Thus, this representation is not one-to-one with the points in the complex plane.</p>
+<p id="p-623">Here we can define the argument of a complex number as follows:</p>
+<article class="definition-like" id="definition-10"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.6.3</span>. <span class="title">An argument of a complex number \(z\).</span>
+</h6>
+<p id="p-624">An <dfn class="terminology">argument</dfn> of a non-zero complex number \(z\text{,}\) denoted by \(arg(z)\text{,}\) is an angle \(\theta\) measured from the positive real axis to the line segment joining \(z\) to the origin.</p>
+<p id="p-625">The set of all possible arguments can be written as:</p>
+<div class="displaymath">
+\begin{equation*}
+arg(z)=Arg(z) + 2\pi k,  k \in \mathbb{Z}
+\end{equation*}
+</div>
+<p>where \(Arg(z)\) is called \(\textbf{the principal value of the argument}\) satisfying \(-\pi\lt  Arg \leq \pi\text{.}\)</p>
+<p id="p-626">This means that \(arg(z)\) is an infinite set, and \(Arg(z)\) is a single number.</p></article><p id="p-627">You might ask why we are introducing another way of denoting complex numbers where the Cartesian Form seemed just fine, thank you very much. Well, it turns out that many things will be much easier in the language of the modulus and the argument as we will see in the following sections.</p>
+<p id="p-628">We want to be able to calculate \(Arg(z)\) wherever \(z\) is in the complex plane. In oder to do this it depends on which quadrant of the complex plane the number is in.</p>
+<p id="p-629">If \(z=a+bi\) and \(\theta =\arctan\big({\dfrac{b}{a}}\big)\) then</p>
+<div class="displaymath">
+\begin{equation*}
+Arg(z) = \begin{cases}\theta \amp  \text{ If \(z\) is in the first or fourth quadrants }    \\ \theta + \pi \amp   \text{ If \(z\) is in the second quadrant }  \\ \theta - \pi \amp  \text{ If \(z\) is in the third quadrant } \end{cases}
+\end{equation*}
+</div>
+<article class="example-like" id="example-6"><a data-knowl="" class="id-ref" data-refid="hk-example-6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.6.4</span>.</h6></a></article><div id="hk-example-6" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-630">Plot the following numbers in the complex plane and find \(|z|\text{,}\) \(Arg(z)\) and \(arg(z)\) for:</p>
+<ol class="decimal">
+<li id="li-307"><p id="p-631">\(z=1+i\)</p></li>
+<li id="li-308"><p id="p-632">\(z=1-i\)</p></li>
+<li id="li-309"><p id="p-633">\(z=-\sqrt{3}-i\)</p></li>
+<li id="li-310"><p id="p-634">\(z=-1+\sqrt{3}i\)</p></li>
+<li id="li-311"><p id="p-635">\(z=i\)</p></li>
+<li id="li-312"><p id="p-636">\(z=2\)</p></li>
+<li id="li-313"><p id="p-637">\(z=-\pi\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div id="hk-solution-5" class="hidden-content tex2jax_ignore"><div class="solution">
+<figure class="figure-like" id="figure-23"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/pl3point2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.6.5.</span> positions of the points listed above.</figcaption></figure><ol class="decimal">
+<li id="li-314"><p id="p-638">For \(z=1+i\text{,}\) \(|z|=\sqrt{1^2+1^2}=\sqrt{2}\text{,}\) \(Arg(z)=\frac{\pi}{4}\text{,}\) \(arg(z)=\{\frac{\pi}{4}+2\pi k |k\in\mathbb{Z}\}\)</p></li>
+<li id="li-315"><p id="p-639">\(z=1-i\text{,}\) \(|z|=\sqrt{1^2+(-1)^2}=\sqrt{2}\text{,}\) \(Arg(z)=-\frac{\pi}{4}\text{,}\) \(arg(z)=\{-\frac{\pi}{4}+2\pi k |k\in\mathbb{Z}\}\)</p></li>
+<li id="li-316"><p id="p-640">\(z=-\sqrt{3}-i\) \(|z|=\sqrt{(-\sqrt{3})^2+(-1)^2}=2\text{,}\) \(Arg(z)=-\frac{5\pi}{6}\text{,}\) \(arg(z)=\{-\frac{5\pi}{6}+2\pi k |k\in\mathbb{Z}\}\)</p></li>
+<li id="li-317"><p id="p-641">\(z=-1+\sqrt{3}i\) \(|z|=\sqrt{(-1)^2+(\sqrt{3})^2}=2\text{,}\) \(Arg(z)=\frac{2\pi}{3}\text{,}\) \(arg(z)=\{\frac{2\pi}{3}+2\pi k |k\in\mathbb{Z}\}\)</p></li>
+<li id="li-318"><p id="p-642">\(z=i\text{,}\) \(|z|=\sqrt{1^2}=1\text{,}\) \(Arg(z)=\frac{\pi}{2}\text{,}\) \(arg(z)=\{\frac{\pi}{2}+2\pi k |k\in\mathbb{Z}\}\)</p></li>
+<li id="li-319"><p id="p-643">\(z=2\text{,}\) \(|z|=\sqrt{2^2}=2\text{,}\) \(Arg(z)=0\text{,}\) \(arg(z)=\{2\pi k |k\in\mathbb{Z}\}\)</p></li>
+<li id="li-320"><p id="p-644">\(z=-\pi\text{,}\) \(|z|=\sqrt{(-\pi)^2}=\pi\text{,}\) \(Arg(z)=\pi\text{,}\) \(arg(z)=\{\pi+2\pi k |k\in\mathbb{Z}\}\)</p></li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-5"><a data-knowl="" class="id-ref" data-refid="hk-exercise-5"></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"></article></div>
+<article class="outcomes" id="outcomes-3"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-330"><p id="p-654">I know what an argument of a complex number is.</p></li>
+<li id="li-331"><p id="p-655">I understand that a complex number \(z\) has infinitely many arguments \(arg(z)\) but has a unique principal value on \((-\pi,\pi ]\) denoted by \(Arg(z)\text{.}\)</p></li>
+<li id="li-332"><p id="p-656">I know how to find \(Arg(z)\) of a complex number \(z\text{.}\)</p></li>
+</ol></article></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.1</span> <span class="title">The Modulus-Argument form of a complex number</span>
+</h3>
+<p id="p-657">We've seen now that you can use \(|z|\) and \(arg(z)\) to pinpoint a number in the complex plane. Now we are going to discover how to write \(z\) explicitly using these quantities</p>
+<p id="p-658">Consider the diagram below:</p>
+<figure class="figure-like" id="figure-24"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/modarg3.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.6.6.</span> A complex number \(z\) located \(|z|\) away from the origin with real part \(a\) and imaginary part \(b\) making an angle of \(\theta\) with the positive real axis</figcaption></figure><p id="p-659">It's clear using our basic trigonometry that we can relate many of these quantities. In particular:</p>
+<div class="displaymath">
+\begin{equation*}
+\sin{\theta}=\dfrac{b}{|z|} \Rightarrow b=|z|\sin{\theta}
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\cos{\theta}=\dfrac{a}{|z|} \Rightarrow a=|z|\cos{\theta}
+\end{equation*}
+</div>
+<p id="p-660">But this means that we can write:</p>
+<div class="displaymath">
+\begin{equation*}
+z=|z|\cos{\theta}+i|z|\sin{\theta} = |z|(\cos{\theta}+i\sin{\theta})
+\end{equation*}
+</div>
+<p id="p-661">There's a specific name for this form:</p>
+<article class="definition-like" id="definition-11"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.6.7</span>. <span class="title">Modulus-Argument form of a complex number.</span>
+</h6>
+<p id="p-662">If \(z\) is a non-zero complex number and \(\theta\) is an argument of \(z\text{,}\) then the expression</p>
+<div class="displaymath">
+\begin{equation*}
+z=|z|(\cos{\theta}+i\sin{\theta})
+\end{equation*}
+</div>
+<p>is called the <dfn class="terminology">modulus-argument form</dfn> of \(z\text{.}\)</p>
+<p id="p-663">It is usual to choose \(\theta\) to be the principal argument of the \(z\text{.}\)</p></article><p id="p-664">The <em class="emphasis">modulus-argument form</em> is also known as the <em class="emphasis">polar form</em>.</p>
+<article class="example-like" id="example-7"><a data-knowl="" class="id-ref" data-refid="hk-example-7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.6.8</span>.</h6></a></article><div id="hk-example-7" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-665">Write the following complex numbers in the modulus-argument form.</p>
+<ol class="decimal">
+<li id="li-333"><p id="p-666">\(z=1+i\)</p></li>
+<li id="li-334"><p id="p-667">\(z=1-i\)</p></li>
+<li id="li-335"><p id="p-668">\(z=-\sqrt{3}-i\)</p></li>
+<li id="li-336"><p id="p-669">\(z=-1+\sqrt{3}i\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span></a><div id="hk-solution-6" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-670">In each of these cases we just have to use that \(|z|=\sqrt{Re(z)^2+Im(z)^2}\) and trigonometry to calculate the principle argument. Here we plot each of the numbers in the complex plane:</p>
+<figure class="figure-like" id="figure-25"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/modargplot.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.6.9.</span> The positions of the complex numbers whose modulus and argument we have to calculate</figcaption></figure><p id="p-671">Looking at the first one, the argument is just the angle subtended between the positive real axis and the line joining the origin to the number. We see that this is a triangle with base 1 and height 1, and thus the angle is \(\arctan(1)=\frac{\pi}{4}\text{.}\) Then length of the hypotenuse is \(\sqrt{1^2+1^2}=\sqrt{2}\text{.}\) Thus we can write:</p>
+<div class="displaymath">
+\begin{equation*}
+1+i=\sqrt{2}(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))
+\end{equation*}
+</div>
+<p id="p-672">For the next number the angle is the same, but just measured in the opposite direction (ie. clockwise) and is therefore negative the previous one. So:</p>
+<div class="displaymath">
+\begin{equation*}
+1+i=\sqrt{2}(\cos(-\frac{\pi}{4})+i\sin(-\frac{\pi}{4}))
+\end{equation*}
+</div>
+<p id="p-673">For the next number we have to be a bit more careful with the calculation of the angle. Both parts are negative, and so we can measure the angle between the negative real axis and the line between the origin and the number, and then add on to that \(\pi\text{.}\)</p>
+<figure class="figure-like" id="figure-26"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/thirdone.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.6.10.</span> The positions of the complex numbers whose modulus and argument we have to calculate</figcaption></figure><p id="p-674">So this argument is: \(\pi+\arctan\left(\frac{1}{\sqrt{3}}\right)=\pi+\frac{\pi}{6}=\frac{7\pi}{6}\text{,}\) and therefore (having calculated that \(\sqrt{(-\sqrt{3})^2+(-1)^2}=2\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+-\sqrt{3}-i=2(\cos\frac{\pi}{7}+i\sin\frac{\pi}{7})
+\end{equation*}
+</div>
+<p id="p-675">Note that when we defined the principle argument we actually said that it had to be between \(\pi\) and \(\pi\) but sometimes we will choose to represent the argument in the range \([0,2\pi)\text{.}\)</p>
+<p id="p-676">For the last example, you should get:</p>
+<div class="displaymath">
+\begin{equation*}
+-\sqrt{3}-i=2(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3})
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-6"><a data-knowl="" class="id-ref" data-refid="hk-exercise-6"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.6.11</span>.</h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-677">Write the following complex numbers in the modulus-argument form.</p>
+<ol class="decimal">
+<li id="li-337"><p id="p-678">\(-\sqrt{3}+i\)</p></li>
+<li id="li-338"><p id="p-679">\(5-5\sqrt{3}i\)</p></li>
+<li id="li-339"><p id="p-680">\(-3-3i\)</p></li>
+<li id="li-340"><p id="p-681">\(\sqrt{3}+i\)</p></li>
+<li id="li-341"><p id="p-682">\(-1+i\)</p></li>
+</ol></article></div>
+<article class="outcomes" id="outcomes-4"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-342"><p id="p-683">Given a complex number \(z\text{,}\) I know how to find \(|z|\) and \(Arg(z)\text{.}\)</p></li>
+<li id="li-343"><p id="p-684">I know how to use \(|z|\) and \(Arg(z)\) to write \(z\) in a modulus argument form.</p></li>
+</ol></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

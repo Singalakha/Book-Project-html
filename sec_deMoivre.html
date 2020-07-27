@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T22:15:47+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Multiplication and de Moivre's Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_argument.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_functions.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_argument.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_functions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre" class="active">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-14.html" data-scroll="section-14">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_deMoivre"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.7</span> <span class="title">Multiplication and de Moivre's Theorem</span>
+</h2>
+<a href="sec_deMoivre.html" class="permalink">¶</a><section class="introduction" id="introduction-8"><p id="p-685">Remember when we first saw the basic arithmetic operations on complex numbers? Addition in Cartesian form was really easy, but multiplication, which had this lovely geometric interpretation (it's just rotations) was not so simple. Remember in Cartesian form: \((a+bi)(c+di)=(ac-bd)+(ad+bc)i\) which is just a bit messy. It turns out that in modulus argument form, multiplication is super simple!</p>
+<article class="theorem-like" id="theorem-4-a"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.7.1</span>. <span class="title">(a): Multiplication of two complex numbers in the modulus-argument form.</span>
+</h6>
+<p id="p-686">Suppose that \(z= |z|(\cos{\alpha}+i\sin{\alpha})\) and \(w=|w|(\cos{\beta}+i\sin{\beta})\) are non-zero complex numbers in the modulus-argument form, then their product is:</p>
+<div class="displaymath">
+\begin{equation*}
+zw=|z||w|\Big(\cos{(\alpha+\beta)}+i\sin{(\alpha+\beta)}\Big)
+\end{equation*}
+</div></article><p id="p-687"><em class="emphasis">Remark</em>: This theorem gives us the geometric interpretation for multiplication of complex numbers, i.e. multiplying two complex numbers is equivalent to multiplying their moduli and adding their arguments.</p>
+<p id="p-688">The proof of the theorem is as follows:</p>
+<article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+zw\amp =\Big(|z|(\cos{\alpha}+i\sin{\alpha})\Big)\Big(|w|(\cos{\beta}+i\sin{\beta})\Big)  \textbf{Modulus-argument form }\\
+\amp =|z||w|\Big(\cos{\alpha}+i\sin{\alpha}\Big)\Big(\cos{\beta}+i\sin{\beta}\Big)  \textbf{Commutative property }\\
+\amp =|z||w|\Big( \cos{\alpha}\cos{\beta}+i\cos{\alpha}\sin{\beta}+i\cos{\beta}\sin{\alpha}-\sin{\alpha}\sin{\beta}\Big)  \textbf{Definition 2.1(b)}\\
+\amp =|z||w|\Big( (\cos{\alpha}\cos{\beta}-\sin{\alpha}\sin{\beta})+i(\cos{\alpha}\sin{\beta}+\cos{\beta}\sin{\alpha})\Big)  \textbf{Definition 2.1(a)}\\
+\amp =|z||w|\Big(\cos{(\alpha+\beta)}+i\sin{(\alpha+\beta)}\Big)  \textbf{Compound angle identities}\Box
+\end{align*}
+</div></article></div>
+<p id="p-689">and visually, we can see an example of the product of two complex numbers here:</p>
+<figure class="figure-like" id="figure-27"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/modarg4.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.7.2.</span> Here we have two complex numbers \(z\) and \(w\) with their moduli (\(|z|\) and \(|w|\)) and arguments (\(\alpha\) and \(\beta\)) written down. The product of them \(zw\) is given by a complex number whose modulus is \(|z||w|\) and whose argument is \(\alpha+\beta\text{.}\)</figcaption></figure><p id="p-690">This is something really fundamental to understand and remember: <em class="emphasis">In modulus argument form, when you multiply together two complex numbers, the moduli multiply and the arguments add.</em></p>
+<p id="p-691">How would you write down the complex number \(i\) in modulus argument form?</p>
+<figure class="figure-like" id="figure-28"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/imodarg.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.7.3.</span> </figcaption></figure><p id="p-692">Well, it sits on the imaginary axis, and therefore has principle argument \(\frac{\pi}{2}\text{.}\) Thus:</p>
+<div class="displaymath">
+\begin{equation*}
+i=1\left(\cos(\frac{\pi}{2})+i\sin(\frac{\pi}{2})\right)
+\end{equation*}
+</div>
+<p id="p-693">This means that multiplying a complex number \(z=|z|(\cos\alpha+i\sin\alpha)\) by \(i\) can be written as:</p>
+<div class="displaymath">
+\begin{equation*}
+zi=|z|(\cos(\alpha+\frac{\pi}{2})+i\sin(\alpha+\frac{\pi}{2}))
+\end{equation*}
+</div>
+<p>ie multiplication by \(i\) is equivalent to rotation by \(\frac{\pi}{2}\) in the complex plane...which is one of the ways that we first came across \(i\text{.}\)</p></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.7.1</span> <span class="title">Taking powers of complex numbers</span>
+</h3>
+<p id="p-694">Now we know how easy it is to multiply together two complex numbers when they are written in modulus-argument form. How about squaring a complex number. This is just a special case of multiplication, where the number is being multiplied by itself. Let's start with complex numbers of modulus 1, and adapt to the more general case later. Take the above expression for \(zw\) and make \(w\) be the same as \(z\text{.}\) ie. if \(z=w=\cos{\theta}+i\sin{\theta}\text{,}\) you get:</p>
+<div class="displaymath">
+\begin{equation*}
+z^2=\cos{(2\theta)}+i\sin{(2\theta)}
+\end{equation*}
+</div>
+<p id="p-695">How about \(z^3\text{?}\) Well, you just multiply \(z^2\) by \(z\text{,}\) which yields:</p>
+<div class="displaymath">
+\begin{equation*}
+z^3=\cos{(3\theta)}+i\sin{(3\theta)}
+\end{equation*}
+</div>
+<p id="p-696">In fact, repeated multiplications like this give us a general statement and the name of it is <em class="emphasis">De Moivre's Theorem</em>:</p>
+<article class="theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.7.4</span>. <span class="title">(b): De Moivre's Theorem.</span>
+</h6>
+<p id="p-697">For any integer \(n\) and real number \(\theta\text{,}\)</p>
+<p id="p-698">\((\cos{\theta}+i\sin{\theta})^n=\cos{(n\theta)}+i\sin{(n\theta)}\)</p></article><p id="p-699">From the picture of multiplication of complex numbers as rotations, de Moivre's theorem should become relatively intuitive. Note that <em class="emphasis">De Moivre's Theorem</em> is for complex numbers with modulus 1. However, the theorem can be extended to include any complex number \(z\) with \(|z|=r\) i.e. \(z=r(\cos{\theta}+i\sin{\theta})\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+z^n=(r(\cos{\theta}+i\sin{\theta}))^n=r^n(\cos{(n\theta)}+i\sin{(n\theta)})
+\end{equation*}
+</div>
+<p id="p-700">Let's look at the proof of <em class="emphasis">De Moivre's Theorem</em>.</p>
+<p id="p-701"><em class="emphasis">De Moivre's Theorem proof:</em></p>
+<p id="p-702">We use mathematical induction to prove the theorem.</p>
+<p id="p-703"><em class="emphasis">Case 1 : \(n \geq 0\)</em></p>
+<p id="p-704">For any integer \(n\geq 0\) let \(P(n)\) be the proposition that</p>
+<div class="displaymath">
+\begin{equation*}
+(\cos{\theta}+i\sin{\theta})^n=\cos{(n\theta)}+i\sin{(n\theta)}
+\end{equation*}
+</div>
+<p id="p-705"><em class="emphasis">Base case</em>: The statement \(P(0)\) says that</p>
+<div class="displaymath">
+\begin{equation*}
+(\cos{\theta}+i\sin{\theta})^0=\cos{(0)}+i\sin{(0)}=1
+\end{equation*}
+</div>
+<p>which is true.</p>
+<p id="p-706"><em class="emphasis">Induction Hypothesis (IH):</em> We now assume that \(P(m)\) is true for some non-negative integer \(m\)</p>
+<div class="displaymath">
+\begin{equation*}
+(\cos{\theta}+i\sin{\theta})^m=\cos{(m\theta)}+i\sin{(m\theta)}
+\end{equation*}
+</div>
+<p id="p-707"><em class="emphasis">Inductive Step:</em> It now remains for us to show that \(P(m+1)\) holds true</p>
+<div class="displaymath">
+\begin{align*}
+\cos{((m+1)\theta)}+i\sin{((m+1)\theta)}\amp = (\cos{\theta}+i\sin{\theta})^{m+1} \\
+\amp =(\cos{\theta}+i\sin{\theta})^m(\cos\theta +i\sin\theta)\\
+\amp =(\cos{(m\theta)}+i\sin{(m\theta)})(\cos\theta +i\sin\theta)  \textbf{IH}\\
+\amp =\cos{((m+1)\theta)}+i\sin{((m+1)\theta)}  \textbf{theorem} \knowl{./knowl/theorem-4-a.html}{\text{Theorem 2.7.1}} 
+\end{align*}
+</div>
+<p id="p-708">So \(P(m+1)\) holds true. By the principle of mathematical induction \(P(n)\) is true for all non-negative integers \(n\text{.}\) \end{theorem}</p>
+<p id="p-709"><em class="emphasis">Case 2: \(n \lt 0\)</em></p>
+<p id="p-710">Let \(n=-k\) where \(n\) is any negative integer, so \(k\) is a positive integer.</p>
+<div class="displaymath">
+\begin{align*}
+(\cos\theta +i\sin\theta)^n\amp =(\cos\theta +i\sin\theta)^n\\
+\amp =(\cos\theta +i\sin\theta)^{-k}\\
+\amp =\dfrac1{(\cos\theta +i\sin\theta)^k}\\
+\amp =\dfrac1{\cos{(k\theta)} +i\sin{(k\theta})} \amp \textbf{Case 1}\\
+\amp =\dfrac1{\cos{(k\theta)} +i\sin{(k\theta})} \times \dfrac{{\cos{(k\theta)} -i\sin{(k\theta})}}{{\cos{(k\theta)} -i\sin{(k\theta})}}\\
+\amp =\dfrac{\cos{(k\theta)} -i\sin{(k\theta)}}{\cos^2{(k\theta)} -i^2\sin^2{(k\theta)}}\\
+\amp =\dfrac{\cos{(k\theta)} -i\sin{(k\theta)}}{\cos^2{(k\theta)} +\sin^2{(k\theta)}}\\
+\amp =\cos{(k\theta)} -i\sin{(k\theta)}\\
+\amp =\cos{(-n\theta)} -i\sin{(-n\theta)}\\
+\amp =\cos{(n\theta)} +i\sin{(n\theta)}
+\end{align*}
+</div>
+<p id="p-711">We have now proved that \((\cos\theta +i\sin\theta)^n=(\cos\theta +i\sin\theta)^n\) for any integer \(n\text{.}\) \(\Box\)</p>
+<article class="example-like" id="example-8"><a data-knowl="" class="id-ref" data-refid="hk-example-8"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.7.5</span>.</h6></a></article><div id="hk-example-8" class="hidden-content tex2jax_ignore"><article class="example-like"><ol class="decimal">
+<li id="li-344"><p id="p-712">Use De Moivre's Theorem to write \((1+i)^{20}\) in a cartesian from.</p></li>
+<li id="li-345"><p id="p-713">Write \((\sqrt{3}+i)^3(1+\sqrt{3}i)^5\) in a modulus-argument form.</p></li>
+<li id="li-346"><p id="p-714">Write \(\dfrac{(1+i)^{10}}{1+\sqrt{3}i}\) in a modulus-argument form.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div id="hk-solution-7" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-715" class="decimal">
+<li id="li-347">
+<p id="p-716">We first need to write this number in modulus argument as that is how de Moivre's theorem is stated. We can write:</p>
+<div class="displaymath">
+\begin{equation*}
+(1+i)=\sqrt{2}(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4})
+\end{equation*}
+</div>
+<p>and therefore:</p>
+<div class="displaymath">
+\begin{align*}
+(1+i)^{20}\amp = (\sqrt{2}(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}))^{20}=\sqrt{2}^{20}(\cos\frac{20\pi}{4}+i\sin\frac{20\pi}{4})\nonumber\\
+\amp = 2^{10}(\cos 5\pi+i\sin 5\pi)\nonumber
+\end{align*}
+</div>
+<p>But we know that we can always subtract any integer multiple of \(2\pi\) from an argument and it will still be the same complex number. Because the angle here is \(5\pi\) if we subtract 2 lots of \(2\pi\) we will end up with \(\pi\) which is a principle argument, so:</p>
+<div class="displaymath">
+\begin{equation*}
+(1+i)^{20}=2^{10}(\cos \pi+i\sin \pi)=2^{10}(-1+0 i)=-2^{10}
+\end{equation*}
+</div>
+</li>
+<li id="li-348">
+<p id="p-717">We will do the same thing for the next example, but without the explanatory steps. Go through and make sure that you can see what is happening here:</p>
+<div class="displaymath">
+\begin{align*}
+(\sqrt{3}+i)^3(1+\sqrt{3}i)^5\amp = (2(\cos(\frac{\pi}{6}+i\sin\frac{\pi}{6}))^3((2(\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}))^5\nonumber\\
+\amp = 2^3(\cos\frac{3\pi}{6}+i\sin\frac{3\pi}{6})2^5(\cos\frac{5\pi}{3}+i\sin\frac{5\pi}{3})\nonumber\\
+\amp = 2^32^5(\cos(\frac{3\pi}{6}+\frac{10\pi}{6})+i\sin(\frac{3\pi}{6}+\frac{10\pi}{6})\nonumber\\
+\amp = 2^8(\cos\frac{13\pi}{6}+i\sin\frac{13\pi}{6})\nonumber\\
+\amp = 2^8(\cos\frac{\pi}{6}+i\sin\frac{\pi}{6})\nonumber\\
+\amp = 2^8(\frac{\sqrt{3}}{2}+\frac{i}{2})=2^7(\sqrt{3}+i)\nonumber
+\end{align*}
+</div>
+</li>
+<li id="li-349">
+<p id="p-718">And again, make sure that you can follow all steps:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{(1+i)^{10}}{1+\sqrt{3}i}\amp = (1+i)^{10}(1+\sqrt{3}i)^{-1}\nonumber\\
+\amp = (\sqrt{2}(\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}))^{10} (2(\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}))^{-1}\nonumber\\
+\amp = \frac{2^5}{2}(\cos\frac{10\pi}{4}+i\sin\frac{10\pi}{4})(\cos(-\frac{\pi}{3})+i\sin(-\frac{\pi}{3}))\nonumber\\
+\amp = 2^4(\cos(\frac{10\pi}{4}-\frac{pi}{3})+i\cos(\frac{10\pi}{4}-\frac{pi}{3}))\nonumber\\
+\amp = 2^4(\cos(\frac{13\pi}{6})+i\cos(\frac{13\pi}{6}))\nonumber\\
+\amp = 16(\sqrt{3}{2}+\frac{i}{2})=8(\sqrt{3}+i)
+\end{align*}
+</div>
+</li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-7"><a data-knowl="" class="id-ref" data-refid="hk-exercise-7"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.7.6</span>.</h6></a></article><div id="hk-exercise-7" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-350">
+<p id="p-719">Write the following complex numbers in a cartesian form:</p>
+<ol class="lower-alpha">
+<li id="li-351"><p id="p-720">\((1-\sqrt{3}i)^5\)</p></li>
+<li id="li-352"><p id="p-721">\((2\sqrt{3}+2i)^5\)</p></li>
+<li id="li-353"><p id="p-722">\((1-i)^8\)</p></li>
+<li id="li-354"><p id="p-723">\((1-\sqrt{3}i)^5(\sqrt{3}+i)^2\)</p></li>
+<li id="li-355"><p id="p-724">\(\dfrac{(1-\sqrt{3}i)^5}{(1-i)^6}\)</p></li>
+</ol>
+</li>
+<li id="li-356"><p id="p-725">By considering the expansion of \((1+i)^{10}\text{,}\) show that \(\binom{10}{1}-\binom{10}{3}+\binom{10}{5}-\binom{10}{7}+\binom{10}{9}=32\)</p></li>
+<li id="li-357">
+<p id="p-726">Let \(z=\cos{\theta}+i\sin{\theta}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-358"><p id="p-727">Show that \(2\cos{\theta}=z+\dfrac1{z}\text{.}\)</p></li>
+<li id="li-359"><p id="p-728">Show that \(2\cos{(n\theta)}=z^n+\dfrac1{z^n}\text{.}\)</p></li>
+</ol>
+</li>
+<li id="li-360"><p id="p-729">Find the exact value of \(\dfrac1{(\sqrt{3}+i)^6}\text{,}\) clearly showing your working.</p></li>
+<li id="li-361"><ol class="lower-alpha">
+<li id="li-362"><p id="p-730">Express \(\dfrac{\sqrt{3}}{2}-\dfrac1{2}i\) in the modulus-argument form.</p></li>
+<li id="li-363"><p id="p-731">Hence show that \((\dfrac{\sqrt{3}}{2}-\dfrac1{2}i)^9=ci\) where \(c\) is a real number to be found.</p></li>
+<li id="li-364">
+<p id="p-732">Find one pair of possible values of positive integers \(m\) and \(n\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+\Big(\dfrac{\sqrt{3}}{2}-\dfrac1{2}i\Big)^m=\Big(\dfrac{\sqrt{2}}{2}+\dfrac{\sqrt{2}}{2}i\Big)^n
+\end{equation*}
+</div>
+</li>
+</ol></li>
+</ol></article></div>
+<article class="outcomes" id="outcomes-5"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-365"><p id="p-733">I know how to multiply two complex numbers in a modulus-argument form.</p></li>
+<li id="li-366"><p id="p-734">I can prove Theorem 4(a) and De Moivre's Theorem.</p></li>
+<li id="li-367"><p id="p-735">I know how to use De Moivre's Theorem to take powers of complex numbers in a modulus-argument form.</p></li>
+</ol></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

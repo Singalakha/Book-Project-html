@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-04-16T22:15:48+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions of a complex variable</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="mam1000w.html"><span class="title">First year Pure Mathematics:</span> <span class="subtitle">MAM1000W</span></a></h1>
+<p class="byline">Singalakha Menziwa, Jonathan Shock</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_deMoivre.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_nthroots.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_deMoivre.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="complex-numbers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_nthroots.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link part"><a href="Term-1.html" data-scroll="Term-1"><span class="codenumber">I</span> <span class="title">Term 1</span></a></li>
+<li class="link">
+<a href="absolute-valued-functions.html" data-scroll="absolute-valued-functions"><span class="codenumber">1</span> <span class="title">Absolute Value Functions</span></a><ul>
+<li><a href="Piecewise-Defined-Functions.html" data-scroll="Piecewise-Defined-Functions">Piecewise-Defined Functions</a></li>
+<li><a href="Absolute-Value.html" data-scroll="Absolute-Value">Absolute Value</a></li>
+<li><a href="Absolute-Value-Equations.html" data-scroll="Absolute-Value-Equations">Absolute Value Equations</a></li>
+<li><a href="Absolute-Value-Inequalities.html" data-scroll="Absolute-Value-Inequalities">Absolute Value Inequalities</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-2.html" data-scroll="Term-2"><span class="codenumber">II</span> <span class="title">Term 2</span></a></li>
+<li class="link part"><a href="Term-3.html" data-scroll="Term-3"><span class="codenumber">III</span> <span class="title">Term 3</span></a></li>
+<li class="link">
+<a href="complex-numbers.html" data-scroll="complex-numbers"><span class="codenumber">2</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="sec_math_as_language.html" data-scroll="sec_math_as_language">Mathematics as a language</a></li>
+<li><a href="x_sec_set_theory.html" data-scroll="x_sec_set_theory">A lightning introduction to Set Theory</a></li>
+<li><a href="sec_math_as_a_practice.html" data-scroll="sec_math_as_a_practice">Mathematics as a practice</a></li>
+<li><a href="sec_number_systems.html" data-scroll="sec_number_systems">Number Systems and a new way to look at mathematics</a></li>
+<li><a href="sec_complex_numbers.html" data-scroll="sec_complex_numbers">Complex Numbers</a></li>
+<li><a href="sec_argument.html" data-scroll="sec_argument">The argument of a complex number</a></li>
+<li><a href="sec_deMoivre.html" data-scroll="sec_deMoivre">Multiplication and de Moivre's Theorem</a></li>
+<li><a href="sec_functions.html" data-scroll="sec_functions" class="active">Functions of a complex variable</a></li>
+<li><a href="sec_nthroots.html" data-scroll="sec_nthroots">Complex nth roots of a complex number</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Term-4.html" data-scroll="Term-4"><span class="codenumber">IV</span> <span class="title">Term 4</span></a></li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul><li><a href="section-14.html" data-scroll="section-14">A Section in an Appendix</a></li></ul>
+</li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_functions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.8</span> <span class="title">Functions of a complex variable</span>
+</h2>
+<a href="sec_functions.html" class="permalink">¶</a><section class="introduction" id="introduction-9"><p id="p-736">We have already hinted at one function of a complex number, but we haven't really thought about it very deeply. So far in general we have only looked at real-valued functions of a real variable. \(f:\mathbb{R}\rightarrow \mathbb{R}\text{.}\)</p>
+<p id="p-737">We often use a graphical way of describing such a function using the curve \(y=f(x)\) in the \((x,y)\) plane, which says that for each ordered pair \((x,y)\) such that \(y=f(x)\) there is a point. In fact this doesn't need to give a curve, as it could just be a discrete set of points, but generally it will be a curve.</p>
+<p id="p-738">Can we do the same thing for a function of the form \(f:\mathbb{C}\rightarrow\mathbb{C}\text{?}\) We would need to find points \((z,w)\) such that \(w=f(z)\) but both \(z\) and \(w\) are complex numbers which can only be denoted by two real numbers. ie. \(z=a+bi\) and \(w=c+di\text{.}\) So really we need four real numbers \((a,b,c,d)\text{,}\) such that \(c+di=f(a+bi)\text{.}\) So we need four axes? Well, that's not going to work with our simple two dimensional paper!</p>
+<p id="p-739">Instead of this, we write down two versions of the complex plane, one for \(z\) and one for \(w\text{.}\) We then draw on some set of points on the \(z\) plane and ask where those points go to under the map. The points we chose may be discrete points, or they may be a curve.</p>
+<figure class="figure-like" id="figure-29"><div style="width: 24%; margin-left: 38%; margin-right: 38%;"><img src="images/Diagram_9.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.1.</span> The mapping of a set \(S\) to \(f(S)\text{,}\) the image of set \(S\) under the mapping \(f\text{.}\)</figcaption></figure><p id="p-740">We already saw one example of this in the section where we were asking about the multiplicative inverse of a complex number where \(f(z)=1/z\text{.}\) We will see another example in a little bit.</p></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.8.1</span> <span class="title">The Complex Exponential Function</span>
+</h3>
+<p id="p-741">Here we are going to get onto slightly more advanced functions of complex numbers. Up to now we can perform all the basic arithmetic operations on them. and can describe them in a number of ways. We can also take powers of them. We are going to go one step further and ask if we can exponentiate them.</p>
+<p id="p-742">It's pretty clear what taking a power of a complex number means once you understand multiplication: \((1+2i)^5\) is just \((1+2i)\) multiplied by itself five times. What about \(e^(1+2i)\text{?}\) Well, that means taking the number \(e\) and multiplying it by itself \((1+2i)\) times.....erm, ok! That doesn't make much sense, does it?</p>
+<p id="p-743">Well, we are going to see that we can define complex exponentiation without needing to understand what it means to multiply something by itself that many times.</p>
+<p id="p-744">The way we are going to define this is to go back to our Maclaurin polynomial definition and just assume that we can extend this to complex numbers. That seems pretty risky, but it will reap some rich rewards. In fact one has to be really careful about when and how you can do this, and we aren't able to go that far here, but if you want to do everything really correctly you do have to worry about such things.</p>
+<p id="p-745">We need to remember three things. Recall the MacLaurin polynomial for \(e^x\) where \(x \in \mathbb{R}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+e^x=1+x+\dfrac{x^2}{2}+\dfrac{x^3}{3!}+\dfrac{x^4}{4!}+\dfrac{x^5}{5!}+......+\dfrac{x^n}{n!}
+\end{equation*}
+</div>
+<p>and for \(\cos x\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\cos x=1-\dfrac{x^2}{2!}+\dfrac{x^4}{4!}-\dfrac{x^6}{6!}+ \dfrac{x^{2n}}{(2n)!}
+\end{equation*}
+</div>
+<p>and for \(\sin x\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\sin x=x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\dfrac{x^7}{7!}+ \dfrac{x^{2n-1}}{(2n-1)!}
+\end{equation*}
+</div>
+<p id="p-746">In order to take the Maclaurin polynomial for \(e^{iy}\) we are going to do nothing more than replacing \(x\) with \(iy\) where \(y\in\mathbb{R}\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+e^{iy}\amp =1+iy+\dfrac{(iy)^2}{2!}+\dfrac{(iy)^3}{3!}+\dfrac{(iy)^4}{4!}+........+\dfrac{(iy)^n}{n!}\\
+\amp =1+iy-\dfrac{y^2}{2!}-\dfrac{iy^3}{3!}+\dfrac{y^4}{4!}+\dfrac{iy^5}{5!}+\dfrac{iy^6}{6!}+\dfrac{iy^7}{7!}+...\text{.}
+\end{align*}
+</div>
+<p>ok, let's do a bit of rearranging now...</p>
+<div class="displaymath">
+\begin{equation*}
+e^{iy}=\Big(1-\dfrac{y^2}{2!}+\dfrac{y^4}{4!}-\dfrac{y^6}{6!}+....\Big)+i\Big(y-\dfrac{y^3}{3!}+\dfrac{y^5}{5!}-\dfrac{y^7}{7!}+....\Big)
+\end{equation*}
+</div>
+<p id="p-747">But hang on a moment, we should recognise this from the Maclaurin polynomials of \(\cos x\) and \(\sin x\) that we wrote above. Remember that \(y\) is a real number, so</p>
+<div class="displaymath">
+\begin{equation*}
+e^{iy}=\cos{y} + i\sin{y}
+\end{equation*}
+</div>
+<p id="p-748">But this is truly remarkable! Let's step back and see what we have just discovered. Apparently the exponential of an imaginary number (not fully complex yet) is taken by calculating the basic trig functions on the imaginary part of that number. You definitely couldn't plug \(e^{3i}\) into a basic calculator (ok, you could on a more complicated one), and so had I asked you what \(e^{3i}\) was you wouldn't be able to point to where it is in the complex plane. However, you can definitely calculate \(\cos 3\) and \(\sin 3\text{,}\) and these are just the real and imaginary parts of \(e^{3i}\) so you can now point out where it is in the complex plane....go on, do it.</p>
+<p id="p-749">What we have just found is that there is an intimate connection between expoential functions and trigonometric functions and that connection is something to do with complex numbers. You never would have expected them to have anything to do with each other. \(e\) shows up when thinking about differentiation and integration. Trig functions show up when thinking about circles. This is really beautiful and it was all made possible by Maclaurin polynomials.</p>
+<p id="p-750">Ok, so we can actually go a bit further than this. Here we have only looked at the exponential of an imaginary number. What about a fully complex number (with a real and imaginary part.</p>
+<p id="p-751">Well, in fact for both of these, because we haven't been completely sure that we can use the Maclaurin polynomial of a real number on an imaginary number, we are just going to make these definitions and then see what the consequences are:</p>
+<article class="definition-like" id="definition-12"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.8.2</span>. <span class="title">Euler's formula and the complex exponential function.</span>
+</h6>
+<p id="p-752">For \(x, y\in \mathbb{R}\) we define:</p>
+<p id="p-753">(a) \(e^{iy}=\cos{y}+i\sin{y}\) (<dfn class="terminology">Euler's formula</dfn>)</p>
+<p id="p-754">(b) \(e^z=e^{x+iy}=e^xe^{iy}=e^x(\cos{y}+i\sin{y})\)</p>
+<p id="p-755">A special case of <dfn class="terminology">Euler's formula</dfn> (when \(y=\pi\)) is called <dfn class="terminology">Euler's Identity</dfn> and is considered by many as the most beautiful equations in mathematics:</p>
+<div class="displaymath">
+\begin{equation*}
+e^{i\pi}+1=0
+\end{equation*}
+</div>
+<p id="p-756">Many people think of Euler's formula as the most beautiful formula in all of mathematics as it involves five numbers from very different spheres of the number realm. Why should \(e\) and \(\pi\) and \(i\) and integer values 0 and 1 have anything to do with each other? In fact when you understand the formula it is really obvious, but without understand complex numbers it makes no sense at all.</p></article><p id="p-757">This relationship between exponential and trig functions allows us to write the modulus argument form in an even simpler way than before:</p>
+<p id="p-758">For a non-zero complex number, the modulus-argument form i.e. \(z=|z|(\cos{\theta}+i\sin{\theta})\) can now be conveniently written as:</p>
+<div class="displaymath">
+\begin{equation*}
+z=|z|e^{i\theta}
+\end{equation*}
+</div>
+<p id="p-759">We need to get a bit of a feel for what the exponential of a complex number will be. Here is a useful exercise:</p>
+<ol class="decimal">
+<li id="li-368"><p id="p-760">Take a sheet of paper and draw a line down the middle horizontally.</p></li>
+<li id="li-369"><p id="p-761">In the top half draw a copy of the complex plane, with both real and imaginary values ranging from -2 to 2.</p></li>
+<li id="li-370"><p id="p-762">Randomly draw some points in the plane in positions that you can estimate the actual value of the complex number (ie. one of them might be at 1.5-0.5i. Draw some along the axes, and some not on the axes. Maybe draw 10 points.</p></li>
+<li id="li-371"><p id="p-763">For each of these calculate the exponential using the formula above.</p></li>
+<li id="li-372"><p id="p-764">Now draw another copy of the complex plane in the bottom half of the page.</p></li>
+<li id="li-373"><p id="p-765">Plot the positions of the exponentials of the complex numbers that you had in the top half - ie. the answers you found when you calculated the exponential of the first points.</p></li>
+<li id="li-374"><p id="p-766">See if you can see any pattern that is emerging. Do you see any periodicity? Do you see what makes the exponential smaller or larger, or in different positions in the complex plane?</p></li>
+</ol>
+<p id="p-767">In the following we do this not for a series of discrete points, but for a series of lines. See if you can figure out which red lines on the left are mapped to which red lines on the right and blue lines to blue lines under the complex exponential function.</p>
+<figure class="figure-like" id="figure-30"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/expconf.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.3.</span> The complex plane mapped under the exponential function</figcaption></figure><p id="p-768">One really important point to note here is that infinite lines get mapped to circles. This you might have guessed by the way the exponential function is really trigonometric in disguise, and is thus periodic. This means that it's not invertible. It's many to one (just as for \(\cos\) and \(\sin\)).</p>
+<p id="p-769">As we have done before, once we write down a definition we can explore its properties. We will list these but each of them can be proved.</p>
+<article class="theorem-like" id="itm_Properies_5_1"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.8.4</span>. <span class="title">Properties of the complex exponential function.</span>
+</h6>
+<p id="p-770">If \(z_1,z_2\) and \(z=x+iy\) are complex numbers, and \(n,k \in \mathbb{Z}\) then,</p>
+<ol class="decimal">
+<li id="li-375"><p id="p-771">\(e^{z_1}e^{z_2}=e^{z_1+z_2}\)</p></li>
+<li id="li-376"><p id="p-772">\(e^{z_1-z_2}=\dfrac{e^{z_1}}{e^{z_2}}\)</p></li>
+<li id="li-377"><p id="p-773">\((e^z)^n=e^{zn}\)</p></li>
+<li id="li-378"><p id="p-774">\(arg(e^z)=y+2\pi n\)</p></li>
+<li id="li-379"><p id="p-775">\(|e^z|=e^x\)</p></li>
+<li id="li-380"><p id="p-776">If \(e^z=1\) then \(z=2\pi ki\)</p></li>
+<li id="li-381"><p id="p-777">If \(e^{z_1}=e^{z_2}\) then \(z_1-z_2=2k\pi i\)</p></li>
+<li id="li-382"><p id="p-778">\(e^{z+2\pi i n}=e^z\)</p></li>
+</ol></article><p id="p-779"><em class="emphasis">Remark:</em> Property 5.1(h) tells us that \(f(z)=e^z\) is a periodic function with period \(2\pi i\text{.}\) This implies that \(f(z)=e^z\) has no inverse function, unless we restrict the domain of \(f(z)\text{,}\) in this course, we will not define the <em class="emphasis">complex logarithm function</em>, you'll see the function in MAM3000W if you take <em class="emphasis">complex analysis</em>.</p>
+<p id="p-780">We will prove properties 5.1(a) and 5.1(e) leave the rest for homework exercises.</p>
+<p id="p-781"><em class="emphasis">Property 5.1(a) proof</em>: Let \(z_1=x_1+iy_1\) and \(z_2=x_2+iy_2\) where \(x_1,x_2,y_1,y_2 \in \mathbb{R}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+e^{z_1}e^{z_2}\amp =e^{x_1+iy_1}e^{x_2+iy_2} \\
+\amp =e^{x_1}e^{iy_1}e^{x_2}e^{iy_2} \amp \textbf{Definition 5.1(b)} \\
+\amp =e^{x_1}(\cos{y_1}+i\sin{y_1})e^{x_2}(\cos{y_2}+i\sin{y_2})  \amp \textbf{Definition 5.1(a)} \\
+\amp =e^{x_1}e^{x_2}(\cos(y_1+y_2)+i\sin(y_1+y_2))  \amp \textbf{theorem} \knowl{./knowl/theorem-4-a.html}{\text{Theorem 2.7.1}}  \\
+\amp =e^{x_1}e^{x_2}e^{i(y_1+y_2)}  \amp \textbf{Definition 5.1(a)}\\
+\amp =e^{x_1+x_2}e^{i(y_1+y_2)}  \amp \textbf{Exponential laws for} \mathbb{R} \\
+\amp =e^{(x_1+x_2)+i(y_1+y_2)}  \amp \textbf{Definition 5.1(b)}\\
+\amp =e^{(x_1+iy_1)+(x_2+iy_2) } \\
+\amp =e^{z_1+z_2} \amp \Box
+\end{align*}
+</div>
+<p id="p-782">\end{theorem}</p>
+<p id="p-783"><em class="emphasis">Property 5.1(e) proof:</em> Let \(z=x+iy\) where \(x,y \in \mathbb{R}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+|e^z|\amp =|e^{x+iy}|\\
+\amp =|e^xe^{iy}|  \amp \textbf{Definition 5(b)}\\
+\amp =|e^x||e^{iy}| \amp \textbf{Property 3.1(f)}\\
+\amp =e^x|\cos{y}+i\sin{y}| \amp \textbf{Since $e^x$ is a positive real number}\\
+\amp =e^x\sqrt{(\cos^2{y}+\sin^2{y})}  \amp \textbf{Definition 2.2.1(b)}\\
+\amp =e^x  \Box
+\end{align*}
+</div>
+<article class="example-like" id="example-9"><a data-knowl="" class="id-ref" data-refid="hk-example-9"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.8.5</span>.</h6></a></article><div id="hk-example-9" class="hidden-content tex2jax_ignore"><article class="example-like"><ol class="decimal">
+<li id="li-383">
+<p id="p-784">Solve for \(z \in \mathbb{C}\) and plot all the solutions on an Argand diagram:</p>
+<ol class="lower-alpha">
+<li id="li-384"><p id="p-785">\(e^z=\sqrt{3}+i\)</p></li>
+<li id="li-385"><p id="p-786">\(e^{iz}=1+\sqrt{3}i\)</p></li>
+<li id="li-386"><p id="p-787">\(e^z=|1+\sqrt{3}i|\)</p></li>
+</ol>
+</li>
+<li id="li-387"><p id="p-788">Sketch the image of set \(S\) under the mapping \(f\) if: \(f(z)=e^z\) and \(S=\{ z \in \mathbb{C}|\ 1\leq Re(z)\lt 2 ,\ -\dfrac{\pi}{6}\lt Im(z)\leq \dfrac{\pi}{3} \}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span></a><div id="hk-solution-8" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-789" class="decimal">
+<li id="li-388"><ol class="lower-alpha">
+<li id="li-389">
+<p id="p-790">Let \(z=x+iy\text{,}\) where \(x,y\in\mathbb{R}\text{,}\) ie. \(e^z=e^{x+iy}=e^xe^{iy}\text{.}\) Then write the right hand side in exponential form:</p>
+<div class="displaymath">
+\begin{equation*}
+e^xe^{iy}=\sqrt{3}+i=2 e^{i(\dfrac{\pi}{6}+2\pi k)}
+\end{equation*}
+</div>
+<p>where \(k\in\mathbb{Z}\text{.}\) Now we equate the moduli and argument of both sides to get:</p>
+<div class="displaymath">
+\begin{equation*}
+e^x=2\implies x=\ln 2
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+y=\frac{\pi}{6}+2\pi k
+\end{equation*}
+</div>
+<p>which means that</p>
+<div class="displaymath">
+\begin{equation*}
+z=x+iy=\ln 2+i\left(\frac{\pi}{6}+2\pi k\right)\, ,\,\,\, k\in\mathbb{Z}
+\end{equation*}
+</div>
+<p>(All solutions will be plotted on the same diagram after the last example.</p>
+</li>
+<li id="li-390">
+<p id="p-791">The same process here. Let \(z=x+iy\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+e^{iz} = e^i(x+iy)=e^{-y}e^{ix}=1+\sqrt{3}i \\
+\implies \amp e^{-y}e^{ix} = \sqrt{2}e^{i(\frac{\pi}{3}+2\pi k)} \amp k \in \mathbb{Z} \\
+\implies \amp  e^{-y}=2, \amp x=\frac{\pi}{3}+2\pi k \\
+\implies \amp z=\frac{\pi}{3}+2\pi k-i\ln 2
+\end{align*}
+</div>
+</li>
+<li id="li-391">
+<p id="p-792">And again. Let \(z=x+iy\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+e^{x+iy}\amp = e^xe^{iy}=|1+\sqrt{3}i|=2e^{i 2\pi k}, \amp k\in\mathbb{Z}\\
+\implies \amp  x=\ln 2, \amp y=2\pi k\\
+\implies \amp  z=\ln 2+2\pi k 
+\end{align*}
+</div>
+<p><figure class="figure-like" id="figure-31"><div style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/expsolutions.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.6.</span> (i): Blue, (ii): Green, (iii): Red. These are a subset of the infinite families of solutions.</figcaption></figure></p>
+</li>
+</ol></li>
+<li id="li-392">
+<p id="p-793">We are here given a set \(S\) which is some region in the complex plane, and we are asked what happens to this set of numbers when we apply the exponential function to them. Let's start by drawing the original set: <figure class="figure-like" id="figure-32"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/sets.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.7.</span> The question is what do the points in this region get mapped to under the exponential function?</figcaption></figure> We can start with something slightly simpler than the whole region. Let's just take the left, vertical side of the region. This set could be denoted as</p>
+<div class="displaymath">
+\begin{equation*}
+\{z\in \mathbb{C}| Re(z)=1,-\frac{1}{\sqrt{3}}\lt Im(z)\le \sqrt{3}\}
+\end{equation*}
+</div>
+<p>ie. these are numbers of the form \(z=1+i b\) where \(-\frac{1}{\sqrt{3}}\lt b\le \sqrt{3}\}\text{.}\) What happens to these when we exponentiate them? Well, they become:</p>
+<div class="displaymath">
+\begin{equation*}
+e^{1+ib}=e^1e^{ib}
+\end{equation*}
+</div>
+<p>These are numbers with modulus \(e\) and argument \(b\) where \(-\frac{1}{\sqrt{3}}\lt b\le \sqrt{3}\}\text{.}\) This corresponds to an arc of radius \(e\) sweeping out the range of angles given by \(b\text{.}\) It looks like: <figure class="figure-like" id="figure-33"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/firstmap.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.8.</span> The left-most vertical line gets mapped to an arc of radius \(e\text{.}\)</figcaption></figure> We could do exactly the same thing with the outer vertical line and this would give the same thing, except it would have radius \(e^2\text{:}\) <figure class="figure-like" id="figure-34"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/secondmap.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.9.</span> The right-most vertical line (which is not actually included in the region) gets mapped to an arc of radius \(e^2\text{.}\)</figcaption></figure> How about the top sloping line in the original region? This is the set of points:</p>
+<div class="displaymath">
+\begin{equation*}
+\{z\in \mathbb{C}| 1\le Re(z)\lt 2,Im(z)=\sqrt{3}\}
+\end{equation*}
+</div>
+<p>That is:</p>
+<div class="displaymath">
+\begin{equation*}
+z=a+i\sqrt{3}
+\end{equation*}
+</div>
+<p>where \(1\le a\lt 2\text{.}\) When we exponentiate this we get:</p>
+<div class="displaymath">
+\begin{equation*}
+e^z=e^ae^{i\sqrt{3}}=e^a(\cos\sqrt{3}+i\sin\sqrt{3})=e^a(\cos\sqrt{3}+i\sin\sqrt{3})
+\end{equation*}
+</div>
+<p>This is a set of numbers with modulus \(e^a\) where \(1\le a\lt 2\) and with constant argument given by \(\sqrt{3}\text{.}\) This gives the new line in the following: <figure class="figure-like" id="figure-35"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/third.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.10.</span> The top line gets mapped to the new line here</figcaption></figure> And finally for the lower horizontal line we do the same thing as above and come to: <figure class="figure-like" id="figure-36"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fourth.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.11.</span> All four sides of the region are now mapped.</figcaption></figure> Convince yourselves at this stage that in fact any point in the middle of the original set will be mapped to a point inside this new region. Thus we have: <figure class="figure-like" id="figure-37"><div style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/mappingdone.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.12.</span> and the interior of the region is also mapped.</figcaption></figure></p>
+</li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-8"><a data-knowl="" class="id-ref" data-refid="hk-exercise-8"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.8.13</span>.</h6></a></article><div id="hk-exercise-8" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-794">\​begin{enumerate}[(a)]</p>
+<p id="p-795">\item Solve for \(z \in \mathbb{C}\) and write the solution is a cartesian form. Sketch all the solutions on an Argand diagram if:</p>
+<ol class="decimal">
+<li id="li-393"><p id="p-796">\(e^z=1+i\)</p></li>
+<li id="li-394"><p id="p-797">\(e^{iz}=1+i\)</p></li>
+<li id="li-395"><p id="p-798">\(e^{-z}=-\sqrt{3}+i\)</p></li>
+<li id="li-396"><p id="p-799">\(e^z=|1+i|\)</p></li>
+<li id="li-397"><p id="p-800">\(e^{\overline{z+i}}=4i\)</p></li>
+<li id="li-398"><p id="p-801">\(|e^z|=|1+i|\)</p></li>
+<li id="li-399"><p id="p-802">\(e^{|z|}=|1+i|\)</p></li>
+</ol>
+<p id="p-803"><em class="emphasis">Useful facts</em>:</p>
+<p id="p-804">If \(z_1\) and \(z_2\) are complex numbers, then:</p>
+<p id="p-805">1. \(z_1z_2=(r_1e^{i\theta_1})(r_2e^{i\theta_2})=r_1r_2e^{i(\theta_1+\theta_2)}\)</p>
+<p id="p-806">2. \(\dfrac{z_2}{z_1}=\dfrac{r_2e^{i\theta_2}}{r_1e^{i\theta_1}}=\dfrac{r_2}{r_1}e^{\theta_2-\theta_1}\) provided \(z_1 \neq 0\)</p></article></div>
+<p id="p-807">\item Prove the following properties of the complex argument:</p>
+<p id="p-808">(i) \(Arg(z_1z_2)=Arg(z_1)+Arg(z_2)\) (ii) \(Arg(z_1\overline{z_2})=Arg(z_1)-Arg(z_2)\)</p>
+<p id="p-809">\item Show that:</p>
+<p id="p-810">(i) \(e^{z+\pi i} =-e^z\) (ii) \(\overline{e^z}=e^{\overline{z}}\)</p>
+<p id="p-811">\item If \(\alpha\) is an argument of \(w\) and \(\beta\) is an argument of \(z\) (where both \(w\) and \(z\) are complex numbers, find the argument of \(\dfrac{w^2z}{\overline{w}}\) if possible.</p>
+<p id="p-812">\item If \(Arg((a + i)^3) =\pi\) , where \(a\) is real and positive, find the exact value of \(a\text{.}\)</p>
+<p id="p-813">\item Write the following complex numbers in a cartesian form i.e. form \(a+bi\)</p>
+<ol class="decimal">
+<li id="li-400"><p id="p-814">\((\sqrt{3}-i)^6\)</p></li>
+<li id="li-401"><p id="p-815">\((\dfrac{\sqrt{3}}{2}-\dfrac{i}{2})^{24}\)</p></li>
+<li id="li-402"><p id="p-816">\((-1+i)^{16}.e^{-\dfrac{i\pi}{2}}\)</p></li>
+<li id="li-403"><p id="p-817">\((\sqrt{3}-i)^5(-\frac1{2}+\frac{\sqrt{3}}{2}i)^{15}\)</p></li>
+</ol>
+<p id="p-818">\item If \(z=\sqrt{3}+i\) and \(w=1+\sqrt{3}i\) find modulus-argument forms for \(zw, \dfrac{z}{w}\text{,}\) and \(\dfrac1{z}\text{.}\)</p>
+<p id="p-819">\item Sketch the image of set \(S\) under the mapping \(f\) if:</p>
+<p id="p-820">\(f(z)=e^{iz}\) and \(S= \{ z \in \mathbb{C}\ |\ \dfrac{\pi}{6}\leq Re(z) \lt \dfrac{\pi}{3},\ 0 \lt Im(z)\leq 1\ \}\) \end{enumerate}</p>
+<ol class="decimal">
+<li id="li-404"><p id="p-821">Show that the function \(w=e^z\) maps the rectangle in Figure 14(a) to the semi-annulus in Figure 14(b) <figure class="figure-like" id="figure-38"><div style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/mappingdone2.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.8.14.</span> The function \(e^z\) mapping a rectangle to a semi-annulus the plane</figcaption></figure></p></li>
+<li id="li-405"><p id="p-822">Prove <a data-knowl="./knowl/itm_Properies_5_1.html" title="Proposition 2.8.4: Properties of the complex exponential function">Properties 2.8.4</a></p></li>
+</ol>
+<article class="outcomes" id="outcomes-6"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-406"><p id="p-823">I know how to write a complex number \(z=a+bi\) in a complex exponential form.</p></li>
+<li id="li-407"><p id="p-824">I know all the three forms of a complex number, and I am comfortable with changing a form of a complex number from one form to another.</p></li>
+<li id="li-408"><p id="p-825">I can prove all the properties of the complex exponential function.</p></li>
+<li id="li-409"><p id="p-826">I know that \(e^z\) is a periodic function that is not one-to-one, and therefore doesn't have an inverse, preventing me from taking a logarithm of a complex number.</p></li>
+<li id="li-410"><p id="p-827">For a given complex number \(w\text{,}\) I know how to find all the complex numbers \(z\) that satisfy the equation \(e^z=w\text{.}\)</p></li>
+<li id="li-411"><p id="p-828">I know how to sketch the solutions of the equation \(e^z=w\) where \(w\) is a given complex number.</p></li>
+<li id="li-412"><p id="p-829">I know how to map a set of complex numbers under the function \(f(z)=e^z\text{.}\)</p></li>
+</ol></article></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.8.2</span> <span class="title">Complex trigonometric functions</span>
+</h3>
+<p id="p-830">ok, so now you can calculate where in the complex plane a number like \(e^{-2+3i}\) is by writing this in terms of trig functions:</p>
+<div class="displaymath">
+\begin{equation}
+e^{-2+3i}=e^{-2}\left(\cos 3+i\sin 3\right)\text{.}\tag{2.8.1}
+\end{equation}
+</div>
+<p>and all the stuff on the right you can calculate very easily on even the simplest of calculators.</p>
+<p id="p-831">How about \(\cos(-2+3i)\text{.}\) What is this? Where does it sit in the complex plane? Well, you certainly can't type this into a basic calculator. How can we work out trig functions applied to complex numbers? Well, we're going to use some clever footwork and take advantage of what we did in the previous steps. Here it is:</p>
+<p id="p-832">Recall <em class="emphasis">Euler's formula:</em></p>
+<div class="displaymath">
+\begin{equation*}
+e^{i\theta}=\cos{\theta}+i\sin{\theta}...........(1)
+\end{equation*}
+</div>
+<p id="p-833">Let \(\theta =-\theta\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+e^{-i\theta}=\cos{\theta}-i\sin{\theta}..........(2)
+\end{equation*}
+</div>
+<p id="p-834">(1)+(2) yields:</p>
+<div class="displaymath">
+\begin{equation*}
+2\cos{\theta}=e^{i\theta}+e^{-i\theta} \Rightarrow \cos{\theta}=\dfrac{e^{i\theta}+e^{-i\theta}}{2}
+\end{equation*}
+</div>
+<p id="p-835">(1)-(2) yields:</p>
+<div class="displaymath">
+\begin{equation*}
+\sin{\theta}=\dfrac{e^{i\theta}-e^{-i\theta}}{2i}
+\end{equation*}
+</div>
+<p id="p-836">We use the equations above as a motivation for the definitions that follow.</p>
+<article class="definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.8.15</span>. <span class="title">The complex trigonometric function.</span>
+</h6>
+<p id="p-837">Given any complex number \(z\text{,}\) we define :</p>
+<p id="p-838">\(\sin{z}=\dfrac{e^{iz}-e^{-iz}}{2i}\) and \(\cos{z}=\dfrac{e^{iz}+e^{-iz}}{2}\)</p></article><p id="p-839"><em class="emphasis">Remark</em>: One big difference between real and complex trigonometric functions is that real sine and cosine functions are bounded between -1 and 1, while the complex functions are not bounded if they are defined over the set of all complex numbers (see examples that follow).</p>
+<p id="p-840">So, how could we use this to calculate \(\cos(-2+3i)\text{?}\)</p>
+<p id="p-841">Well, according to the above definition:</p>
+<div class="displaymath">
+\begin{equation*}
+\cos(-2+3i)=\frac{e^{i(-2+3i)}+e^{-i(-2+3i)}}{2}=\frac{e^{(-3-2i)}+e^{(3+2i)}}{2}
+\end{equation*}
+</div>
+<p id="p-842">And now we can use the definition of the complex exponential to give us:</p>
+<div class="displaymath">
+\begin{align*}
+\cos(-2+3i)=\frac{e^{-3}(\cos(-2)+i\sin(-2))+e^{3}(\cos(2)+i\sin(2))}{2} \\
+\amp  =\frac{e^{-3}\cos (-2)+e^3\cos 2}{2}+i\frac{e^{-3}\sin(-2)+e^3\sin 2}{2} 
+\end{align*}
+</div>
+<p>which can be written as:</p>
+<div class="displaymath">
+\begin{equation*}
+\cos(-2+3i)=\frac{\cos 2(e^{-3}+e^3)}{2}+i\frac{\sin 2(e^3-e^{-3})}{2}
+\end{equation*}
+</div>
+<p>and all of this can be calculated on a basic calculator. It looked like quite a lot of work, but the steps are all pretty simple. This means that you can now calculate the \(\sin\) and \(\cos\) of any complex number you want and know where it sits in the complex plane.</p>
+<p id="p-843">This is not going to be the only time you will see "trigonometric functions" related to exponential functions. You'll come across (if you haven't already) hyperbolic functions whose definitions resemble those of the complex trigonometric functions. The most common hyperbolic functions are the <em class="emphasis">hyperbolic sine</em>, denoted \(\sinh\text{,}\) and the <em class="emphasis">hyperbolic cosine</em>, denoted \(\cosh\text{,}\) defined by:</p>
+<div class="displaymath">
+\begin{equation*}
+\sinh{x}= \dfrac{e^x-e^{-x}}{2}
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\cosh{x}=\dfrac{e^x+e^{-x}}{2}
+\end{equation*}
+</div>
+<p id="p-844">Hyperbolic functions may not be periodic functions as are the trigonometric functions; but many identities involving hyperbolic functions are quite similar to those for the corresponding trigonometric functions, as suggested by the names.</p>
+<p id="p-845">The following identities remain valid and can be proved using definition 5.2 and properties of the exponential function. Proofs are left to the Check Your Understanding exercises.</p>
+<article class="theorem-like" id="proposition-5"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.8.16</span>. <span class="title">Properties of the complex trigonometric functions.</span>
+</h6>
+<p id="p-846">If \(z\) is complex numbers, then:</p>
+<ol class="decimal">
+<li id="li-413"><p id="p-847">\(\sin{(z+2\pi)}=\sin{z}\text{,}\) and \(\cos{(z+2\pi)}=\cos{z}\)</p></li>
+<li id="li-414"><p id="p-848">\(\sin{(-z)}=-\sin{z}\) , and \(\cos{(-z)}=\cos{z}\)</p></li>
+<li id="li-415"><p id="p-849">\(\sin{2z}=2\sin{z}\cos{z}\) , and \(\cos{2z}=\cos^2{z}-\sin^2{z}\)</p></li>
+<li id="li-416"><p id="p-850">\(\sin^2{z}+\cos^2{z}=1\)</p></li>
+</ol></article><p id="p-851"><em class="emphasis">Remark:</em> Property 5.2 (a) tells us that \(\sin{z}\) and \(\cos{z}\) are both periodic with period \(2\pi\text{.}\) This also tells us that \(\sin{z}\) and \(\cos{z}\) are not one-to-one functions, preventing them from have inverse functions.</p>
+<article class="example-like" id="example-10"><a data-knowl="" class="id-ref" data-refid="hk-example-10"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.8.17</span>.</h6></a></article><div id="hk-example-10" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-852">Find complex number(s) \(z\) that satisfy the following equations:</p>
+<ol class="decimal">
+<li id="li-417"><p id="p-853">\(\cos{z}=2\)</p></li>
+<li id="li-418"><p id="p-854">\(\sin{z}=2i\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div id="hk-solution-9" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-855" class="decimal">
+<li id="li-419">
+<p id="p-856">The method for these is always the same...we take the following steps:</p>
+<ol class="lower-alpha">
+<li id="li-420">
+<p id="p-857">Write the trig function in terms of exponentials:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{e^{iz}+e^{-iz}}{2}=2
+\end{equation*}
+</div>
+</li>
+<li id="li-421">
+<p id="p-858">Multiply everything through by 2 in this case, and always by \(e^{iz}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+e^{2iz}+1=4e^{iz}
+\end{equation*}
+</div>
+</li>
+<li id="li-422">
+<p id="p-859">Let \(w=e^{iz}\) so that we have a quadratic in \(w\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+w^2-4w+1=0
+\end{equation*}
+</div>
+</li>
+<li id="li-423">
+<p id="p-860">Complete the square:</p>
+<div class="displaymath">
+\begin{equation*}
+(w-2)^2-3=0
+\end{equation*}
+</div>
+</li>
+<li id="li-424">
+<p id="p-861">Solve the quadratic:</p>
+<div class="displaymath">
+\begin{equation*}
+w=2\pm\sqrt{3}
+\end{equation*}
+</div>
+</li>
+<li id="li-425"><p id="p-862">Check that both of these solutions are positive (we have to do something slightly different if they're not.</p></li>
+<li id="li-426">
+<p id="p-863">Now replace the \(w\) with \(e^{iz}\text{.}\) Let \(z=a+bi\implies e^{iz}=e^{-b}e^{ia}\text{,}\) and write the right hand side in complex exponential form:</p>
+<div class="displaymath">
+\begin{equation*}
+e^{-b}e^{ia}=2\pm \sqrt{3}e^{2\pi i k}\, ,\,\,\, k\in\mathbb{Z}
+\end{equation*}
+</div>
+</li>
+<li id="li-427">
+<p id="p-864">Match the modulus and argument of both sides:</p>
+<div class="displaymath">
+\begin{equation*}
+e^{-b}=2\pm \sqrt{3}\implies b=-\ln(2\pm\sqrt{3})\, ,\,\,\, a=2\pi k
+\end{equation*}
+</div>
+</li>
+<li id="li-428">
+<p id="p-865">Write \(z\) in terms of these \(a\) and \(b\) that you've just found:</p>
+<div class="displaymath">
+\begin{equation*}
+z=2\pi k-i\ln(2\pm\sqrt{3})\, , \,\,\, k\in\mathbb{Z}
+\end{equation*}
+</div>
+</li>
+</ol>
+</li>
+<li id="li-429">
+<p id="p-866">Very similar to the last, but we'll see a subtlety:</p>
+<ol class="lower-alpha">
+<li id="li-430">
+<p id="p-867">Write the trig function in terms of exponentials:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{e^{iz}-e^{-iz}}{2i}=2
+\end{equation*}
+</div>
+</li>
+<li id="li-431">
+<p id="p-868">Multiply everything through by \(2i\) in this case, and always by \(e^{iz}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+e^{2iz}-1=4ie^{iz}
+\end{equation*}
+</div>
+</li>
+<li id="li-432">
+<p id="p-869">Let \(w=e^{iz}\) so that we have a quadratic in \(w\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+w^2-4iw-1=0
+\end{equation*}
+</div>
+</li>
+<li id="li-433">
+<p id="p-870">Complete the square:</p>
+<div class="displaymath">
+\begin{equation*}
+(w-2i)^2+3=0
+\end{equation*}
+</div>
+</li>
+<li id="li-434">
+<p id="p-871">Solve the quadratic:</p>
+<div class="displaymath">
+\begin{equation*}
+w=2i\pm\sqrt{3}i=i(2\pm\sqrt{3})
+\end{equation*}
+</div>
+</li>
+<li id="li-435">
+<p id="p-872">Here are two complex roots. We have to write them in modulus argument form. Their modulus is \(2\pm\sqrt{3}\) and their argument is \(\frac{\pi}{2}+2\pi k\text{,}\) \(k\in\mathbb{Z}\text{.}\) So again writing everything back in terms of \(z=a+bi\) we have:</p>
+<div class="displaymath">
+\begin{equation*}
+e^{-b}e^{ia}=(2\pm\sqrt{3})e^{\frac{\pi}{2} i+2\pi k i}
+\end{equation*}
+</div>
+<p>Matching moduli and arguments we have</p>
+<div class="displaymath">
+\begin{equation*}
+z=\frac{\pi}{2}+2\pi k-i\ln(2\pm\sqrt{3})
+\end{equation*}
+</div>
+</li>
+</ol>
+</li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise-like" id="exercise-9"><a data-knowl="" class="id-ref" data-refid="hk-exercise-9"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.8.18</span>.</h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol class="decimal">
+<li id="li-436">
+<p id="p-873">Solve for \(z \in \mathbb{C}\) if:</p>
+<ol class="lower-alpha">
+<li id="li-437"><p id="p-874">\(\sin{z}=4i\)</p></li>
+<li id="li-438"><p id="p-875">\(\cos{2z}=2\)</p></li>
+<li id="li-439"><p id="p-876">\(\cos{z}=\sin{z}\)</p></li>
+<li id="li-440"><p id="p-877">\(\sin{(iz)}=\dfrac{e^z}{2}\)</p></li>
+</ol>
+</li>
+<li id="li-441"><p id="p-878">Show that the formula \(e^{iz}=\cos{z}+i\sin{z}\) holds true for all complex numbers \(z\text{.}\)</p></li>
+<li id="li-442"><p id="p-879">Prove that \(\sin{z}=0\) if, and only if, \(z=k\pi\text{,}\) where \(k\) is an integer.</p></li>
+<li id="li-443"><p id="p-880">Prove that \(\cos{z}=0\) if, and only if, \(z=\frac{\pi}{2}+k\pi\text{,}\) where \(k\) is an integer.</p></li>
+<li id="li-444"><p id="p-881">Prove Properties 5.2.</p></li>
+</ol></article></div>
+<article class="outcomes" id="outcomes-7"><h6 class="heading">
+<span class="type">Outcomes:</span> <span class="title">Checklist for this section</span>
+</h6>
+<ol class="decimal">
+<li id="li-445"><p id="p-882">I know how \(\sin{z}\) and \(\cos{z}\) are related to \(e^{iz}\) for a complex number \(z\text{.}\)</p></li>
+<li id="li-446"><p id="p-883">I can solve equation of the form \(\sin{z}=w\) and \(\cos{z}=w\) for a given complex number \(w\text{.}\)</p></li>
+<li id="li-447"><p id="p-884">I know that lecturers are always willing to help, and I will consult them when I need clarifications.</p></li>
+</ol></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
